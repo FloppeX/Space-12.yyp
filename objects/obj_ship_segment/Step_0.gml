@@ -12,7 +12,7 @@ scr_find_mirror_positions();
 // Update module placement
 
 if scr_exists(module){
-	module.module_segment = id
+	module.ship_segment = id
 	module.owner = owner
 	if ship_segment_above != noone
 		module.module_above = ship_segment_above.module

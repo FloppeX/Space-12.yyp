@@ -132,7 +132,7 @@ if ai_mode == 2{
 			target_point_x = scr_wrap_closest_x(target);
 			target_point_y = scr_wrap_closest_y(target);
 			target_distance = scr_wrap_distance_to_point(phy_position_x,phy_position_y,target_point_x,target_point_y)
-			target_dir = scr_wrap_intercept_course(id,target,phy_speed + gun_bullet_speed)
+			target_dir = scr_wrap_intercept_course_new(id,target,phy_speed + gun_bullet_speed)
 			if abs(angle_difference(-phy_rotation,target_dir)) > 45
 				target_speed = 0.2 * max_speed
 			if abs(angle_difference(-phy_rotation,target_dir)) > 90
@@ -171,11 +171,11 @@ if ai_mode == 2{
 
 
 // Shooting
-var target_arc = 30 //30
+var target_arc = 20 //30
 for(var i = 0; i < array_length_1d(ship_segment); i+=1;)
 		if ship_segment[i].module != noone
 			if object_is_ancestor(ship_segment[i].module.object_index, obj_module_gun)
-				if scr_timer(20) and !ship_segment[i].module.activation_timer and ship_segment[i].module.ready_to_shoot and !controls_disabled and !ai_disabled_timer{
+				if scr_timer(10) and !ship_segment[i].module.activation_timer and ship_segment[i].module.ready_to_shoot and !controls_disabled and !ai_disabled_timer{
 					var temp_target = scr_rocket_find_target_in_arc(target_objects[0],-ship_segment[i].module.phy_rotation,target_arc,ship_segment[i].module.bullet_range * 1.5)
 					if temp_target == noone 
 						temp_target = scr_rocket_find_target_in_arc(target_objects[1],-ship_segment[i].module.phy_rotation,target_arc,ship_segment[i].module.bullet_range * 1.5)

@@ -99,8 +99,8 @@ direction_randomizer = 0
 abort_attack = false
 attack_duration = irandom(480)+240//240
 attack_timer = attack_duration
-min_standoff_distance = irandom(80) //100
-max_standoff_distance = irandom(200)+80
+min_standoff_distance = irandom(80) + 60 //100
+max_standoff_distance = irandom(200)+120
 
 invisible = false
 
