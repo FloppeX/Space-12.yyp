@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scr_chance_percent",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_chance_percent",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

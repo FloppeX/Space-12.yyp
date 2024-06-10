@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scr_counter_lateral_drift",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_counter_lateral_drift",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,1 @@
+draw_sprite_ext(Spr_pointer,-1,x,y,1,1,image_angle-90,c_white,0.6)

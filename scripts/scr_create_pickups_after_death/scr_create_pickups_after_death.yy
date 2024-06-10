@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scr_create_pickups_after_death",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_create_pickups_after_death",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

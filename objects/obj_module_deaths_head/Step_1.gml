@@ -1,0 +1,9 @@
+event_inherited();
+
+will_affect_neighbor = false
+
+with(obj_module_gun)
+	if scr_module_is_neighbor(other,id){
+		bullet_damage_bonus += 1
+		other.will_affect_neighbor = true
+	}

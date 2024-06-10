@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"music_quirky_action_2",
+  "audioGroupId":{
+    "name":"audiogroup_music",
+    "path":"audiogroups/audiogroup_music",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":34.8752,
+  "name":"music_quirky_action_2",
+  "parent":{
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"music_quirky_action_2",
+  "type":0,
+  "volume":1.0,
+}

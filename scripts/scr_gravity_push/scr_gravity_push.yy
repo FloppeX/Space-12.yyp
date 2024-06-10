@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scr_gravity_push",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_gravity_push",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_purchase",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.0,
+  "name":"snd_purchase",
+  "parent":{
+    "name":"Shop sounds",
+    "path":"folders/Sounds/Shop sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_purchase",
+  "type":0,
+  "volume":1.0,
+}

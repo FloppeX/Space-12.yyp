@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"music_sci_fi_open_looping",
+  "audioGroupId":{
+    "name":"audiogroup_music",
+    "path":"audiogroups/audiogroup_music",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":43.981834,
+  "name":"music_sci_fi_open_looping",
+  "parent":{
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"music_sci_fi_open_looping",
+  "type":0,
+  "volume":1.0,
+}

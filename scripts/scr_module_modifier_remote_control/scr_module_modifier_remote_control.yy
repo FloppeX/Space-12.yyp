@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scr_module_modifier_remote_control",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_module_modifier_remote_control",
+  "parent":{
+    "name":"Gun modifiers",
+    "path":"folders/Scripts/Gun modifiers.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

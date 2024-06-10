@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"music_funky_gameplay_looping",
+  "audioGroupId":{
+    "name":"audiogroup_music",
+    "path":"audiogroups/audiogroup_music",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":125.98783,
+  "name":"music_funky_gameplay_looping",
+  "parent":{
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"music_funky_gameplay_looping",
+  "type":0,
+  "volume":1.0,
+}
