@@ -28,7 +28,7 @@ scr_create_ship_segments(number_of_segments,24,obj_ship_segment_enemy)
 
 
 repeat(round(number_of_segments/4))
-	scr_place_engine_enemy()
+	scr_place_engine_enemy(obj_module_engine_enemy)
 	
 var module_placed = false
 var temp_module = instance_create_depth(0,0,-10,obj_module_enemy_cockpit_1);

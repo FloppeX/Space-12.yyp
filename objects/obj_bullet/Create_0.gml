@@ -13,3 +13,8 @@ part_type_direction(bullet_glow_particle,0,0,0,1);
 part_type_orientation(bullet_glow_particle,0,0,0,0,1);      
 part_type_blend(bullet_glow_particle,true);                      
 part_type_life(bullet_glow_particle,5,10);
+
+// TESTING bounce
+bounce = 0
+bounce_cooldown_timer = 0
+bounce_cooldown_timer_start = 10

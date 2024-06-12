@@ -15,7 +15,8 @@ phy_rotation = -point_direction(0, 0, phy_speed_x, phy_speed_y)
 
 // Hit an enemy
 
-if hit_enemy == true{
+bounce_cooldown_timer -= 1
+if hit_enemy == true and bounce_cooldown_timer <= 0{
 	//
 	temp_length = 0
 	temp_distance = point_distance(phy_position_xprevious,phy_position_yprevious,phy_position_x,phy_position_y)
@@ -34,9 +35,14 @@ if hit_enemy == true{
 	damage_number = instance_create_depth(phy_position_x,phy_position_y,-1,obj_damage_number)
 	damage_number.damage = damage;
 	damage_number.color = color;
-	instance_destroy();
-	exit;
+	if bounce <= 0{
+		instance_destroy();
+		exit;
 	}
+	hit_enemy = false
+	bounce -= 1
+	bounce_cooldown_timer = bounce_cooldown_timer_start
+}
 
 // Wrap movement
 

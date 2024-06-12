@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":0.654604,
   "name":"snd_slurp_blood",
   "parent":{
     "name":"Crew sounds",

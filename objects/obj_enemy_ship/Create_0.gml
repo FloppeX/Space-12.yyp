@@ -97,10 +97,10 @@ ai_disabled_timer = 0
 shoot = false
 direction_randomizer = 0
 abort_attack = false
-attack_duration = irandom(480)+240//240
+attack_duration = 300//irandom(480)+240//240
 attack_timer = attack_duration
-min_standoff_distance = irandom(80) + 60 //100
-max_standoff_distance = irandom(200)+120
+min_standoff_distance = 120 //100
+max_standoff_distance = 400
 
 invisible = false
 

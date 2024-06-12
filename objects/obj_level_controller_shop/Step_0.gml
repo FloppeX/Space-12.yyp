@@ -30,13 +30,14 @@ if (obj_player.phy_position_y - obj_shop.phy_position_y) > 50 and !scr_exists(wo
 var force_max = 60
 
 if global.player_entering_shop{
-	global.zoom = 600
 	with(obj_player){
 		var y_diff = phy_position_y - obj_shop.phy_position_y 
 		var y_force = clamp(-y_diff,-force_max,force_max)
 		physics_apply_force(phy_position_x,phy_position_y,0,y_force)
 		var y_braking_force = -50 * phy_speed_y
 		physics_apply_force(phy_position_x,phy_position_y,0,y_braking_force)
+		
+		global.zoom = 400 + y_diff
 		}	
 }
 

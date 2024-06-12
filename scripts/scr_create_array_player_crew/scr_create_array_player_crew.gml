@@ -94,4 +94,41 @@ function scr_create_array_player_crew() {
 	global.array_player_crew[crew_number,1] = crew_cost
 	global.array_player_crew[crew_number,2] = crew_rarity
 	
+	crew_number = 10
+
+	crew_id = obj_crew_token_battle_hardened_crusader
+	crew_cost = 10
+	crew_rarity = 2
+	global.array_player_crew[crew_number,0] = crew_id
+	global.array_player_crew[crew_number,1] = crew_cost
+	global.array_player_crew[crew_number,2] = crew_rarity
+	
+	crew_number = 11
+
+	crew_id = obj_crew_token_psychic_leech
+	crew_cost = 10
+	crew_rarity = 2
+	global.array_player_crew[crew_number,0] = crew_id
+	global.array_player_crew[crew_number,1] = crew_cost
+	global.array_player_crew[crew_number,2] = crew_rarity
+	
+	crew_number = 12
+
+	crew_id = obj_crew_token_combat_medic
+	crew_cost = 10
+	crew_rarity = 2
+	global.array_player_crew[crew_number,0] = crew_id
+	global.array_player_crew[crew_number,1] = crew_cost
+	global.array_player_crew[crew_number,2] = crew_rarity
+	
+	crew_number = 13
+
+	crew_id = obj_crew_token_hot_shot_pilot
+	crew_cost = 10
+	crew_rarity = 2
+	global.array_player_crew[crew_number,0] = crew_id
+	global.array_player_crew[crew_number,1] = crew_cost
+	global.array_player_crew[crew_number,2] = crew_rarity
+	
+	
 }

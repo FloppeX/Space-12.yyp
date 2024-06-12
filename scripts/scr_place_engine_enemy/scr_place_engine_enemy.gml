@@ -14,8 +14,10 @@ function scr_place_engine_enemy(argument0){
 				temp_segment = ship_segment[i]
 				module_placed = true
 				}
-	if module_placed == true
+	if module_placed == true{
 		temp_segment.module = temp_module
+		temp_segment.module.owner = id
+	}
 	else
 		with(temp_module)
 				instance_destroy();

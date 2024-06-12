@@ -8,6 +8,10 @@ global.player_exiting_shop = false
 part_particles_clear(global.part_system_above)
 part_particles_clear(global.part_system_below)
 
+// Zoom
+
+global.zoom = 1000
+
 // Place player in the center of the room
 
 
