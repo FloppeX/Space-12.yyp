@@ -7,6 +7,9 @@
 
 // OBS does not wrap (yet)
 function scr_wrap_intercept_course_new(shooter,target,bullet_speed){
+	
+if !scr_exists(shooter) or !scr_exists(target)
+	return -1
 
 var instance_x = shooter.phy_position_x
 var instance_y = shooter.phy_position_y

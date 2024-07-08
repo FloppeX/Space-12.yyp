@@ -24,7 +24,7 @@ function scr_add_ship_segment(argument0, argument1, argument2) {
 						temp_x = ship.ship_segment[i].phy_position_x+lengthdir_x(segment_distance,-ship.phy_rotation)
 						temp_y = ship.ship_segment[i].phy_position_y+lengthdir_y(segment_distance,-ship.phy_rotation)
 						if !instance_place(temp_x,temp_y,segment_type){
-							new_segment = instance_create_depth(temp_x,temp_y,-6,segment_type)
+							new_segment = instance_create_depth(temp_x,temp_y,-1,segment_type)
 							ship.ship_segment[number_of_segments] = new_segment
 							segment_placed = true
 							}
@@ -33,7 +33,7 @@ function scr_add_ship_segment(argument0, argument1, argument2) {
 						temp_x = ship.ship_segment[i].phy_position_x+lengthdir_x(segment_distance,-ship.phy_rotation-90)
 						temp_y = ship.ship_segment[i].phy_position_y+lengthdir_y(segment_distance,-ship.phy_rotation-90)
 						if !instance_place(temp_x,temp_y,segment_type){
-							new_segment = instance_create_depth(temp_x,temp_y,-6,segment_type)
+							new_segment = instance_create_depth(temp_x,temp_y,-1,segment_type)
 							ship.ship_segment[number_of_segments] = new_segment
 							segment_placed = true
 							}
@@ -42,7 +42,7 @@ function scr_add_ship_segment(argument0, argument1, argument2) {
 						temp_x = ship.ship_segment[i].phy_position_x+lengthdir_x(segment_distance,-ship.phy_rotation+90)
 						temp_y = ship.ship_segment[i].phy_position_y+lengthdir_y(segment_distance,-ship.phy_rotation+90)
 						if !instance_place(temp_x,temp_y,segment_type){
-							new_segment = instance_create_depth(temp_x,temp_y,-6,segment_type)
+							new_segment = instance_create_depth(temp_x,temp_y,-1,segment_type)
 							ship.ship_segment[number_of_segments] = new_segment
 							segment_placed = true
 							}
@@ -51,7 +51,7 @@ function scr_add_ship_segment(argument0, argument1, argument2) {
 						temp_x = ship.ship_segment[i].phy_position_x+lengthdir_x(segment_distance,-ship.phy_rotation+180)
 						temp_y = ship.ship_segment[i].phy_position_y+lengthdir_y(segment_distance,-ship.phy_rotation+180)
 						if !instance_place(temp_x,temp_y,segment_type){
-							new_segment = instance_create_depth(temp_x,temp_y,-6,segment_type)
+							new_segment = instance_create_depth(temp_x,temp_y,-1,segment_type)
 							ship.ship_segment[number_of_segments] = new_segment
 							segment_placed = true
 							}

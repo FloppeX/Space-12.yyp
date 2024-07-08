@@ -37,12 +37,12 @@ if global.player_entering_shop{
 		var y_braking_force = -50 * phy_speed_y
 		physics_apply_force(phy_position_x,phy_position_y,0,y_braking_force)
 		
-		global.zoom = 400 + y_diff
+		global.zoom =  500 + y_diff
 		}	
 }
 
 if global.player_exiting_shop and !instance_exists(obj_wormhole){
-	global.zoom = 1000
+	global.zoom = 900
 	global.active_level += 1
 	wormhole_end = instance_create_depth(0.5 * room_width,0.5 * room_height-500,100,obj_wormhole_level_end_new)
 	wormhole_end.next_level = global.levels[global.active_level]

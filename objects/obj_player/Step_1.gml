@@ -14,6 +14,8 @@ for(var h = 0; h < array_height_2d(modifiers); h+=1;)
 // Update base health, since new segments may have been added
 
 max_health_base =  array_length_1d(ship_segment) * 10
+
+invisible = false
 		
 // Gamepad controls
 
@@ -65,30 +67,32 @@ if controls_disabled == false{
 // Zoom
 
 if gamepad_button_check_pressed(0,gp_padl)
-		global.zoom = global.zoom - 400
+		global.zoom = global.zoom - 100
 
 if gamepad_button_check_pressed(0,gp_padr)
-		global.zoom = global.zoom + 400
+		global.zoom = global.zoom + 100
 	
 global.zoom = clamp(global.zoom,global.min_zoom,global.max_zoom)
 
-	
+	/*
 if keyboard_check(vk_right){
 	shop = room_duplicate(rm_shop)
 	room_goto (shop)
 	}
-
+*/
 // Testing stuff
 
-	
-if keyboard_check(vk_left){
-	space = room_duplicate(rm_space)
-	room_goto (space)
-	}
 	
 if keyboard_check_pressed(vk_space){
 		credits += 4
 	}
+	
+if keyboard_check_pressed(ord("D")){
+		diamonds += 1
+	}
+	
+if keyboard_check_pressed(ord("H"))
+	obj_health += 50
 	
 if keyboard_check_pressed(vk_control){
 		scr_add_ship_segment(id,24,obj_ship_segment_player)
@@ -127,6 +131,3 @@ global.wrap_border_right = phy_position_x + 0.5 * global.play_area_width;
 global.wrap_border_top = phy_position_y - 0.5 * global.play_area_height;
 global.wrap_border_bottom = phy_position_y + 0.5 * global.play_area_height;
 
-// Wrap room if needed
-
-scr_wrap_room_player_new();	

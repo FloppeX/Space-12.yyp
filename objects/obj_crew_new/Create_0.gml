@@ -4,3 +4,6 @@ description_lines[2] = "Description line 2"
 
 owner = noone
 timer = 0
+
+credit_cost = 0
+diamond_cost = 1

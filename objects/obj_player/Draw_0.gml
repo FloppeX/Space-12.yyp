@@ -1,7 +1,7 @@
 //draw_self()
 
 for(var i = 0; i < array_length_1d(ship_segment); i+=1;)
-	if ship_segment[i].ship_segment_right != noone
+	//if ship_segment[i].ship_segment_right != noone
 		draw_sprite_ext(spr_segment_2,-1,ship_segment[i].phy_position_x,ship_segment[i].phy_position_y,1,1,-phy_rotation,c_white,alpha)
 
 // Draw at this and other positions
@@ -20,14 +20,5 @@ if global.view_mode == 2{
 	while(map_objects[number_of_map_objects,0] != noone)
 		number_of_map_objects += 1
 	draw_text(phy_position_x,phy_position_y+80,"phy_rotation: " + string(phy_rotation mod 360))
-	//draw_text(phy_position_x,phy_position_y+150,string(number_segments_placed))
-
-	for(var i = 0; i < array_length_1d(ship_segment); i+=1;){
-		draw_text(ship_segment[i].phy_position_x+10,ship_segment[i].phy_position_y,i)
-		if scr_exists(ship_segment[i].module){
-			draw_circle_color(ship_segment[i].module.phy_position_x,ship_segment[i].module.phy_position_y,24,c_fuchsia,c_purple,1)
-			if ship_segment[i].module.persistent == true
-				draw_circle_color(ship_segment[i].module.phy_position_x,ship_segment[i].module.phy_position_y,18,c_lime,c_green,1)
-		}
-		}
+	draw_text(phy_position_x,phy_position_y+120,"angular velocity: " + string((phy_angular_velocity)))
 	}

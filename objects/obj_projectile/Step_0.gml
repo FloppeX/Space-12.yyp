@@ -26,9 +26,10 @@ scr_find_mirror_positions();
 
 scr_wrap_room();
 
-// Sound
 
-audio_emitter_falloff(projectile_audio_emitter, 0, starting_range, 1);
+// Sound
+/*
+audio_emitter_falloff(projectile_audio_emitter, 0, 200, 1);
 
 var temp_pitch = 8/(damage+0.1)
 temp_pitch = clamp(temp_pitch,20,0.5)

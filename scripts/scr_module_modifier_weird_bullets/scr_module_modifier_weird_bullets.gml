@@ -5,7 +5,7 @@ function scr_module_modifier_weird_bullets() {
 
 	// Modifier actions
 
-	bullet_range_multiplier +=1
+	bullet_range_multiplier *=2
 
 	if bullets[0] != noone
 		for(var i = 0; i < array_length_1d(bullets); i+=1;)

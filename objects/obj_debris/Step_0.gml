@@ -11,6 +11,4 @@ else
 	
 phy_angular_velocity = clamp(phy_angular_velocity,-max_rotation_speed,max_rotation_speed)
 
-scr_find_mirror_positions();
-
 scr_wrap_room();

@@ -10,6 +10,8 @@ max_health = (max_health_base * max_health_multiplier) + max_health_bonus
 max_energy = (max_energy_base * max_energy_multiplier) + max_energy_bonus
 energy_increase = (energy_increase_base * energy_increase_multiplier) + energy_increase_bonus
 
+
+
 // Disabled?
 
 disabled_timer -= 1;
@@ -36,7 +38,7 @@ if obj_health <= 0{
 	phy_active = false
 	audio_stop_sound(engine_noise)
 	
-	scr_explode_object_new_new();
+	scr_explode_ship();
 	for(var i = 0; i < array_length_1d(ship_segment); i+=1;){
 		if scr_exists(ship_segment[i].module)
 			with(ship_segment[i].module)
@@ -95,6 +97,9 @@ if ai_disabled_timer <= 0{ // set this to > 0 to control the enemy from another 
 		if target == noone
 			target = scr_rocket_find_target_in_arc(target_objects[1],-phy_rotation,targeting_arc,seek_range)
 		}
+		if target != noone
+			if target.invisible
+				target = noone
 
 if ai_mode == 1 {
 	ai_timer -= 1;
@@ -134,12 +139,12 @@ if ai_mode == 2{
 			target_distance = scr_wrap_distance_to_point(phy_position_x,phy_position_y,target_point_x,target_point_y)
 			var temp_bullet_speed = 0
 			
-			if target_distance > 300{
+			if target_distance > 200{
 				target_speed = max_speed
 				target_dir = scr_wrap_intercept_course_new(id,target,phy_speed)
 			}
 			else{
-				target_speed = 0.2 * max_speed
+				target_speed = 0//0.2 * max_speed
 				var temp_angle = angle_difference(-phy_rotation,target_dir)
 				for(var i = 0; i < array_length_1d(ship_segment); i+=1;)
 					if scr_exists(ship_segment[i].module)
@@ -149,7 +154,7 @@ if ai_mode == 2{
 								temp_angle = module_angle
 								temp_bullet_speed = ship_segment[i].module.bullet_speed
 								target_dir = scr_wrap_intercept_course_new(id,target,temp_bullet_speed) + ship_segment[i].module.offset_angle
-								target_speed = 0.2 * max_speed
+								target_speed = 0//0.2 * max_speed
 								//target_dir = target_dir + ship_segment[i].module.offset_angle
 								}
 				//			}
@@ -191,8 +196,9 @@ for(var i = 0; i < array_length_1d(ship_segment); i+=1;)
 					var temp_target = scr_rocket_find_target_in_arc(target_objects[0],-ship_segment[i].module.phy_rotation,target_arc,ship_segment[i].module.bullet_range * 1.5)
 					if temp_target == noone 
 						temp_target = scr_rocket_find_target_in_arc(target_objects[1],-ship_segment[i].module.phy_rotation,target_arc,ship_segment[i].module.bullet_range * 1.5)
-					if temp_target != noone 
-						ship_segment[i].module.activation_timer = 30
+					if temp_target != noone
+						if !temp_target.invisible
+							ship_segment[i].module.activation_timer = 30
 					}		
 
 // Avoid teammates
@@ -237,17 +243,18 @@ if controls_disabled == false{
 	
 	rotation_value = (1-sqr(1-abs(rotation_value))) * sign(rotation_value)
 
-	if abs(phy_angular_velocity) < rotation_speed //* abs(rotation_value)
-		physics_apply_torque(rotation_force * rotation_value)
+	if abs(phy_angular_velocity) < rotation_speed{
+		physics_apply_torque(array_length_1d(ship_segment) * rotation_force * rotation_value)
+		phy_angular_damping = 2 * array_length_1d(ship_segment) + add_thrust * 10
+		}
+	else
+		phy_angular_damping = 30
 
 	// Apply thrust
 	
 	if phy_speed < target_speed
 		add_thrust += 0.02
 	else add_thrust -= 0.02
-	
-	// Set angular damping
-	phy_angular_damping = 20	
 
 	}
 else{

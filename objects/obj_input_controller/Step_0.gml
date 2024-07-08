@@ -48,18 +48,23 @@ if gamepad_is_connected(0){
 	global.zoom = clamp(global.zoom,global.min_zoom,global.max_zoom)
 */
 	}
-
+/*
 if keyboard_check(vk_right){
-	shop = room_duplicate(rm_shop)
-	room_goto (shop)
+	shop = room_goto(rm_shop)
 	}
-
+*/
 	
+if keyboard_check_pressed(ord("L")){
+	global.active_level += 1
+	next_level = global.levels[global.active_level]
+	room_goto(next_level)
+	}
+/*
 if keyboard_check(vk_left){
 	space = room_duplicate(rm_space)
 	room_goto (space)
 	}
-	
+	*/
 if keyboard_check_pressed(vk_space){
 		obj_player.credits += 4
 	}

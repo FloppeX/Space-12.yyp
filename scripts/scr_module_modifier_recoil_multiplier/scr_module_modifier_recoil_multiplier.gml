@@ -5,7 +5,7 @@ function scr_module_modifier_recoil_multiplier(argument0) {
 
 	// Modifier script
 
-	recoil_force_multiplier += value
+	recoil_force_multiplier *= value
 
 
 }

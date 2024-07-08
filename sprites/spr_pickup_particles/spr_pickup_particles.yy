@@ -3,8 +3,8 @@
   "%Name":"spr_pickup_particles",
   "bboxMode":0,
   "bbox_bottom":12,
-  "bbox_left":0,
-  "bbox_right":12,
+  "bbox_left":3,
+  "bbox_right":9,
   "bbox_top":0,
   "collisionKind":2,
   "collisionTolerance":0,
@@ -23,7 +23,7 @@
   ],
   "name":"spr_pickup_particles",
   "nineSlice":null,
-  "origin":9,
+  "origin":4,
   "parent":{
     "name":"Sprites",
     "path":"folders/Sprites.yy",
@@ -76,7 +76,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":6,
-    "yorigin":8,
+    "yorigin":6,
   },
   "swatchColours":[
     4278190335,4278255615,4284874597,4294967040,4294901760,4294902015,4294967295,4293717228,4293059298,4292335575,

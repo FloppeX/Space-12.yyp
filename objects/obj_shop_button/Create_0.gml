@@ -1,3 +1,4 @@
 activated = false
 owner = obj_shop
-cost = 0
+credit_cost = 0
+diamond_cost = 0

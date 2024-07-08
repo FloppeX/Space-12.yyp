@@ -6,6 +6,8 @@ cost = 6
 
 placement_req_below = noone
 
+fixed_rotation = 360
+
 //
 
 thrust_base = 60
@@ -33,7 +35,9 @@ part_type_life(part_engine_flame,1,5);
 
 sound_priority = 1
 
-sound = snd_engine_2
+sound = snd_engine_2b
 
 engine_noise = audio_play_sound_on(module_audio_emitter,sound,1,sound_priority)
 audio_sound_set_track_position(engine_noise,random(audio_sound_length(sound)));
+
+

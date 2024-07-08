@@ -14,7 +14,7 @@ start_menu.y_pos = 0.4*display_get_gui_height()
 
 //view_object = instance_create_depth(0.5 * room_width,0.5 * room_height,-5,obj_view_object)
 
-global.zoom = 1000
+global.zoom = 900
 zoom_timer = 0
 
 // Clear particles
@@ -47,7 +47,7 @@ if(number_of_asteroids > 0){
 audio_stop_all()
 level_music = music_sci_fi_open_looping
 //if global.music_on 
-	audio_play_sound(level_music,1,1)
+audio_play_sound_on(global.music_emitter,level_music,1,1)
 
 // Create background sprites
 

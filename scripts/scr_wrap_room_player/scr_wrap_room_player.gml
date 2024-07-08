@@ -1,6 +1,6 @@
-function scr_wrap_room_player_new() {
-	var x_diff = 0
-	var y_diff = 0
+ function scr_wrap_room_player_new() {
+	x_diff = 0
+	y_diff = 0
 
 	if phy_position_x < global.wrap_margin_player
 		x_diff = global.play_area_width
@@ -17,12 +17,14 @@ function scr_wrap_room_player_new() {
 	for(var i = 0; i < array_length_1d(ship_segment); i+=1;)
 		if scr_exists(ship_segment[i])
 			with(ship_segment[i]){
+				x_diff = other.x_diff
+				y_diff = other.y_diff
 				phy_position_x += x_diff
 				phy_position_y += y_diff
 				if module != noone
 					with(module){
-						phy_position_x += x_diff
-						phy_position_y += y_diff
+						phy_position_x += other.x_diff
+						phy_position_y += other.y_diff
 					}
 				}
 

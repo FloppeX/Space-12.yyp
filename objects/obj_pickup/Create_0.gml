@@ -1,8 +1,9 @@
 event_inherited();
-
-life_timer = 900
+timer = 0
+max_age = 900
 
 max_speed = 10
+phy_rotation = random(360)
 
 pickup_glow_particle = part_type_create();
 part_type_sprite(pickup_glow_particle,sprite_index,false,false,false);            
@@ -14,3 +15,8 @@ part_type_direction(pickup_glow_particle,0,0,0,1);
 part_type_orientation(pickup_glow_particle,0,0,0,0,1);      
 part_type_blend(pickup_glow_particle,true);                      
 part_type_life(pickup_glow_particle,5,10);
+
+
+//Sound
+audio_emitter = audio_emitter_create()
+audio_emitter_falloff(audio_emitter, 100, 600, 1);

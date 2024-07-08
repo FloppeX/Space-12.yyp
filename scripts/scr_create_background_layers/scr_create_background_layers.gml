@@ -1,18 +1,25 @@
 function scr_create_background_layers() {
 	// Create background sprites
-
+	
+	layer_create(400,"background_layer_1")
+	layer_create(300,"background_layer_2")	
+	layer_create(200,"background_layer_3")	
+	layer_create(100,"background_layer_4")	
+		
 	for (var i = 0; i< 300; i++;)
 	   {
 	   var sprite, scale, x_pos, y_pos, x_scale,y_scale,col,alpha,angle;
 		sprite = spr_star
 		x_pos = global.wrap_border_left + random( global.play_area_width)
 		y_pos = global.wrap_border_top + random( global.play_area_height)
-		scale = random(0.1)+0.1
+		scale = random(0.1)+0.2
 		x_scale = scale
 		y_scale =  scale
 		color = make_color_hsv(random(255),random(20)+80,255)
-		alpha =  random(0.1)+0.1
+		alpha =  random(0.2)+0.2
 		angle = random(360)
+		
+		
 	
 		background_sprite_0[i] = layer_sprite_create(layer_get_id("background_layer_1"),x_pos-global.play_area_width,y_pos-global.play_area_height, sprite);
 		layer_sprite_xscale(background_sprite_0[i],  x_scale);
@@ -85,11 +92,10 @@ function scr_create_background_layers() {
 		sprite = spr_star
 		x_pos = global.wrap_border_left + random( global.play_area_width)
 		y_pos = global.wrap_border_top + random( global.play_area_height)
-		scale = random(0.2)+0.2
-		x_scale = scale
+		scale = random(0.1)+0.3
 		y_scale =  scale
 		color = make_color_hsv(random(255),random(20)+80,255)
-		alpha =  random(0.2)+0.2
+		alpha =  random(0.3)+0.3
 		angle = random(360)
 	
 		background_sprite_0[i] = layer_sprite_create(layer_get_id("background_layer_2"),x_pos-global.play_area_width,y_pos-global.play_area_height, sprite);
@@ -163,7 +169,7 @@ function scr_create_background_layers() {
 		sprite = spr_star
 		x_pos = global.wrap_border_left + random( global.play_area_width)
 		y_pos = global.wrap_border_top + random( global.play_area_height)
-		scale = random(0.3)+0.3
+		scale = random(0.1)+0.4
 		x_scale = scale
 		y_scale =  scale
 		color = make_color_hsv(random(255),random(20)+80,255)
@@ -242,8 +248,8 @@ function scr_create_background_layers() {
 		y_pos = global.wrap_border_top + random( global.play_area_height)
 		x_scale = random(3)+2// random(3)+1
 		y_scale = random(1)+2// random(3)+1
-		color = make_color_hsv(random(255),255,255)
-		alpha = random(0.2)+0.1// random(0.1)+0.9
+		color = make_color_hsv(random(255),192,255)
+		alpha = random(0.1)+0.2// random(0.1)+0.9
 		angle = random(360)
 	
 		background_sprite_0[i] = layer_sprite_create(layer_get_id("background_layer_4"),x_pos-global.play_area_width,y_pos-global.play_area_height, sprite);

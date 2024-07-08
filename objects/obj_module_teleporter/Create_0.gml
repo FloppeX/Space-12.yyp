@@ -20,3 +20,4 @@ use_timer = use_timer_interval
 target_point_x = 0
 target_point_y = 0
 
+fixed_rotation = false

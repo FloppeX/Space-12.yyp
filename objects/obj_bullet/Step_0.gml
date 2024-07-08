@@ -34,6 +34,8 @@ if hit_enemy == true and bounce_cooldown_timer <= 0{
 	//part_particles_create_color(global.part_system_above, phy_position_x+lengthdir_x(+10,-phy_rotation), phy_position_y+ lengthdir_y(+10,-phy_rotation), global.part_weapon_splat,color, 6);
 	damage_number = instance_create_depth(phy_position_x,phy_position_y,-1,obj_damage_number)
 	damage_number.damage = damage;
+	//damage_number.phy_speed_x = phy_position_xprevious-phy_position_x
+	//damage_number.phy_speed_y = -3//phy_position_yprevious-phy_position_y
 	damage_number.color = color;
 	if bounce <= 0{
 		instance_destroy();

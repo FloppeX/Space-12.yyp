@@ -13,7 +13,7 @@ my_shield.obj_health = shield_health
 my_shield.owner = id
 
 shield_particle = part_type_create();
-part_type_sprite(shield_particle,spr_shield,0,0,0);
+part_type_sprite(shield_particle,spr_shield_new,0,0,0);
 part_type_size(shield_particle,1,1,0,0.1);
 part_type_scale(shield_particle,1,1);
 part_type_color3(shield_particle,c_white,c_fuchsia,c_black);

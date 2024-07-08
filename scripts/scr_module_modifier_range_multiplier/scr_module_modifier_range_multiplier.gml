@@ -5,7 +5,7 @@ function scr_module_modifier_range_multiplier(argument0) {
 
 	// Modifier script
 
-	bullet_range_multiplier += value
+	bullet_range_multiplier *= value
 
 
 }

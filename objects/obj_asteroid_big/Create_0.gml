@@ -8,7 +8,7 @@ push_force = 30//900
 child_object = obj_asteroid_medium;
 death_effect_size = 2;
 
-
+/*
 var random_number = random(100)
 if random_number <= global.asteroid_chance_credit
 	child_object =  obj_asteroid_medium_credit

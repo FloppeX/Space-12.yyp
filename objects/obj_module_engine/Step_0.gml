@@ -1,21 +1,23 @@
 event_inherited();
 
+if !audio_is_playing(engine_noise)
+	engine_noise = audio_play_sound_on(module_audio_emitter,sound,1,sound_priority)
+
 thrust = (thrust_base + thrust_bonus) * thrust_multiplier
 
 var add_thrust = owner.add_thrust
+thrust = thrust * add_thrust
 
-if scr_exists(owner) and add_thrust > 0 and visible and (owner.energy >= energy_cost){
-	owner.energy -= energy_cost*add_thrust
+if scr_exists(owner) and thrust > 0 and visible and (owner.energy >= energy_cost){
+	if owner.phy_speed < owner.max_speed
+		owner.energy -= energy_cost*add_thrust
 	var temp_dist = point_distance(phy_position_x,phy_position_y,owner.phy_position_x,owner.phy_position_y)
 	var temp_dir = point_direction(phy_position_x,phy_position_y,owner.phy_position_x,owner.phy_position_y)
 	var thrust_point_offset = 0.5
 	var thrust_point_x = phy_position_x + lengthdir_x(temp_dist * thrust_point_offset,temp_dir)
 	var thrust_point_y = phy_position_y + lengthdir_y(temp_dist * thrust_point_offset,temp_dir)
-	/*with(owner)
-		physics_apply_force(thrust_point_x,thrust_point_y,lengthdir_x(other.thrust,-phy_rotation),lengthdir_y(other.thrust,-phy_rotation))
-	*/
+	
 	physics_apply_force(thrust_point_x,thrust_point_y,lengthdir_x(thrust,-phy_rotation),lengthdir_y(thrust,-phy_rotation))	
-		
 		
 	flame_offset_distance = 10
 	flame_offset_angle = 180
@@ -42,7 +44,6 @@ if scr_exists(owner) and add_thrust > 0 and visible and (owner.energy >= energy_
 	part_type_orientation(part_engine_flame,-phy_rotation,-phy_rotation,0,0,0)
 	part_type_alpha2(part_engine_flame,0.6*owner.alpha,0);
 	part_particles_create(global.part_system_below , phy_position_x+lengthdir_x(flame_offset_distance,-phy_rotation+flame_offset_angle), phy_position_y+ lengthdir_y(flame_offset_distance,-phy_rotation+flame_offset_angle), part_engine_flame, 6);
-	
 	}
 
 audio_emitter_gain(module_audio_emitter, add_thrust);

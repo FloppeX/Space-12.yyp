@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"scr_crew_psychic_leech",
   "bboxMode":0,
-  "bbox_bottom":24,
+  "bbox_bottom":22,
   "bbox_left":0,
-  "bbox_right":24,
+  "bbox_right":22,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"704354f0-c64d-45be-b35d-63071ed90b87","name":"704354f0-c64d-45be-b35d-63071ed90b87","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"9cee7cf1-6327-42a1-8fee-6a129a5bccfa","name":"9cee7cf1-6327-42a1-8fee-6a129a5bccfa","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":25,
+  "height":24,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"44af72f9-4b23-4cd4-98bb-b1d4528243ef","blendMode":0,"displayName":"default","isLocked":false,"name":"44af72f9-4b23-4cd4-98bb-b1d4528243ef","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"3f3a5e90-78ba-4cd8-9d26-c2b80dd9f817","blendMode":0,"displayName":"default","isLocked":false,"name":"3f3a5e90-78ba-4cd8-9d26-c2b80dd9f817","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"scr_crew_psychic_leech",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"704354f0-c64d-45be-b35d-63071ed90b87","path":"sprites/scr_crew_psychic_leech/scr_crew_psychic_leech.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"ccdf134a-69dd-4c2c-a908-318faa4acb6c","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"9cee7cf1-6327-42a1-8fee-6a129a5bccfa","path":"sprites/scr_crew_psychic_leech/scr_crew_psychic_leech.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"aa8e7664-1b55-4ff8-bc8a-be521fd9923f","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -86,5 +86,5 @@
   },
   "type":1,
   "VTile":false,
-  "width":25,
+  "width":24,
 }

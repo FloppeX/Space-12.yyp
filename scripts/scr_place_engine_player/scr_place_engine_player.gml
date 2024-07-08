@@ -1,6 +1,6 @@
 function scr_place_engine_player() {
 	var temp_segment = ship_segment[0]
-	var temp_module = instance_create_depth(0,0,-10,obj_module_engine_player);
+	var temp_module = instance_create_depth(0,0,-10,obj_module_engine_small);
 	var temp_distance = 1000
 
 	for(var i = 0; i < array_length_1d(ship_segment); i+=1;)

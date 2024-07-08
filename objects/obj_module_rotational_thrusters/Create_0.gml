@@ -5,3 +5,5 @@ module_name = "Turn thrusters"
 
 distance_to_com = 0 // distance to owners center of mass
 cost = 4
+
+fixed_rotation = 360

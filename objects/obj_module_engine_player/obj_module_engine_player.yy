@@ -1,7 +1,9 @@
 {
   "$GMObject":"",
   "%Name":"obj_module_engine_player",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":1,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_module_engine_player",
   "overriddenProperties":[],
@@ -25,10 +27,10 @@
   "physicsSensor":false,
   "physicsShape":1,
   "physicsShapePoints":[
-    {"x":4.0,"y":0.0,},
-    {"x":25.0,"y":0.0,},
-    {"x":25.0,"y":10.0,},
-    {"x":4.0,"y":10.0,},
+    {"x":0.0,"y":0.0,},
+    {"x":20.0,"y":0.0,},
+    {"x":20.0,"y":12.0,},
+    {"x":0.0,"y":12.0,},
   ],
   "physicsStartAwake":true,
   "properties":[],

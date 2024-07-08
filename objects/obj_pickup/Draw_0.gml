@@ -1,4 +1,5 @@
-gpu_set_blendmode(bm_add)
+draw_self()
+/*gpu_set_blendmode(bm_add)
 var temp_direction = random(360)
 var temp_distance = random(4)
 draw_sprite_ext(sprite_index,-1,phy_position_x+lengthdir_x(temp_distance,temp_direction),phy_position_y+lengthdir_y(temp_distance,temp_direction),3,3,-phy_rotation,c_white,0.1)

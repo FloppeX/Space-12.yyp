@@ -51,6 +51,4 @@ part_particles_create(global.part_system_above, phy_position_x+lengthdir_x(-offs
 	
 // Wrap movement
 
-scr_find_mirror_positions();
-
 scr_wrap_room();

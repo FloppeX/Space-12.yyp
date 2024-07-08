@@ -6,7 +6,7 @@ alpha = owner.alpha
 
 // Find mirror positions
 
-scr_find_mirror_positions();
+//scr_find_mirror_positions();
 
 // Wrap movement
 
@@ -29,6 +29,11 @@ if scr_exists(module){
 
 // Adjust module cost
 
-if scr_exists(module)
-	module_cost = module.cost
-else module_cost = 0
+if scr_exists(module){
+	credit_cost = module.credit_cost
+	diamond_cost = module.diamond_cost
+}
+else {
+	credit_cost = 0
+	diamond_cost = 0
+}

@@ -5,7 +5,7 @@ function scr_module_modifier_bullet_speed_mult_10() {
 
 	// Modifier script
 
-	bullet_speed_multiplier += 0.1
+	bullet_speed_multiplier *= 1.1
 
 
 }

@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":2.288729,
   "name":"snd_explosion_small_01",
   "parent":{
     "name":"Explosions",

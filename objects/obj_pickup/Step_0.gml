@@ -1,17 +1,16 @@
+timer += 1
 
-life_timer -= 1
-
-if life_timer <= 0
+if timer >= max_age
 	instance_destroy();
 	
-if life_timer <= 300{
+if timer >= 0.66*max_age{
 	if scr_timer(8) 
 		if visible == true
 			visible = false
 		else visible = true
 	}
 	
-if life_timer <= 150{
+if timer >= 5/6*max_age{
 	if scr_timer(4) 
 		if visible == true
 			visible = false

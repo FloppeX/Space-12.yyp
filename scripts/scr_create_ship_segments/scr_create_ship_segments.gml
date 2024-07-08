@@ -6,7 +6,7 @@ function scr_create_ship_segments(argument0, argument1, argument2) {
 
 	//ship_segment[number_of_segments-1] = noone
 
-	ship_segment[0] = instance_create_depth(phy_position_x,phy_position_y,-4,segment_type)
+	ship_segment[0] = instance_create_depth(phy_position_x,phy_position_y,-1,segment_type)
 	number_segments_placed = 1;
 	var segment_placed = false;
 

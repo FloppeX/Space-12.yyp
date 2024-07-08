@@ -11,3 +11,4 @@ if global.view_mode == 2{
 			if scr_exists(shop_segments[i].module)
 				draw_line_color(6000,6000,shop_segments[i].module.phy_position_x,shop_segments[i].module.phy_position_y,c_green,c_green)
 	}
+	

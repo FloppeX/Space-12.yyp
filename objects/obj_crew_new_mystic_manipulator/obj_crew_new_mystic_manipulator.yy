@@ -39,8 +39,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_crew_hooded_alien",
-    "path":"sprites/spr_crew_hooded_alien/spr_crew_hooded_alien.yy",
+    "name":"spr_crew_corvid_mystic",
+    "path":"sprites/spr_crew_corvid_mystic/spr_crew_corvid_mystic.yy",
   },
   "spriteMaskId":null,
   "visible":true,

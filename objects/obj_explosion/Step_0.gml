@@ -22,7 +22,6 @@ if destruction_timer >= 0{
 				y_force = lengthdir_y(force,angle)
 				with(collision_coords[0]){
 					physics_apply_impulse(other.collision_coords[1],other.collision_coords[1],other.x_force,other.y_force)
-					//disabled_timer += 1
 					}
 				part_type_scale(global.part_weapon_splat,0.1,0.1);      
 				part_particles_create_color(global.part_system_above,collision_coords[1] ,collision_coords[2] , global.part_weapon_splat,c_lime, 6);

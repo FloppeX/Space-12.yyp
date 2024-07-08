@@ -11,17 +11,31 @@ if scr_exists(follow_object){
 	var temp_dir = scr_wrap_direction_to_point(phy_position_x, phy_position_y, follow_object.phy_position_x, follow_object.phy_position_y) 
 	var temp_dist = scr_wrap_distance_to_point(phy_position_x, phy_position_y, follow_object.phy_position_x, follow_object.phy_position_y)
 	camera_speed = min(6,temp_dist/24)
-	phy_position_x += lengthdir_x(camera_speed, temp_dir)
-	phy_position_y += lengthdir_y(camera_speed, temp_dir)
+	phy_speed_x = lengthdir_x(camera_speed, temp_dir)
+	phy_speed_y = lengthdir_y(camera_speed, temp_dir)
 	/*
 	phy_position_x = follow_object.phy_position_x
 	phy_position_y = follow_object.phy_position_y
 	*/
 	}
 	
+// Move the background
+
+layer_hspeed(layer_get_id("background_layer_1"), phy_speed_x*0.8)
+layer_vspeed(layer_get_id("background_layer_1"), phy_speed_y*0.8)
+
+layer_hspeed(layer_get_id("background_layer_2"), phy_speed_x*0.6)
+layer_vspeed(layer_get_id("background_layer_2"), phy_speed_y*0.6)
+
+layer_hspeed(layer_get_id("background_layer_3"), phy_speed_x*0.4)
+layer_vspeed(layer_get_id("background_layer_3"), phy_speed_y*0.4)
+
+layer_hspeed(layer_get_id("background_layer_4"), phy_speed_x*0)
+layer_vspeed(layer_get_id("background_layer_4"), phy_speed_y*0)
+
+	
 // Wrap room
 
-scr_find_mirror_positions();
 scr_wrap_room();
 
 //

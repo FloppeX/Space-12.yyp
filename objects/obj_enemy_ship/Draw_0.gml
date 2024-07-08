@@ -7,6 +7,11 @@ if health_bar_timer > 0
 
 
 if global.view_mode == 2{
+	draw_set_font(global.font_small_text)
+	draw_set_halign(fa_center)
+	draw_set_color(c_white)
+	draw_text(phy_position_x,phy_position_y+120,"angular velocity: " + string((phy_angular_velocity)))
+	
 	if scr_exists(target)
 		draw_line_color(phy_position_x,phy_position_y,target.phy_position_x,target.phy_position_y,c_red,c_fuchsia)
 }

@@ -1,0 +1,1 @@
+owner.luck_bonus += 1

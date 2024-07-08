@@ -1,3 +1,5 @@
+other.bounce += 1
+/*
 other.color = c_lime
 
 var angle_from_center = point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)

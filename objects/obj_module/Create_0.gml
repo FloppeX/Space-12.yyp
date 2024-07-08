@@ -10,7 +10,8 @@ alpha = 1
 
 //
 
-cost = 6
+credit_cost = 6
+diamond_cost = 0
 
 //
 
@@ -46,6 +47,7 @@ module_left = noone
 module_right = noone
 owned_by_shop = false // used when selecting modules in the shop
 
+fixed_rotation = false
 target_angle = 0;
 offset_angle = 0;
 placement_offset_angle = 0

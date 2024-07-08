@@ -27,7 +27,7 @@ if instance_exists(obj_player){
 	global.player.draw_scale = 0.01
 	}
 if !instance_exists(obj_player){
-	global.player = instance_create_depth(0.5 * room_width,0.5 * room_height,-5,obj_player)
+	global.player = instance_create_depth(0.5 * room_width,0.5 * room_height,-6,obj_player)
 	global.player.controls_disabled_timer = 60
 	global.player.phy_rotation = 0
 	global.player.draw_scale = 0.01

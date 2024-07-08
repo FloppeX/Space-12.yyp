@@ -15,22 +15,32 @@ gamepad_set_axis_deadzone(0, 0.1);
 
 
 //
-
+player_ship = instance_find(obj_player,0)
 
 if mouse_check_button_pressed(mb_left) or gamepad_button_check_pressed(0,gp_face1){
 	selected_segment = instance_place(x,y,obj_ship_segment)
 	
 	
 	if scr_exists(selected_segment){
-		if obj_player.credits >= selected_segment.module_cost{
+		var purchase_ok = false
+		if player_ship.credits >= selected_segment.credit_cost and player_ship.diamonds >= selected_segment.diamond_cost
+			purchase_ok = true;
+		if selected_segment.owner == player_ship
+			purchase_ok = true;
+		if purchase_ok{
 			if scr_check_module_placement(cursor_module,selected_segment){
 				// Deduct the cost
-				if selected_segment.module_cost > 0{
-					obj_player.credits -= selected_segment.module_cost
-					audio_play_sound_on(obj_shop.shop_audio_emitter,snd_purchase,0,1)
-					}
-				selected_segment.module_cost = 0
-				
+				if selected_segment.owner != player_ship {
+					if selected_segment.credit_cost > 0 or selected_segment.diamond_cost > 0{
+						player_ship.credits -= selected_segment.credit_cost
+						player_ship.diamonds -= selected_segment.diamond_cost
+						selected_segment.module.owned_by_shop = false;
+						selected_segment.module.owner = player_ship
+						selected_segment.owner = player_ship
+						audio_play_sound_on(obj_shop.shop_audio_emitter,snd_purchase,0,1)
+						}
+					//selected_segment.credit_cost = 0
+				}				
 				// Delete the modules joint
 				segment_module = selected_segment.module
 				selected_segment.module = noone
@@ -55,9 +65,12 @@ if mouse_check_button_pressed(mb_left) or gamepad_button_check_pressed(0,gp_face
 						selected_segment.module.ship_segment = selected_segment
 						selected_segment.module.phy_position_x = selected_segment.phy_position_x
 						selected_segment.module.phy_position_y = selected_segment.phy_position_y
-						selected_segment.module.joint = physics_joint_revolute_create(selected_segment, selected_segment.module,selected_segment.module.phy_position_x,selected_segment.module.phy_position_y,0, 360, 0, 30,0,1,0);
 						selected_segment.module.visible = true
 						selected_segment.module.persistent = true
+						if !selected_segment.visible // This is dumb, but it works as a way of checking if the segment is on a ship or a shop
+							scr_adjust_module_placement_shop(selected_segment.module,selected_segment)
+						else
+							selected_segment.module.joint = physics_joint_revolute_create(selected_segment, selected_segment.module,selected_segment.module.phy_position_x,selected_segment.module.phy_position_y,0, 360, 0, 30,0,1,0);
 						}
 				segment_module = noone
 	
@@ -81,7 +94,7 @@ if mouse_check_button_pressed(mb_left) or gamepad_button_check_pressed(0,gp_face
 		selected_segment = noone;
 	}
 
-if  scr_exists(cursor_module){
+if  scr_exists(cursor_module) and !object_is_ancestor(cursor_module.object_index,obj_crew_token){
 	cursor_module.visible = true
 	cursor_module.phy_position_x = x 
 	cursor_module.phy_position_y = y

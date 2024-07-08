@@ -5,7 +5,7 @@ function scr_module_modifier_damage_multiplier(argument0) {
 
 	// Modifier script
 
-	bullet_damage_multiplier += value
+	bullet_damage_multiplier *= value
 
 
 }

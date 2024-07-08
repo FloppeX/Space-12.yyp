@@ -2,6 +2,8 @@ event_inherited();
 
 module_name = "Shield"
 
+fixed_rotation = false
+
 mechanism_retracted = true;
 mechanism_extended = false;
 
@@ -19,7 +21,7 @@ shield_current_size = 0
 size_change_coefficient = 8
 
 shield_particle = part_type_create();
-part_type_sprite(shield_particle,spr_shield,0,0,0);
+part_type_sprite(shield_particle,spr_shield_new,0,0,0);
 part_type_size(shield_particle,1,1,0,0.1);
 part_type_scale(shield_particle,1,1);
 part_type_color3(shield_particle,c_white,c_orange,c_black);

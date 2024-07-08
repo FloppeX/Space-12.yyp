@@ -41,8 +41,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_shield",
-    "path":"sprites/spr_shield/spr_shield.yy",
+    "name":"spr_force_shield_2",
+    "path":"sprites/spr_force_shield_2/spr_force_shield_2.yy",
   },
   "spriteMaskId":null,
   "visible":true,

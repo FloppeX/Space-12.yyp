@@ -17,8 +17,8 @@
     "path":"folders/Objects/Modules/Engines & thrusters.yy",
   },
   "parentObjectId":{
-    "name":"obj_module",
-    "path":"objects/obj_module/obj_module.yy",
+    "name":"obj_module_device",
+    "path":"objects/obj_module_device/obj_module_device.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.0,

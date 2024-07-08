@@ -25,13 +25,15 @@ starting_range = 0
 starting_damage = 0
 starting_direction = 0
 
+
 //Sounds
 
-sound = snd_laser_loop// snd_bullet_whine // snd_tone_loop// 
-sound_priority = 1
+
+//sound = snd_laser_loop// snd_bullet_whine // snd_tone_loop// 
+sound_priority = 0.5
 projectile_audio_emitter = audio_emitter_create()
 
-audio_emitter_falloff(projectile_audio_emitter, 0, 20, 1);
-projectile_noise = audio_play_sound_on(projectile_audio_emitter,sound,1,sound_priority)
+audio_emitter_falloff(projectile_audio_emitter, 0, 200, 1);
+//projectile_noise = audio_play_sound_on(projectile_audio_emitter,sound,1,sound_priority)
 
-audio_sound_set_track_position(projectile_noise,random(audio_sound_length(sound)));
+//audio_sound_set_track_position(projectile_noise,random(audio_sound_length(sound)));

@@ -6,6 +6,7 @@ draw_scale = 1
 energy = 0
 phy_rotation = -90
 add_thrust = 0
+persistent = false
 gamepad_button[0] = false
 gamepad_button[1] = false
 gamepad_button[2] = false
@@ -70,8 +71,6 @@ for(var q = 0; q < number_of_items_per_row; q+=1;){
 	shop_segments[i].owner = id
 	shop_segments[i].visible = false
 	shop_segments[i].persistent = false
-	//module_holders[i].placement_offset_angle = 0
-	//module_holders[i].placement_offset_distance = 0
 	shop_segments[i].phy_position_x = phy_position_x + 180 + q * x_step_offset;
 	shop_segments[i].phy_position_y = phy_position_y - (0.5 * y_step_offset * (number_of_rows-1)) + p * y_step_offset;
 
@@ -98,18 +97,22 @@ for(var q = 0; q < number_of_items_per_row; q+=1;){
 		shop_segments[i].module = temp_module
 		temp_module.phy_position_x = shop_segments[i].phy_position_x
 		temp_module.phy_position_y = shop_segments[i].phy_position_y
+		
 		temp_module.phy_rotation = ( phy_rotation - temp_module.offset_angle)
-		temp_module.joint = physics_joint_revolute_create(id, temp_module,temp_module.phy_position_x,temp_module.phy_position_y,0, 360, 0, 10,3,1,0);
+		//temp_module.joint = physics_joint_revolute_create(id, temp_module,temp_module.phy_com_x,temp_module.phy_com_y,0, 360, 0, 10,3,1,0);
+		
+		scr_adjust_module_placement_shop(temp_module,shop_segments[i])
+		
 		}
 	i += 1
 	}
 	
 // Get module identities - used to check if more items can be taken...
-
+/*
 module_identities[number_of_items] = noone
 for(var i = 0; i < number_of_items; i+=1;)
 	module_identities[i] = shop_segments[i].module.id
-	
+	*/
 // Audio
 
 shop_audio_emitter = audio_emitter_create()
@@ -127,3 +130,41 @@ segment_button = instance_create_depth(x-260,y+30,-10,obj_shop_button_segment);
 
 player_target_position_x = 0.5 * room_width
 player_target_position_y = 0.5 * room_height
+
+// Randomize the structural parts and color for the shop
+
+hue = irandom(255)
+
+
+shop_structure_part = instance_create_depth(phy_position_x,phy_position_y,20,obj_shop_structure);
+shop_structure_part.shadow = false
+shop_structure_part.sprite_index = spr_shop_structure_bars
+shop_structure_part.depth = 100
+shop_structure_part.color = c_white
+
+
+shop_structure_part = instance_create_depth(phy_position_x-300,phy_position_y-250,-10,obj_shop_structure);
+//shop_structure_part = instance_create_depth(phy_position_x-250,phy_position_y-150,-10,obj_shop_structure);
+shop_structure_part = instance_create_depth(phy_position_x-200,phy_position_y-250,-10,obj_shop_structure);
+
+shop_structure_part = instance_create_depth(phy_position_x-300,phy_position_y,-10,obj_shop_structure);
+//shop_structure_part = instance_create_depth(phy_position_x-250,phy_position_y,-10,obj_shop_structure);
+shop_structure_part = instance_create_depth(phy_position_x-200,phy_position_y,-10,obj_shop_structure);
+
+shop_structure_part = instance_create_depth(phy_position_x-300,phy_position_y+150,-10,obj_shop_structure);
+//shop_structure_part = instance_create_depth(phy_position_x-250,phy_position_y+150,-10,obj_shop_structure);
+shop_structure_part = instance_create_depth(phy_position_x-200,phy_position_y+250,-10,obj_shop_structure);
+
+shop_structure_part = instance_create_depth(phy_position_x+300,phy_position_y-250,-10,obj_shop_structure);
+//shop_structure_part = instance_create_depth(phy_position_x+250,phy_position_y-150,-10,obj_shop_structure);
+shop_structure_part = instance_create_depth(phy_position_x+200,phy_position_y-250,-10,obj_shop_structure);
+
+shop_structure_part = instance_create_depth(phy_position_x+300,phy_position_y,-10,obj_shop_structure);
+//shop_structure_part = instance_create_depth(phy_position_x+250,phy_position_y,-10,obj_shop_structure);
+shop_structure_part = instance_create_depth(phy_position_x+200,phy_position_y,-10,obj_shop_structure);
+
+shop_structure_part = instance_create_depth(phy_position_x+300,phy_position_y+150,-10,obj_shop_structure);
+//shop_structure_part = instance_create_depth(phy_position_x+250,phy_position_y+150,-10,obj_shop_structure);
+shop_structure_part = instance_create_depth(phy_position_x+200,phy_position_y+150,-10,obj_shop_structure);
+
+

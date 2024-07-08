@@ -2,9 +2,8 @@ event_inherited();
 
 sprite_index = spr_asteroid_med_health
 
-pickup_objects = irandom(1)+1
+pickup_objects = 0//irandom(1)+1
 
 pickup_object_type = obj_pickup_health;
 
-if random(100) <=  global.asteroid_chance_health * 5 * global.luck
-	child_object = obj_asteroid_small_health
+child_object = obj_asteroid_small_health

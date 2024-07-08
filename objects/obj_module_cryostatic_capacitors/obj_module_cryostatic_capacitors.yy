@@ -39,8 +39,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_module_batteries_2",
-    "path":"sprites/spr_module_batteries_2/spr_module_batteries_2.yy",
+    "name":"spr_module_battery_2",
+    "path":"sprites/spr_module_battery_2/spr_module_battery_2.yy",
   },
   "spriteMaskId":null,
   "visible":true,

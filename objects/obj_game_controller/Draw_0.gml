@@ -15,6 +15,7 @@ if global.view_mode == 2{
 	}
 
 
+
 // Draw black borders
 
 if global.view_mode == 1 and global.zoom > 2160{

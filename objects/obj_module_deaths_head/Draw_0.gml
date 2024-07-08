@@ -1,3 +1,4 @@
+event_inherited();
 
 if will_affect_neighbor == true{
 	if global.game_timer mod 180 <= 120

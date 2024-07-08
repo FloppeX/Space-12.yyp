@@ -2,7 +2,7 @@ event_inherited();
 
 if activated {
 	owner.invisible = true
-	owner.alpha = 0.3
+	owner.alpha = 0.2
 	}
 else {
 	owner.invisible = false

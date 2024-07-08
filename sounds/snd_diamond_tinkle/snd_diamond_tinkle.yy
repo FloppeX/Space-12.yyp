@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_diamond_tinkle",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.587833,
+  "name":"snd_diamond_tinkle",
+  "parent":{
+    "name":"Pickup sounds",
+    "path":"folders/Sounds/Pickup sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_diamond_tinkle.wav",
+  "type":0,
+  "volume":1.0,
+}

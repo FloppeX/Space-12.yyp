@@ -16,9 +16,6 @@ draw_sprite_ext(sprite_index,-1,phy_position_x,phy_position_y,1,1,rotation,c_whi
 draw_sprite_ext(spr_sawblade_cover,-1,owner.phy_position_x,owner.phy_position_y,1,1,-owner.phy_rotation,c_white,1)
 
 
-if global.view_mode == 2{
-	draw_text(phy_position_x,phy_position_y +40,rotation_speed)
-	}
 /*
 
 

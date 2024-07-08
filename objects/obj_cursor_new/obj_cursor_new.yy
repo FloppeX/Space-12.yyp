@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_cursor_yellow",
-    "path":"sprites/spr_cursor_yellow/spr_cursor_yellow.yy",
+    "name":"spr_cursor_new",
+    "path":"sprites/spr_cursor_new/spr_cursor_new.yy",
   },
   "spriteMaskId":null,
   "visible":true,

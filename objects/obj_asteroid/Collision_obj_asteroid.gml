@@ -1,4 +1,4 @@
-if age >= 40 and other.age > 40{
+if timer >= 40 and other.timer > 40{
 collision_victim = other
 collided = true
 collision_timer = collision_timer_length

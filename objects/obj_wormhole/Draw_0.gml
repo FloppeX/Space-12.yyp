@@ -9,10 +9,4 @@ for(var i = wormhole_segments; i > 0; i-=1;){
 	}
 color = make_color_hsv(temp_hue,255,255)	
 
-if global.view_mode == 2{
-	draw_set_font(global.font_small_text)
-	draw_set_color(c_white)
-	draw_text(x,y+200,depth)
-	}
-	
 //draw_line(0,0,phy_position_x,phy_position_y)

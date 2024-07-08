@@ -17,8 +17,8 @@ function scr_create_random_module(argument0) {
 		probability_step += array[i,3]
 		if random_number <= probability_step{
 			var temp_module = instance_create_depth(0,0,-10,array[i,0]);
-			temp_module.cost = array[i,2]
-			temp_module.cost = round(0.75 * temp_module.cost + random(0.5)*temp_module.cost)
+			temp_module.credit_cost = array[i,2]
+			temp_module.credit_cost = round(0.75 * temp_module.credit_cost + random(0.5)*temp_module.credit_cost)
 			return temp_module
 			}
 		} 

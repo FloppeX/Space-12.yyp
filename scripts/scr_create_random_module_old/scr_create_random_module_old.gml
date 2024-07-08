@@ -44,18 +44,18 @@ function scr_create_random_module_old() {
 			if p <= 59 and p >= 30
 				with (temp_module){
 					scr_add_random_modifier_common();
-					cost += 1
+					credit_cost += 1
 					}
 			if p <= 29 and p >= 10
 				with (temp_module){
 					scr_add_random_modifier_uncommon();
-					cost += 2
+					credit_cost += 2
 					}
 			var p = irandom(99)
 			if p <= 9 and p >= 0
 				with (temp_module){
 					scr_add_random_modifier_rare();
-					cost += 4
+					credit_cost += 4
 					}
 				
 		// Chance for negative modifier
@@ -64,7 +64,7 @@ function scr_create_random_module_old() {
 			if p <= 29 and p >= 0
 				with (temp_module){
 					scr_add_random_modifier_negative();
-					cost -= 2
+					credit_cost -= 2
 					}
 			}
 			}

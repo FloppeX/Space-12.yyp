@@ -6,84 +6,92 @@ boss_name = "Imperial Enforcer"
 
 // Ship stats
 
-max_rotation_speed = 120;
-max_speed_base = 5
+max_rotation_speed = 60;
+max_speed_base = 2.8
+rotation_force = 200
 
-rotation_force = 900
+// Enemies to target 
 
-pickup_objects_credits = 8 + irandom(5)
-pickup_objects_health = 6 + irandom(2)
-pickup_objects_particles = 6 + irandom(2)
+target_objects[0] = obj_player
+target_objects[1] = obj_enemy_modular_team_2
 
 ///
 // Segments
 
-var number_of_segments = 10 + global.difficulty_level
+var number_of_segments = 8 + global.temp_number_of_segments
+var segment_distance = 24
 
-max_health_base = 10 * number_of_segments
-max_health = (max_health_base * max_health_multiplier) + max_health_bonus
-obj_health = max_health
+scr_create_ship_segments(number_of_segments,segment_distance,obj_ship_segment_enemy)
 
-scr_create_ship_segments(number_of_segments,24,obj_ship_segment_enemy)
+scr_ship_update_segments(id,segment_distance)
 
-
-repeat(round(number_of_segments/4))
+repeat(round(number_of_segments/3))
 	scr_place_engine_enemy(obj_module_engine_enemy)
 	
 var module_placed = false
-var temp_module = instance_create_depth(0,0,-10,obj_module_enemy_cockpit_1);
-repeat(100){
-	var i = irandom(array_length_1d(ship_segment)-1)
-	if scr_check_module_placement(temp_module,ship_segment[i]) and ship_segment[i].module == noone and !module_placed{
-		ship_segment[i].module = temp_module
-		module_placed = true
+	var temp_module = instance_create_depth(0,0,-10,obj_module_enemy_cockpit_1);
+	repeat(100)
+		if module_placed == false{
+		var i = irandom(array_length_1d(ship_segment)-1)
+		if scr_check_module_placement(temp_module,ship_segment[i]) and ship_segment[i].module == noone and !module_placed{
+			ship_segment[i].module = temp_module
+			module_placed = true
+			}
+		}
+	if module_placed == false
+		with(temp_module)
+			instance_destroy();
+
+repeat(10){
+	var module_placed = false	
+	repeat(10){
+		if module_placed == false{
+			var temp_module = scr_create_random_enemy_weapon();
+			repeat(10){
+				var i = irandom(array_length_1d(ship_segment)-1)
+				if scr_check_module_placement(temp_module,ship_segment[i]) and ship_segment[i].module == noone and !module_placed{
+					ship_segment[i].module = temp_module
+					module_placed = true
+					}
+				}
+			if module_placed == false
+				with(temp_module)
+					instance_destroy();
 		}
 	}
 		
-repeat(40){
-	var module_placed = false
-	var temp_module = instance_create_depth(0,0,-10,obj_module_sawblade_enemy);
-	temp_module.max_arm_length = 100
-	temp_module.offset_angle = irandom(3) * 90;
-	if temp_module.offset_angle == 0
-		temp_module.placement_req_above = noone
-	if temp_module.offset_angle == 90
-		temp_module.placement_req_right = noone
-	if temp_module.offset_angle == 180
-		temp_module.placement_req_below = noone
-	if temp_module.offset_angle == 270
-		temp_module.placement_req_left = noone
+	var module_placed = false	
 	repeat(10){
-		var i = irandom(array_length_1d(ship_segment)-1)
-		if scr_check_module_placement(temp_module,ship_segment[i]) and ship_segment[i].module == noone and !module_placed{
-			ship_segment[i].module = temp_module
-			module_placed = true
-			}
+		if module_placed == false{
+			var temp_module = scr_create_random_enemy_weapon();
+			repeat(10){
+				var i = irandom(array_length_1d(ship_segment)-1)
+				if scr_check_module_placement(temp_module,ship_segment[i]) and ship_segment[i].module == noone and !module_placed{
+					ship_segment[i].module = temp_module
+					module_placed = true
+					}
+				}
+			if module_placed == false
+				with(temp_module)
+					instance_destroy();
 		}
-	
-	if module_placed == false
-		with(temp_module)
-			instance_destroy();
 	}
-	
-repeat(40){	
-	var module_placed = false
-	var temp_module = scr_create_random_enemy_device();
-	repeat(100){
-		var i = irandom(array_length_1d(ship_segment)-1)
-		if scr_check_module_placement(temp_module,ship_segment[i]) and ship_segment[i].module == noone and !module_placed{
-			ship_segment[i].module = temp_module
-			module_placed = true
-			}
-		}
-	if module_placed == false
-		with(temp_module)
-			instance_destroy();
 }
 	
+	/*
+var segment_placed = false
+temp_module = instance_create_depth(0,0,-10,obj_module_engine_enemy);
+repeat(100){
+	var i = irandom(array_length_1d(ship_segment)-1)
+	if scr_check_module_placement(temp_module,ship_segment[i]) and ship_segment[i].module == noone and !segment_placed{
+		ship_segment[i].module = temp_module
+		segment_placed = true
+		}
+	}
+	*/
 	
-for(var i = 0; i < array_length_1d(ship_segment); i+=1;)
-	if scr_exists(ship_segment[i]){
+
+for(var i = 0; i < array_length_1d(ship_segment); i+=1;){
 			ship_segment[i].owner = id
 			ship_segment[i].persistent = false
 			ship_segment[i].visible = true
@@ -99,7 +107,14 @@ for(var i = 0; i < array_length_1d(ship_segment); i+=1;)
 				}
 			}
 
+
 gun_bullet_speed = 8
+
+// Health
+
+max_health_base = 8 * number_of_segments
+max_health = (max_health_base * max_health_multiplier) + max_health_bonus
+obj_health = max_health
 
 //Sounds
 

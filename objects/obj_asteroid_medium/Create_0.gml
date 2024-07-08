@@ -14,7 +14,7 @@ if i == 1
 child_object = obj_asteroid_small;
 death_effect_size = 1;
 
-
+/*
 var random_number = irandom(99)
 if random_number <= global.asteroid_chance_credit
 	child_object =  obj_asteroid_small_credit

@@ -1,0 +1,597 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ActiveConfig="Default" Platform="Windows" Runtime="VM" Device="Default">
+	<Desktop x="0" y="56" width="3840" height="2104" id="19" title="Space 12 - GameMaker" windowState="Maximized">
+		<Workspaces>
+			<Workspace active="False" chain="False" title="scr_add_ship_segment" localise_title="DocumentWindow_Title_Script" localise_arguments="[&#xD;&#xA;    &quot;scr_add_ship_segment&quot;&#xD;&#xA;]" workspace_offset="[0, 0]" workspace_scale="1" />
+			<Workspace active="True" chain="True" title="Workspace 1" localise_title="Workspace_TabTitle" localise_arguments="[&#xD;&#xA;    &quot;1&quot;&#xD;&#xA;]" workspace_offset="[6510, 373942]" workspace_scale="1">
+				<Module Command="open_sprite_editor">
+					<SpriteEditor SpriteEditor_Id="scr_crew_hot_shot_pilot">
+						<WorkspaceChain left="2613dpi_px" top="122986.336dpi_px" />
+					</SpriteEditor>
+				</Module>
+				<Module Command="open_sprite_editor">
+					<SpriteEditor SpriteEditor_Id="spr_star_twinkle">
+						<WorkspaceChain left="2613dpi_px" top="125534.336dpi_px" />
+					</SpriteEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_ship" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2585.4446dpi_px" top="135080.8dpi_px" />
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_sprite_editor">
+					<SpriteEditor SpriteEditor_Id="spr_pickup_particles">
+						<WorkspaceChain left="2604.111dpi_px" top="138638.4dpi_px" />
+					</SpriteEditor>
+				</Module>
+				<Module Command="open_sprite_editor">
+					<SpriteEditor SpriteEditor_Id="spr_asteroid_med_2">
+						<WorkspaceChain left="2604.111dpi_px" top="143146.4dpi_px" />
+					</SpriteEditor>
+				</Module>
+				<Module Command="DocumentWindow_RestoreLayout" WorkspaceOwner="true">
+					<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="600dpi_px">
+						<Script column="0" file="${project_dir}\scripts\scr_add_random_modifiers\scr_add_random_modifiers.gml" resource="scr_add_random_modifiers" overridden_title="False" view_readonly="False" />
+						<WorkspaceChain left="2613dpi_px" top="121724.12dpi_px" />
+					</DocumentWindow>
+				</Module>
+				<Module Command="DocumentWindow_RestoreLayout" WorkspaceOwner="true">
+					<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="600dpi_px">
+						<Script column="0" file="${project_dir}\scripts\scr_create_array_player_crew\scr_create_array_player_crew.gml" resource="scr_create_array_player_crew" overridden_title="False" view_readonly="False" />
+						<WorkspaceChain left="2613dpi_px" top="122355.23dpi_px" />
+					</DocumentWindow>
+				</Module>
+				<Module Command="DocumentWindow_RestoreLayout" WorkspaceOwner="true">
+					<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="600dpi_px">
+						<Script column="0" file="${project_dir}\scripts\scr_diamond_twinkle\scr_diamond_twinkle.gml" resource="scr_diamond_twinkle" overridden_title="False" view_readonly="False" />
+						<WorkspaceChain left="2585.4446dpi_px" top="134468.8dpi_px" />
+					</DocumentWindow>
+				</Module>
+				<Module Command="DocumentWindow_RestoreLayout" WorkspaceOwner="true">
+					<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="534.4dpi_px">
+						<Script column="0" file="${project_dir}\scripts\scr_draw_vision_cone\scr_draw_vision_cone.gml" resource="scr_draw_vision_cone" overridden_title="False" view_readonly="False" />
+						<WorkspaceChain left="2604.111dpi_px" top="144354.4dpi_px" />
+					</DocumentWindow>
+				</Module>
+				<Module Command="DocumentWindow_RestoreLayout" WorkspaceOwner="true">
+					<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="410.80002dpi_px">
+						<Script column="0" file="${project_dir}\scripts\scr_wrap_room\scr_wrap_room.gml" resource="scr_wrap_room" overridden_title="False" view_readonly="False" />
+						<WorkspaceChain left="2613dpi_px" top="126164.336dpi_px" />
+					</DocumentWindow>
+				</Module>
+				<Module Command="DocumentWindow_RestoreLayout" WorkspaceOwner="true">
+					<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="410.80002dpi_px">
+						<Script column="0" file="${project_dir}\scripts\scr_wrap_room_player\scr_wrap_room_player.gml" resource="scr_wrap_room_player" overridden_title="False" view_readonly="False" />
+						<WorkspaceChain left="2613dpi_px" top="133248.8dpi_px" />
+					</DocumentWindow>
+				</Module>
+				<Module Command="DocumentWindow_RestoreLayout" WorkspaceOwner="true">
+					<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="600dpi_px">
+						<Script column="0" file="${project_dir}\scripts\scr_create_explosion_big\scr_create_explosion_big.gml" resource="scr_create_explosion_big" overridden_title="False" view_readonly="False" />
+						<WorkspaceChain left="2604.111dpi_px" top="156656dpi_px" />
+					</DocumentWindow>
+				</Module>
+				<Module Command="DocumentWindow_RestoreLayout" WorkspaceOwner="true">
+					<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="600dpi_px">
+						<Script column="0" file="${project_dir}\scripts\scr_create_explosion\scr_create_explosion.gml" resource="scr_create_explosion" overridden_title="False" view_readonly="False" />
+						<WorkspaceChain left="2604.111dpi_px" top="156028dpi_px" />
+					</DocumentWindow>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_crew_new_slurpy_the_dog" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2613dpi_px" top="120439.664dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="600dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_crew_new_slurpy_the_dog\Create_0.gml" resource="obj_crew_new_slurpy_the_dog" subResource="0_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_crew_new_slurpy_the_dog\Step_1.gml" resource="obj_crew_new_slurpy_the_dog" subResource="3_1" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_crew_new_slurpy_the_dog\Step_0.gml" resource="obj_crew_new_slurpy_the_dog" subResource="3_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_crew_token_slurpy_the_dog" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2613dpi_px" top="121081.89dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="600dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_crew_token_slurpy_the_dog\Create_0.gml" resource="obj_crew_token_slurpy_the_dog" subResource="0_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_crew_token_hot_shot_pilot" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2613dpi_px" top="123619.23dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="600dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_crew_token_hot_shot_pilot\Create_0.gml" resource="obj_crew_token_hot_shot_pilot" subResource="0_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_crew_new_hot_shot_pilot" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2613dpi_px" top="124261.45dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="600dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_crew_new_hot_shot_pilot\Create_0.gml" resource="obj_crew_new_hot_shot_pilot" subResource="0_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_crew_new_hot_shot_pilot\Step_1.gml" resource="obj_crew_new_hot_shot_pilot" subResource="3_1" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_parent_physical" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2613dpi_px" top="131360.8dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="600dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_parent_physical\Create_0.gml" resource="obj_parent_physical" subResource="0_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_parent_physical\Step_0.gml" resource="obj_parent_physical" subResource="3_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_parent_physical\Collision_obj_parent_physical.gml" resource="obj_parent_physical" subResource="4_0_obj_parent_physical" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_pickup_credit" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2613dpi_px" top="127880.336dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="1" isActive="False" w="900dpi_px" h="600dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_pickup\Create_0.gml" resource="obj_pickup" subResource="0_0" overridden_title="False" view_readonly="True" />
+							<Script column="0" file="${project_dir}\objects\obj_parent_physical\Collision_obj_parent_physical.gml" resource="obj_parent_physical" subResource="4_0_obj_parent_physical" overridden_title="False" view_readonly="True" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_pickup" eventsOpen="true" parentOpen="true" physicsOpen="true" physicsEditorOpen="true" propertiesOpen="false" activeWindow="properties">
+						<WorkspaceChain left="2613dpi_px" top="130196.805dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="3" isActive="False" w="900dpi_px" h="600dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_pickup\Create_0.gml" resource="obj_pickup" subResource="0_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_pickup\Step_0.gml" resource="obj_pickup" subResource="3_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_pickup\Draw_0.gml" resource="obj_pickup" subResource="8_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_parent_physical\Collision_obj_parent_physical.gml" resource="obj_parent_physical" subResource="4_0_obj_parent_physical" overridden_title="False" view_readonly="True" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_pickup_health" eventsOpen="true" parentOpen="true" physicsOpen="true" physicsEditorOpen="true" propertiesOpen="false" activeWindow="properties">
+						<WorkspaceChain left="2613dpi_px" top="128504.77dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="533.60004dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_pickup_health\Step_0.gml" resource="obj_pickup_health" subResource="3_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_pickup_particles" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2613dpi_px" top="129602.805dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="533.60004dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_pickup_particles\Step_0.gml" resource="obj_pickup_particles" subResource="3_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_wormhole_traveller_ship" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2604.111dpi_px" top="145494.8dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="533.60004dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_wormhole_traveller_ship\Draw_0.gml" resource="obj_wormhole_traveller_ship" subResource="8_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_shop_button" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2604.111dpi_px" top="146088.8dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="533.60004dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_shop_button\Draw_0.gml" resource="obj_shop_button" subResource="8_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_projectile" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2604.111dpi_px" top="147276.8dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="533.60004dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_projectile\Draw_0.gml" resource="obj_projectile" subResource="8_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_module_sawblade" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2604.111dpi_px" top="148464.8dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="533.60004dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_module_sawblade\Draw_0.gml" resource="obj_module_sawblade" subResource="8_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_game_controller" eventsOpen="true" parentOpen="false" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="parent">
+						<WorkspaceChain left="2604.111dpi_px" top="149058.8dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="1" isActive="False" w="900dpi_px" h="533.60004dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_game_controller\Draw_0.gml" resource="obj_game_controller" subResource="8_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_game_controller\Step_0.gml" resource="obj_game_controller" subResource="3_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_cursor_new" eventsOpen="true" parentOpen="false" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="parent">
+						<WorkspaceChain left="2604.111dpi_px" top="150240.4dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="533.60004dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_cursor_new\Draw_0.gml" resource="obj_cursor_new" subResource="8_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_parent_environment" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2604.111dpi_px" top="135674.8dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="600dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_parent_physical\Create_0.gml" resource="obj_parent_physical" subResource="0_0" overridden_title="False" view_readonly="True" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_asteroid_big_particles" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2613dpi_px" top="127255.89dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="600dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_asteroid_big_particles\Create_0.gml" resource="obj_asteroid_big_particles" subResource="0_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_asteroid_big_health" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2604.111dpi_px" top="136298.8dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="533.60004dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_asteroid_big_health\Create_0.gml" resource="obj_asteroid_big_health" subResource="0_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_asteroid_big_credit" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2604.111dpi_px" top="139252.4dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="533.60004dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_asteroid_big_credit\Create_0.gml" resource="obj_asteroid_big_credit" subResource="0_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_asteroid_medium_credit" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2604.111dpi_px" top="141958.4dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="533.60004dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_asteroid_medium_credit\Create_0.gml" resource="obj_asteroid_medium_credit" subResource="0_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_asteroid_medium_health" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2604.111dpi_px" top="141364.4dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="533.60004dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_asteroid_medium_health\Create_0.gml" resource="obj_asteroid_medium_health" subResource="0_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_asteroid_medium_particles" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2613dpi_px" top="131984.8dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="600dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_asteroid_medium_particles\Create_0.gml" resource="obj_asteroid_medium_particles" subResource="0_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_asteroid_small_credit" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2604.111dpi_px" top="142552.4dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="533.60004dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_asteroid_small_credit\Create_0.gml" resource="obj_asteroid_small_credit" subResource="0_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_asteroid_small_health" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2604.111dpi_px" top="143760.4dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="464.80002dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_asteroid_small_health\Create_0.gml" resource="obj_asteroid_small_health" subResource="0_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_asteroid_small_particles" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2613dpi_px" top="132608.8dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="600dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_asteroid_small_particles\Create_0.gml" resource="obj_asteroid_small_particles" subResource="0_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_wormhole_level_end_new" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2604.111dpi_px" top="151392dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="1" isActive="False" w="900dpi_px" h="600dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_wormhole_level_end_new\Create_0.gml" resource="obj_wormhole_level_end_new" subResource="0_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_wormhole_level_end_new\Step_0.gml" resource="obj_wormhole_level_end_new" subResource="3_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_asteroid_medium" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2604.111dpi_px" top="139846.4dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="533.60004dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_asteroid_medium\Step_0.gml" resource="obj_asteroid_medium" subResource="3_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_asteroid_medium\Create_0.gml" resource="obj_asteroid_medium" subResource="0_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_asteroid_small" eventsOpen="true" parentOpen="true" physicsOpen="true" physicsEditorOpen="false" propertiesOpen="false" activeWindow="properties">
+						<WorkspaceChain left="2604.111dpi_px" top="140440.4dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="533.60004dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_asteroid_small\Step_0.gml" resource="obj_asteroid_small" subResource="3_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_asteroid_small\Create_0.gml" resource="obj_asteroid_small" subResource="0_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_asteroid_big" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2604.111dpi_px" top="136892.8dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="1" isActive="False" w="900dpi_px" h="533.60004dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_asteroid_big\Create_0.gml" resource="obj_asteroid_big" subResource="0_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_asteroid_big\Step_0.gml" resource="obj_asteroid_big" subResource="3_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_level_controller_space" eventsOpen="true" parentOpen="false" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="parent">
+						<WorkspaceChain left="2604.111dpi_px" top="138080.8dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="1" isActive="False" w="900dpi_px" h="533.60004dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_level_controller_space\Create_0.gml" resource="obj_level_controller_space" subResource="0_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_level_controller_space\Step_0.gml" resource="obj_level_controller_space" subResource="3_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_level_controller_space\Draw_64.gml" resource="obj_level_controller_space" subResource="8_64" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_module_engine" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2604.111dpi_px" top="152018dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="600dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_module_engine\Step_0.gml" resource="obj_module_engine" subResource="3_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_module" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2604.111dpi_px" top="147870.8dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="1" isActive="False" w="900dpi_px" h="533.60004dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_module\Draw_0.gml" resource="obj_module" subResource="8_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_module\Step_0.gml" resource="obj_module" subResource="3_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_ship_segment" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2604.111dpi_px" top="152658dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="3" isActive="False" w="900dpi_px" h="600dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_ship_segment\Step_0.gml" resource="obj_ship_segment" subResource="3_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_ship_segment\Step_1.gml" resource="obj_ship_segment" subResource="3_1" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_ship_segment\Step_2.gml" resource="obj_ship_segment" subResource="3_2" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_ship_segment\Draw_0.gml" resource="obj_ship_segment" subResource="8_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_wormhole" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2604.111dpi_px" top="144900.8dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="1" isActive="False" w="900dpi_px" h="533.60004dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_wormhole\Draw_0.gml" resource="obj_wormhole" subResource="8_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_wormhole\Step_0.gml" resource="obj_wormhole" subResource="3_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_wormhole_traveller" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2604.111dpi_px" top="153298dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="410dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_wormhole_traveller\Step_0.gml" resource="obj_wormhole_traveller" subResource="3_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_view_object" eventsOpen="true" parentOpen="false" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="parent">
+						<WorkspaceChain left="2604.111dpi_px" top="153908dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="410dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_view_object\Step_0.gml" resource="obj_view_object" subResource="3_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_sawblade" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2604.111dpi_px" top="146682.8dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="1" isActive="False" w="900dpi_px" h="533.60004dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_sawblade\Draw_0.gml" resource="obj_sawblade" subResource="8_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_sawblade\Step_0.gml" resource="obj_sawblade" subResource="3_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_debris" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2604.111dpi_px" top="154968dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="410dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_debris\Step_0.gml" resource="obj_debris" subResource="3_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_camera" eventsOpen="true" parentOpen="false" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="parent">
+						<WorkspaceChain left="2604.111dpi_px" top="155578dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="410dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_camera\Step_0.gml" resource="obj_camera" subResource="3_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_bullet" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2604.111dpi_px" top="150798dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="1010.4dpi_px" h="533.60004dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_bullet\Draw_0.gml" resource="obj_bullet" subResource="8_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_bullet\Step_0.gml" resource="obj_bullet" subResource="3_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_explosion" eventsOpen="true" parentOpen="false" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="parent">
+						<WorkspaceChain left="2604.111dpi_px" top="157284dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="600dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_explosion\Step_0.gml" resource="obj_explosion" subResource="3_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_explosion\Create_0.gml" resource="obj_explosion" subResource="0_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_pickup_diamond" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2613dpi_px" top="126631.45dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="2" isActive="False" w="1164.8dpi_px" h="600dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_pickup_diamond\Draw_0.gml" resource="obj_pickup_diamond" subResource="8_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_pickup_diamond\Create_0.gml" resource="obj_pickup_diamond" subResource="0_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_pickup_diamond\Step_0.gml" resource="obj_pickup_diamond" subResource="3_0" overridden_title="False" view_readonly="False" />
+							<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="534.4dpi_px">
+								<Script column="0" file="${project_dir}\scripts\scr_diamond_twinkle\scr_diamond_twinkle.gml" resource="scr_diamond_twinkle" overridden_title="False" view_readonly="False" />
+							</DocumentWindow>
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_asteroid" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2613dpi_px" top="133844.8dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="1" isActive="False" w="900dpi_px" h="600dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_asteroid\Create_0.gml" resource="obj_asteroid" subResource="0_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_asteroid\Step_0.gml" resource="obj_asteroid" subResource="3_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_asteroid\Draw_0.gml" resource="obj_asteroid" subResource="8_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_asteroid\Collision_obj_asteroid.gml" resource="obj_asteroid" subResource="4_0_obj_asteroid" overridden_title="False" view_readonly="False" />
+							<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="1355.2001dpi_px" h="600dpi_px">
+								<Script column="0" file="${project_dir}\scripts\scr_diamond_twinkle\scr_diamond_twinkle.gml" resource="scr_diamond_twinkle" overridden_title="False" view_readonly="False" />
+							</DocumentWindow>
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_enemy_ship" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2613dpi_px" top="124903.664dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="1" isActive="False" w="900dpi_px" h="587.2dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_enemy_ship\Step_1.gml" resource="obj_enemy_ship" subResource="3_1" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_enemy_ship\Create_0.gml" resource="obj_enemy_ship" subResource="0_0" overridden_title="False" view_readonly="False" />
+							<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="588.4dpi_px">
+								<Script column="0" file="${project_dir}\scripts\scr_wrap_room_ship_new\scr_wrap_room_ship_new.gml" resource="scr_wrap_room_ship_new" overridden_title="False" view_readonly="False" />
+							</DocumentWindow>
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_rocket" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2604.111dpi_px" top="154358dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="410dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_rocket\Step_0.gml" resource="obj_rocket" subResource="3_0" overridden_title="False" view_readonly="False" />
+							<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="410.80002dpi_px">
+								<Script column="0" file="${project_dir}\scripts\scr_wrap_room\scr_wrap_room.gml" resource="scr_wrap_room" overridden_title="False" view_readonly="False" />
+							</DocumentWindow>
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_player" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2604.111dpi_px" top="137486.8dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="1" isActive="False" w="1145.6dpi_px" h="533.60004dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_player\Create_0.gml" resource="obj_player" subResource="0_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_player\Step_0.gml" resource="obj_player" subResource="3_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_player\Draw_64.gml" resource="obj_player" subResource="8_64" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_player\Draw_0.gml" resource="obj_player" subResource="8_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_player\Step_1.gml" resource="obj_player" subResource="3_1" overridden_title="False" view_readonly="False" />
+							<DocumentWindow columns="1" fullscreen="False" activeTab="2" isActive="False" w="900dpi_px" h="534.4dpi_px">
+								<Script column="0" file="${project_dir}\scripts\scr_place_weapon_player\scr_place_weapon_player.gml" resource="scr_place_weapon_player" overridden_title="False" view_readonly="False" />
+								<Script column="0" file="${project_dir}\scripts\scr_wrap_room_player\scr_wrap_room_player.gml" resource="scr_wrap_room_player" overridden_title="False" view_readonly="False" />
+								<Script column="0" file="${project_dir}\scripts\scr_explode_object_new_new\scr_explode_object_new_new.gml" resource="scr_explode_object_new_new" overridden_title="False" view_readonly="False" />
+								<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="534.4dpi_px">
+									<Script column="0" file="${project_dir}\scripts\scr_create_random_starting_gun\scr_create_random_starting_gun.gml" resource="scr_create_random_starting_gun" overridden_title="False" view_readonly="False" />
+								</DocumentWindow>
+							</DocumentWindow>
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj_explosive_barrel" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2604.111dpi_px" top="149616.4dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="1" isActive="False" w="900dpi_px" h="533.60004dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj_explosive_barrel\Draw_0.gml" resource="obj_explosive_barrel" subResource="8_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj_explosive_barrel\Step_0.gml" resource="obj_explosive_barrel" subResource="3_0" overridden_title="False" view_readonly="False" />
+							<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="600dpi_px">
+								<Script column="0" file="${project_dir}\scripts\scr_create_explosion_medium\scr_create_explosion_medium.gml" resource="scr_create_explosion_medium" overridden_title="False" view_readonly="False" />
+								<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="600dpi_px">
+									<Script column="0" file="${project_dir}\scripts\scr_create_explosion\scr_create_explosion.gml" resource="scr_create_explosion" overridden_title="False" view_readonly="False" />
+								</DocumentWindow>
+							</DocumentWindow>
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+			</Workspace>
+			<Workspace active="False" chain="False" title="spr_generic_module_22" localise_title="" workspace_offset="[0, 0]" workspace_scale="1">
+				<Module Command="open_image_editor" WorkspaceOwner="true">
+					<ImageEditor id="spr_generic_module_22" frame="0" />
+				</Module>
+			</Workspace>
+			<Workspace active="False" chain="False" title="obj_menu: Events" localise_title="DocumentWindow_Title_ObjectMultipleEvents" localise_arguments="[&#xD;&#xA;    &quot;obj_menu&quot;&#xD;&#xA;]" workspace_offset="[0, 0]" workspace_scale="1">
+				<Module Command="DocumentWindow_RestoreLayout" WorkspaceOwner="true">
+					<DocumentWindow columns="1" fullscreen="True" activeTab="1" isActive="False">
+						<Script column="0" file="${project_dir}\objects\obj_menu\Create_0.gml" resource="obj_menu" subResource="0_0" overridden_title="False" view_readonly="False" />
+						<Script column="0" file="${project_dir}\objects\obj_menu\Draw_64.gml" resource="obj_menu" subResource="8_64" overridden_title="False" view_readonly="False" />
+					</DocumentWindow>
+				</Module>
+			</Workspace>
+			<Workspace active="False" chain="False" title="rm_space" localise_title="" workspace_offset="[0, 0]" workspace_scale="1">
+				<Module Command="open_room_editor" WorkspaceOwner="true">
+					<Room id="rm_space">
+						<RoomEditArea>
+							<PanArea zoom="0.26487428" pan="[-3316.396, -407]" />
+							<Properties />
+							<Selected>
+								<Layer GUID="instance_layer" />
+							</Selected>
+						</RoomEditArea>
+					</Room>
+				</Module>
+			</Workspace>
+			<Workspace active="False" chain="False" title="spr_pickup_particles" localise_title="" workspace_offset="[0, 0]" workspace_scale="1">
+				<Module Command="open_image_editor" WorkspaceOwner="true">
+					<ImageEditor id="spr_pickup_particles" frame="0" />
+				</Module>
+			</Workspace>
+		</Workspaces>
+		<Dock state="Expanded" type="eLeft" restore_size="290.4dpi_px" active_tab="0">
+			<DockTab localise_title="AssetBrowser_Title" cell_sizes="[499]" layout_id="dock_tab_1" layout_guid="beb4e57d-2cf7-4060-ba04-c03af1a413d6">
+				<Module Command="open_asset_browser">
+					<AssetBrowser sort="AtoZ" foldersFirst="True" zoom="100">
+						<Window left="-318.25px" right="" top="810.625px" bottom="" width="370dpi_px" height="463dpi_px" flags="Default" title="Asset Browser" localise_title="AssetBrowser_Title" />
+					</AssetBrowser>
+				</Module>
+			</DockTab>
+		</Dock>
+		<Dock state="Expanded" type="eBottom" restore_size="60dpi_px" active_tab="5">
+			<DockTab localise_title="OutputPanel_Output" cell_sizes="[1000]" layout_id="dock_tab_1" layout_guid="98b2825a-766c-4fc1-b486-9a522edcaabe">
+				<Module Command="open_output_panel">
+					<Window left="0px" right="" top="0px" bottom="" width="900px" height="240px" flags="Default" title="Output" localise_title="OutputPanel_Title" />
+				</Module>
+			</DockTab>
+			<DockTab localise_title="OutputPanel_SearchResults" cell_sizes="[1000]" layout_id="dock_tab_2" layout_guid="00bbfe02-adcb-4f00-b347-116d27ad530c">
+				<Module Command="open_search_output_panel">
+					<Window left="0px" right="" top="0px" bottom="" width="900px" height="240px" flags="Default" title="Search Results" localise_title="OutputPanel_SearchResults" />
+				</Module>
+			</DockTab>
+			<DockTab localise_title="OutputPanel_SourceControl" cell_sizes="[1000]" layout_id="dock_tab_3" layout_guid="41af0191-3d2a-48c3-96f8-79c259ccbeec">
+				<Module Command="open_sc_output_panel">
+					<Window left="0px" right="" top="0px" bottom="" width="900px" height="240px" flags="Default" title="Source Control" localise_title="OutputPanel_SourceControl" />
+				</Module>
+			</DockTab>
+			<DockTab localise_title="Breakpoints" cell_sizes="[1000]" layout_id="dock_tab_4" layout_guid="57b31ed1-c43d-4013-b75d-c906659b5cdb">
+				<Module Command="open_breakpoint_mgr">
+					<Window left="0px" right="" top="0px" bottom="" width="900px" height="240px" flags="Default" title="Breakpoints" localise_title="Breakpoints" />
+				</Module>
+			</DockTab>
+			<DockTab localise_title="CompileErrors" cell_sizes="[1000]" layout_id="dock_tab_5" layout_guid="d385dfee-46a9-4482-9984-cf39e6ce22b2">
+				<Module Command="show_compile_errors">
+					<Window left="0px" right="" top="0px" bottom="" width="900px" height="240px" flags="Default" title="Compile Errors" localise_title="CompileErrors" />
+				</Module>
+			</DockTab>
+			<DockTab localise_title="Feather_LintMessages_Title" cell_sizes="[1000]" layout_id="Diagnostics" layout_guid="13f3a856-20cf-4df7-bf40-384595430c96">
+				<Module Command="feather_lint_messages_initialized">
+					<Window left="" right="" top="" bottom="" width="800px" height="600px" flags="Default" title="Feather Messages" localise_title="Feather_LintMessages_Title" />
+				</Module>
+			</DockTab>
+		</Dock>
+	</Desktop>
+	<Modules>
+		<YoYoStudio.Plugins.RoomEditor.RoomEditorModule>
+			<RoomEditor />
+		</YoYoStudio.Plugins.RoomEditor.RoomEditorModule>
+	</Modules>
+</Project>

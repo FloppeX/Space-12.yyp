@@ -1,17 +1,21 @@
 function scr_create_random_crew() {
-var temp_crew = noone
-var i = irandom(array_length(global.array_player_crew)-1)
+	temp_crew = noone
 
-temp_crew = instance_create_depth(0,0,-10,global.array_player_crew[i,0]);
-temp_crew.cost = global.array_player_crew[i,1]
+	if array_length(global.array_player_crew) >= 1{
+		temp_crew = instance_create_depth(0,0,-10,array_shift(global.array_player_crew));
+		return temp_crew
+	}
+	else 
+		return noone
+}
+
 /*
 global.array_player_crew[i,0] = noone
 for(var p = array_length(global.array_player_crew)-1;p >= 0;p -= 1)
 	if global.array_player_crew[p,0] == noone
 		array_delete(global.array_player_crew,p,1)
 */
-return temp_crew
-}
+
 	/*
 	
 	var h = irandom(10)

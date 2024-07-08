@@ -40,8 +40,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_generic_module_6",
-    "path":"sprites/spr_generic_module_6/spr_generic_module_6.yy",
+    "name":"spr_module_deaths_head",
+    "path":"sprites/spr_module_deaths_head/spr_module_deaths_head.yy",
   },
   "spriteMaskId":null,
   "visible":true,

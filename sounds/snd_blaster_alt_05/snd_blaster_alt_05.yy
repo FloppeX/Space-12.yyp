@@ -2,14 +2,14 @@
   "$GMSound":"",
   "%Name":"snd_blaster_alt_05",
   "audioGroupId":{
-    "name":"sound_effects",
-    "path":"audiogroups/sound_effects",
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":0.65,
   "name":"snd_blaster_alt_05",
   "parent":{
     "name":"Weapon sounds",

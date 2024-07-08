@@ -1,4 +1,4 @@
-if age >= 40
+if timer >= 40
 	if other.owner.hit_invulnerable_timer <= 0{
 		collision_victim = other
 		collided = true

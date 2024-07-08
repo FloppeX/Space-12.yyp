@@ -44,7 +44,7 @@ audio_emitter_velocity(module_audio_emitter, phy_speed_x, phy_speed_y, 0);
 
 // Find mirror positions
 
-scr_find_mirror_positions();
+// scr_find_mirror_positions();
 
 // Wrap movement
 

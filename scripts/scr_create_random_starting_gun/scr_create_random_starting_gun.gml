@@ -27,7 +27,10 @@ function scr_create_random_starting_gun() {
 	//with(temp_module)
 	//	scr_add_modifier_new(scr_module_modifier_angular_bullets,0,0,0,0)
 
-
+repeat(irandom(1)+1)
+	with (temp_module)
+		scr_add_random_modifier_new()
+	/*
 	repeat(irandom(1)+1){
 		var p = random(100)
 		if p < 50
@@ -52,7 +55,7 @@ function scr_create_random_starting_gun() {
 				scr_add_random_modifier_negative();
 
 		}	
-	
+	*/
 	
 	return temp_module;
 

@@ -24,22 +24,22 @@ function scr_create_random_gun() {
 		if p <= 59 and p >= 40
 			with (temp_module){
 				scr_add_random_modifier_common();
-				cost += 1
+				credit_cost += 1
 				}
 		if p <= 39 and p >= 25
 			with (temp_module){
 				scr_add_random_modifier_uncommon();
-				cost += 2
+				credit_cost += 2
 				}
 		if p <= 24 and p >= 10
 			with (temp_module){
 				scr_add_random_modifier_rare();
-				cost += 4
+				credit_cost += 4
 				}
 		if p <= 9 and p >= 0
 			with (temp_module){
 				scr_add_random_modifier_exotic();
-				cost += 4
+				credit_cost += 4
 				}
 				
 	// Chance for negative modifier
@@ -48,15 +48,15 @@ function scr_create_random_gun() {
 		if p <= 29 and p >= 0
 			with (temp_module){
 				scr_add_random_modifier_negative();
-				cost -= 2
+				credit_cost -= 2
 				}
 		}
 		
 	// If forward facing, increase cost slightly
 	with (temp_module)
 		if offset_angle == 0{
-			var cost_increase = min(round(cost * 0.2),1)
-			cost += cost_increase
+			var cost_increase = min(round(credit_cost * 0.2),1)
+			credit_cost += cost_increase
 		}
 		}	
 	

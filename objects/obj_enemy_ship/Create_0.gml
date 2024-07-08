@@ -4,7 +4,7 @@ timer = 0
 
 //credits = irandom(5)+1
 pickup_objects = 1//+irandom(global.difficulty_level)
-pickup_objects_credits = irandom(1)
+pickup_objects_credits = 1//irandom(1)
 pickup_objects_health = irandom(1)
 pickup_objects_particles = irandom(1)
 // Stats variables, for keeping track of stuff
@@ -53,11 +53,11 @@ add_thrust = 0
 
 // Changeable ship variables
 
-max_speed_base = 3.5
+max_speed_base = 2.8
 max_speed_multiplier = 0 
 max_speed_bonus = 0
 
-rotation_speed_base = 80
+rotation_speed_base = 60
 rotation_speed_multiplier = 1 
 rotation_speed_bonus = 0
 
@@ -81,7 +81,7 @@ energy_increase_bonus = 0
 
 // Rotating & moving
 
-rotation_force = 300
+rotation_force = 100
 rotation_value = 0;
 add_thrust = 0;
 

@@ -16,7 +16,7 @@ collided = false
 collision_victim = noone
 
 //
-age = 0
+timer = 0
 
 max_speed = 3
 max_rotation_speed = 50
@@ -28,14 +28,24 @@ damage = 0.1
 max_damage = 30;
 push_force = 60//900
 
+pickup_objects_have_been_allocated = false
 child_object = obj_asteroid_medium;
+child_1_pickups = 0
+child_2_pickups = 0 
+child_1_diamonds = 0
+child_2_diamonds = 0
+
 obj_health = 8;
 death_effect_size = 2;
 
 secondary_color = make_colour_rgb(94,228,174)
 
 pickup_object_type = noone
+diamonds = 0
 pickup_objects = 0
+
+twinkle_dir = irandom(360)
+twinkle_dist = irandom(sprite_width/2)
 
 //
 

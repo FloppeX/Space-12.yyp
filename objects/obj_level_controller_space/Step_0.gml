@@ -33,30 +33,7 @@ if enemy_wave_timer <= 0{
 	enemy_wave_timer = stage_timer_start/(number_of_waves+1)
 	}
 
-// Add enemies and asteroids if needed
 
-if instance_number(obj_asteroid_big) < number_of_asteroids{ //number_of_asteroids >= 1{
-	var i = irandom(1)
-	if i == 0{
-		temp_xpos = global.wrap_border_left + random(global.play_area_width)//global.wrap_border_left + random(global.play_area_width)
-		temp_ypos = global.wrap_border_top//global.wrap_border_top
-		}
-	else{
-		temp_xpos = global.wrap_border_left
-		temp_ypos = global.wrap_border_top + random(global.play_area_height)
-		}
-	var random_number = random(100)
-	if random_number <= global.asteroid_chance_credit*global.luck
-		new_asteroid =  instance_create_depth(temp_xpos,temp_ypos,0,obj_asteroid_big_credit);
-	else {if random_number <= (global.asteroid_chance_credit + global.asteroid_chance_health)
-		new_asteroid =  instance_create_depth(temp_xpos,temp_ypos,0,obj_asteroid_big_health);
-		else {if random_number<= (global.asteroid_chance_credit + global.asteroid_chance_health + global.asteroid_chance_particles)
-			new_asteroid =  instance_create_depth(temp_xpos,temp_ypos,0,obj_asteroid_big_particles);
-			else new_asteroid =  instance_create_depth(temp_xpos,temp_ypos,0,obj_asteroid_big);
-			}
-		}
-	number_of_asteroids -= 1
-	}
 	
 if instance_number(obj_explosive_barrel) < number_of_explosive_barrels{
 	var i = irandom(1)
@@ -122,10 +99,6 @@ if number_of_enemies >= 1 and ship_interval_timer <= 0 and scr_exists(obj_player
 
 if keyboard_check_pressed(vk_enter)
 	number_of_enemies += 1
-
-if keyboard_check_pressed(vk_backspace){
-	stage_timer = 0
-	}
 
 
 // Are all enemies dead? Or is the timer 0? Then count down and move to next level

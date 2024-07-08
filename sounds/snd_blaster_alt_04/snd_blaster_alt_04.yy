@@ -2,8 +2,8 @@
   "$GMSound":"",
   "%Name":"snd_blaster_alt_04",
   "audioGroupId":{
-    "name":"sound_effects",
-    "path":"audiogroups/sound_effects",
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
   "bitRate":128,

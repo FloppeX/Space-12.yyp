@@ -18,6 +18,8 @@ luck = (luck_base + luck_bonus) * luck_multiplier
 
 global.luck = luck
 
+
+
 // Disabled?
 
 disabled_timer -= 1;
@@ -36,10 +38,13 @@ if hit_invulnerable_timer > 0
 // Turn
 
 if controls_disabled == false{
-
-	if abs(phy_angular_velocity) < rotation_speed
-		physics_apply_torque(rotation_force * rotation_value)
-	phy_angular_damping = 20	
+	
+	if abs(phy_angular_velocity) < rotation_speed{
+		physics_apply_torque(array_length_1d(ship_segment) * rotation_force * rotation_value)
+		phy_angular_damping = 2 * array_length_1d(ship_segment) + add_thrust * 10
+		}
+	else
+		phy_angular_damping = 30
 }
 else phy_angular_damping = 4
 	
@@ -65,7 +70,7 @@ if health_difference > 0{
 	
 	
 if obj_health <= 0 and destroyed == false{
-	scr_explode_object_new_new();
+	scr_explode_ship();
 	//phy_active = false
 	for(var i = 0; i < array_length_1d(ship_segment); i+=1;){
 		if scr_exists(ship_segment[i].module)
@@ -75,6 +80,8 @@ if obj_health <= 0 and destroyed == false{
 				instance_destroy()
 		}
 	ship_segment = noone
+	with(obj_crew_new)
+		instance_destroy()
 	audio_play_sound_at(explosion_sound,phy_position_x,phy_position_y,0,100,800,1,0,1)
 	boom = instance_create_depth(phy_position_x,phy_position_y,-10,obj_explosion)
 	boom.radius = 300
@@ -156,7 +163,19 @@ if obj_health > 0{
 					if temp_dist <= other.pickup_seek_range
 						physics_apply_force(phy_position_x,phy_position_y,lengthdir_x(other.pickup_pull_force*temp_dist/other.pickup_seek_range,temp_dir),lengthdir_y(other.pickup_pull_force*temp_dist/other.pickup_seek_range,temp_dir))
 				}
+				
+	var pickup_type = obj_pickup_diamond
+		if instance_number(pickup_type) > 0
+			for(var i = 0; i < instance_number(pickup_type); i+=1;)
+				with (instance_find(pickup_type,i)){
+					var temp_dist = point_distance(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
+					var temp_dir = point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
+					if temp_dist <= other.pickup_seek_range
+						physics_apply_force(phy_position_x,phy_position_y,lengthdir_x(other.pickup_pull_force*temp_dist/other.pickup_seek_range,temp_dir),lengthdir_y(other.pickup_pull_force*temp_dist/other.pickup_seek_range,temp_dir))
+				}
 	}
+	
+// Update total credits earned. For achievemnts maybe?
 			
 if credits > credits_old
 credits_gained += (credits - credits_old)
@@ -165,7 +184,7 @@ credits_old = credits
 
 // GUI stuff
 
-if scr_timer(30)
+if scr_timer(20)
 	scr_populate_map_object_array()
 	
 health_bar_x = global.gui_unit * 0.2
@@ -183,7 +202,9 @@ particles_bar_y = 4.5 * global.gui_unit //540
 particles_bar_height = 1.5 * global.gui_unit
 particles_bar_width = global.gui_unit * 0.16
 
-// Update modules so they cant "find" each other. And make them free?
+
+
+// Update modules so they can "find" each other. And make them free?
 
 if scr_timer(60)
 	for(var i = 0; i < array_length_1d(ship_segment); i+=1;)
@@ -204,7 +225,7 @@ if scr_timer(60)
 						ship_segment[i].module.module_left = ship_segment[i].ship_segment_left.module
 						*/
 					ship_segment[i].module.persistent = true
-					ship_segment[i].module.cost = 0
+					//ship_segment[i].module.cost = 0
 					}
 				}
 		

@@ -1,134 +1,22 @@
 function scr_create_array_player_crew() {
-	// Gun arrays
-
-	global.array_player_crew = []
-	var crew_number,crew_id,crew_cost,crew_rarity;
-	// 0 = gun, 1 = device, 2 = crew
-
-	crew_number = 0
-
-	crew_id = obj_crew_token_brawler
-	crew_cost = 10
-	crew_rarity = 16
-	global.array_player_crew[crew_number,0] = crew_id
-	global.array_player_crew[crew_number,1] = crew_cost
-	global.array_player_crew[crew_number,2] = crew_rarity
-
-	crew_number = 1
-
-	crew_id = obj_crew_token_outlaw
-	crew_cost = 10
-	crew_rarity = 12
-	global.array_player_crew[crew_number,0] = crew_id
-	global.array_player_crew[crew_number,1] = crew_cost
-	global.array_player_crew[crew_number,2] = crew_rarity
-
-	crew_number = 2
-
-	crew_id = obj_crew_token_mystic_manipulator
-	crew_cost = 10
-	crew_rarity = 12
-	global.array_player_crew[crew_number,0] = crew_id
-	global.array_player_crew[crew_number,1] = crew_cost
-	global.array_player_crew[crew_number,2] = crew_rarity
-
-	crew_number = 3
-
-	crew_id = obj_crew_token_arachnoid_harvester
-	crew_cost = 10
-	crew_rarity = 8
-	global.array_player_crew[crew_number,0] = crew_id
-	global.array_player_crew[crew_number,1] = crew_cost
-	global.array_player_crew[crew_number,2] = crew_rarity
-
-	crew_number = 4
-
-	crew_id = obj_crew_token_bloodsucker
-	crew_cost = 10
-	crew_rarity = 12
-	global.array_player_crew[crew_number,0] = crew_id
-	global.array_player_crew[crew_number,1] = crew_cost
-	global.array_player_crew[crew_number,2] = crew_rarity
-	crew_number = 5
-
-	crew_id = obj_crew_token_freebooter
-	crew_cost = 10
-	crew_rarity = 8
-	global.array_player_crew[crew_number,0] = crew_id
-	global.array_player_crew[crew_number,1] = crew_cost
-	global.array_player_crew[crew_number,2] = crew_rarity
-
-	crew_number = 6
-
-	crew_id = obj_crew_token_mechanoid_gunsmith
-	crew_cost = 10
-	crew_rarity = 8
-	global.array_player_crew[crew_number,0] = crew_id
-	global.array_player_crew[crew_number,1] = crew_cost
-	global.array_player_crew[crew_number,2] = crew_rarity
-
-	crew_number = 7
-
-	crew_id = obj_crew_token_rock_man
-	crew_cost = 10
-	crew_rarity = 1
-	global.array_player_crew[crew_number,0] = crew_id
-	global.array_player_crew[crew_number,1] = crew_cost
-	global.array_player_crew[crew_number,2] = crew_rarity
-
-	crew_number = 8
-
-	crew_id = obj_crew_token_mechanoid_lovebot
-	crew_cost = 10
-	crew_rarity = 1
-	global.array_player_crew[crew_number,0] = crew_id
-	global.array_player_crew[crew_number,1] = crew_cost
-	global.array_player_crew[crew_number,2] = crew_rarity
-
-	crew_number = 9
-
-	crew_id = obj_crew_token_ratling_tailgunner
-	crew_cost = 10
-	crew_rarity = 2
-	global.array_player_crew[crew_number,0] = crew_id
-	global.array_player_crew[crew_number,1] = crew_cost
-	global.array_player_crew[crew_number,2] = crew_rarity
 	
-	crew_number = 10
+	global.array_player_crew[0] = obj_crew_token_brawler
+	global.array_player_crew[1] = obj_crew_token_outlaw
+	global.array_player_crew[2] = obj_crew_token_mystic_manipulator
+	global.array_player_crew[3] = obj_crew_token_arachnoid_harvester
+	global.array_player_crew[4] = obj_crew_token_bloodsucker
+	global.array_player_crew[5] = obj_crew_token_freebooter
+	global.array_player_crew[6] = obj_crew_token_mechanoid_gunsmith
+	global.array_player_crew[7] = obj_crew_token_rock_man
+	global.array_player_crew[8] = obj_crew_token_mechanoid_lovebot
+	global.array_player_crew[9] = obj_crew_token_ratling_tailgunner
+	global.array_player_crew[10] = obj_crew_token_battle_hardened_crusader
+	global.array_player_crew[11] = obj_crew_token_psychic_leech
+	global.array_player_crew[12] = obj_crew_token_combat_repair_bot
+	global.array_player_crew[13] = obj_crew_token_hot_shot_pilot
+	global.array_player_crew[14] = obj_crew_token_slurpy_the_dog
+	global.array_player_crew[15] = obj_crew_token_brain_in_a_jar
+	global.array_player_crew[16] = obj_crew_token_corvid_illusionist
 
-	crew_id = obj_crew_token_battle_hardened_crusader
-	crew_cost = 10
-	crew_rarity = 2
-	global.array_player_crew[crew_number,0] = crew_id
-	global.array_player_crew[crew_number,1] = crew_cost
-	global.array_player_crew[crew_number,2] = crew_rarity
-	
-	crew_number = 11
-
-	crew_id = obj_crew_token_psychic_leech
-	crew_cost = 10
-	crew_rarity = 2
-	global.array_player_crew[crew_number,0] = crew_id
-	global.array_player_crew[crew_number,1] = crew_cost
-	global.array_player_crew[crew_number,2] = crew_rarity
-	
-	crew_number = 12
-
-	crew_id = obj_crew_token_combat_medic
-	crew_cost = 10
-	crew_rarity = 2
-	global.array_player_crew[crew_number,0] = crew_id
-	global.array_player_crew[crew_number,1] = crew_cost
-	global.array_player_crew[crew_number,2] = crew_rarity
-	
-	crew_number = 13
-
-	crew_id = obj_crew_token_hot_shot_pilot
-	crew_cost = 10
-	crew_rarity = 2
-	global.array_player_crew[crew_number,0] = crew_id
-	global.array_player_crew[crew_number,1] = crew_cost
-	global.array_player_crew[crew_number,2] = crew_rarity
-	
-	
+	scr_shuffle_array(global.array_player_crew)
 }

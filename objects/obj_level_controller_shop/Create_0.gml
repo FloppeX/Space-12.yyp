@@ -2,15 +2,18 @@ global.player_entering_shop = false
 global.player_in_shop = false
 global.player_exiting_shop = false
 
-
 // Clear particles
 
 part_particles_clear(global.part_system_above)
 part_particles_clear(global.part_system_below)
 
+// TEST prefetching sprites
+
+//texturegroup_load(texgroup_shop)
+
 // Zoom
 
-global.zoom = 1000
+global.zoom = 900
 
 // Place player in the center of the room
 
@@ -24,7 +27,7 @@ if instance_exists(obj_player){
 	global.player.draw_scale = 0.01
 	}
 if !instance_exists(obj_player){
-	global.player = instance_create_depth(0.5 * room_width,0.5 * room_height + 500,-5,obj_player)
+	global.player = instance_create_depth(0.5 * room_width,0.5 * room_height + 500,-6,obj_player)
 	global.player.disabled_timer = 60
 	global.player.phy_rotation = 0
 	global.player.draw_scale = 0.01
@@ -45,7 +48,7 @@ obj_player.show_map = false;
 
 // Shop
 
-shop = instance_create_depth(0.5 * room_width,0.5 * room_height,30,obj_shop)
+shop = instance_create_depth(0.5 * room_width,0.5 * room_height,-4,obj_shop)
 cursor = noone//instance_create_depth(0.5 * room_width,0.5 * room_height,30,obj_cursor_new)
 
 // Wormhole

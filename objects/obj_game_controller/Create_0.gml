@@ -8,7 +8,7 @@ cursor = instance_create_depth(0,0,-100,obj_mouse_cursor)
 
 //
 
-randomize();
+randomize()
 
 // Base settings
 
@@ -73,7 +73,7 @@ if !window_get_fullscreen()
 { window_set_size((s_width - offSET),(s_height - offSET)); }
 */
 
-var res_horizontal = display_get_width()// 1920 // 3840// 
+var res_horizontal =  display_get_width()// 1920 // 3840// 
 var res_vertical = display_get_height() //1080 //2160//
 global.gui_scale = res_horizontal/3840
 global.gui_unit = res_horizontal/16
@@ -95,7 +95,7 @@ display_set_gui_size(res_horizontal, res_vertical);
 global.view_mode = 1
 global.max_zoom = 4400
 global.min_zoom = 200
-global.zoom = 1000
+global.zoom = 900
 temp_zoom = global.zoom
 
 // Screen shake settings
@@ -117,14 +117,15 @@ draw_light_enable(1, true);
 
 // Fonts
 
-global.font_title = font_add(working_directory+ "entsans.ttf", 128, true, false, 32, 128);
+global.font_title = font_add(working_directory+ "EurostileExtendedBlack.ttf", 128, true, false, 32, 128);
 global.font_title_2 = font_add(working_directory+ "orbitron_bold.ttf", 64, false, true, 32, 128);
 global.font_menu = font_add(working_directory+ "orbitron_medium.ttf", 24, false, false, 32, 128);
 //global.font_damage_number = font_add(working_directory+ "DS-DIGIT.TTF", 18, false, false, 32, 128);
 global.font_small_text = font_add(working_directory+ "orbitron_medium.ttf", 10, false, false, 32, 128);
 global.font_big_text = font_add(working_directory+ "orbitron_medium.ttf", 30, false, false, 32, 128);
 global.font_big_text_italic = font_add(working_directory+ "orbitron_medium.ttf", 30, false, true, 32, 128);
-global.font_bigger_text = font_add(working_directory+ "Renegade Master.ttf", 48, false, false, 32, 128);
+global.font_bigger_text = font_add(working_directory+ "orbitron_medium.ttf", 48, false, false, 32, 128);
+global.font_shop = font_add(working_directory+ "arcade.ttf", 24, false, false, 32, 128);
 
 // Play area settings
 
@@ -278,10 +279,21 @@ part_type_color3(global.flame_particle,c_white,c_yellow,c_red);
 part_type_alpha3(global.flame_particle,0.8,0.5,0);
 part_type_speed(global.flame_particle,1.5,3,-0.03,0);
 part_type_direction(global.flame_particle,0,359,0,0);
-
 part_type_orientation(global.flame_particle,0,0,0,1,1);
 part_type_blend(global.flame_particle,0);
 part_type_life(global.flame_particle,80,120);
+
+global.ion_engine_particle = part_type_create();
+part_type_sprite(global.ion_engine_particle,spr_ion_engine_exhaust,false,false,false);
+part_type_size(global.ion_engine_particle,0.40,0.70,0,0);
+part_type_scale(global.ion_engine_particle,1,1);
+part_type_color1(global.ion_engine_particle,c_white);
+part_type_alpha3(global.ion_engine_particle,0.8,0.5,0);
+part_type_speed(global.ion_engine_particle,1.5,3,-0.03,0);
+part_type_direction(global.ion_engine_particle,0,359,0,0);
+part_type_orientation(global.ion_engine_particle,0,0,0,1,1);
+part_type_blend(global.ion_engine_particle,0);
+part_type_life(global.ion_engine_particle,80,120);
 
 global.smoke_particle = part_type_create();
 part_type_shape(global.smoke_particle,pt_shape_disk);

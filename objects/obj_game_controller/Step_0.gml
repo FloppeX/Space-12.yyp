@@ -49,24 +49,10 @@ number_of_enemies = instance_number(obj_enemy_ship)
 global.enemies_killed_this_step = max(0,number_of_enemies_old - number_of_enemies)
 number_of_enemies_old = number_of_enemies
 	
-// Set background speed
 
-if scr_exists(obj_player){
-layer_hspeed(layer_get_id("background_layer_1"), obj_player.phy_speed_x*0.8)
-layer_vspeed(layer_get_id("background_layer_1"), obj_player.phy_speed_y*0.8)
-
-layer_hspeed(layer_get_id("background_layer_2"), obj_player.phy_speed_x*0.4)
-layer_vspeed(layer_get_id("background_layer_2"), obj_player.phy_speed_y*0.4)
-
-layer_hspeed(layer_get_id("background_layer_3"), obj_player.phy_speed_x*0.2)
-layer_vspeed(layer_get_id("background_layer_3"), obj_player.phy_speed_y*0.2)
-
-layer_hspeed(layer_get_id("background_layer_4"), obj_player.phy_speed_x*0)
-layer_vspeed(layer_get_id("background_layer_4"), obj_player.phy_speed_y*0)
-}
 // Sound
 
-audio_emitter_position(global.music_emitter,view_object.phy_position_x,view_object.phy_position_y,0)
+audio_emitter_position(global.music_emitter,global.camera.phy_position_x,global.camera.phy_position_y,0.25 * global.zoom)
 
 // Update stats
 

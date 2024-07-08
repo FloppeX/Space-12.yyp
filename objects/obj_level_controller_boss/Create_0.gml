@@ -25,7 +25,7 @@ if instance_exists(obj_player){
 	global.player.draw_scale = 0.01
 	}
 if !instance_exists(obj_player){
-	global.player = instance_create_depth(0.5 * room_width,0.5 * room_height,-5,obj_player)
+	global.player = instance_create_depth(0.5 * room_width,0.5 * room_height,-6,obj_player)
 	global.player.controls_disabled_timer = 60
 	global.player.phy_rotation = 0
 	global.player.draw_scale = 0.01
@@ -47,7 +47,7 @@ global.camera.y = 3000
 wormhole = instance_create_depth(0.5 * room_width,0.5 * room_height,100,obj_wormhole_level_begin_player)
 
 // timers
-stage_timer_start = 5400
+stage_timer_start = 7200
 stage_timer = stage_timer_start
 
 boss_creation_timer = 360
@@ -60,11 +60,11 @@ ship_interval_timer_start = 60
 ship_interval_timer = ship_interval_timer_start
 
 death_timer = 120
-boss_killed_timer = 300
+boss_killed_timer = 600
 next_level_timer = 120
 
 end_wormhole_created = false
-wormhole_end_timer = 1200
+wormhole_end_timer = 1800
 wormhole_end_gone = false
 
 // Level

@@ -5,9 +5,9 @@ function scr_ship_modifier_superior_avionics(argument0) {
 
 	// Modifier script
 
-	rotation_speed_multiplier += 0.4
+	rotation_speed_multiplier *= 1.2
 
-	drift_resistance_multiplier += 0.6
+	drift_resistance_multiplier *= 1.6
 
 
 }

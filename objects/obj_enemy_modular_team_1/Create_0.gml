@@ -2,9 +2,8 @@ event_inherited();
 
 // Ship stats
 
-max_rotation_speed = 100;
-max_speed_base = 3
-
+max_rotation_speed = 60;
+max_speed_base = 2.8
 rotation_force = 200
 
 // Enemies to target 

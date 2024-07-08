@@ -1,9 +1,4 @@
-if global.view_mode == 2{
-	draw_set_font(global.font_small_text)
-	draw_set_color(c_white)
-	draw_text(x,y+40,depth)
-	}
-	
+
 gpu_set_blendmode(bm_add)
 //draw_sprite_ext(sprite_index,-1,phy_position_x,phy_position_y,bullet_scale*2,bullet_scale*2,-phy_rotation,color,0.1)
 //draw_sprite_ext(sprite_index,-1,phy_position_x,phy_position_y,bullet_scale*1.5,bullet_scale*1.5,-phy_rotation,color,0.2)

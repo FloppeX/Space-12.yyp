@@ -1,32 +1,68 @@
-age += 1;
+timer += 1;
+
+//Determine how many objects the asteroid and its children have
+
+if pickup_objects_have_been_allocated == false and child_object != noone{
+	var temp_pickup_objects = pickup_objects
+	pickup_objects = irandom(temp_pickup_objects)
+	temp_pickup_objects -= pickup_objects
+	child_1_pickups = irandom(temp_pickup_objects)
+	temp_pickup_objects -= child_1_pickups
+	child_2_pickups = temp_pickup_objects
+	pickup_objects_have_been_allocated = true
+	
+	// If it has a diamond, increase its health
+	if diamonds > 0 
+		obj_health = 2*obj_health
+}
+
 
 if obj_health <= 0
 	{
-	
 
-	
-	if child_object != noone{	
+	if pickup_objects > 0
+		for(var i = 0; i < pickup_objects; i+=1;){
+			var tempdir = random(360) //+ i * temp_angle_offset
+			var tempdist = random(20) + 20
+			pickup_object = instance_create_depth(phy_position_x,phy_position_y,-10,pickup_object_type);
+			pickup_object.phy_position_x = phy_position_x+lengthdir_x(tempdist,tempdir)
+			pickup_object.phy_position_y = phy_position_y+lengthdir_y(tempdist,tempdir)
+			pickup_object.phy_speed_x = phy_speed_x
+			pickup_object.phy_speed_y = phy_speed_y
+			}
+		
+	if child_object != noone{
 		travel_direction = point_direction(0, 0, phy_speed_x, phy_speed_y)
 		new_asteroid_1 = instance_create_depth(phy_position_x,phy_position_y,0,child_object)
 		new_asteroid_1.phy_speed_x = lengthdir_x(phy_speed+1,travel_direction+45)
 		new_asteroid_1.phy_speed_y = lengthdir_y(phy_speed+1,travel_direction+45)
+		new_asteroid_1.pickup_object_type = pickup_object_type
+		new_asteroid_1.pickup_objects = child_1_pickups
 		new_asteroid_2 = instance_create_depth(phy_position_x,phy_position_y,0,child_object)
 		new_asteroid_2.phy_speed_x = lengthdir_x(phy_speed+1,travel_direction-45)
 		new_asteroid_2.phy_speed_y = lengthdir_y(phy_speed+1,travel_direction-45)
-		}
+		new_asteroid_2.pickup_object_type = pickup_object_type
+		new_asteroid_2.pickup_objects = child_2_pickups
+		if diamonds > 0{
+			new_asteroid_1.diamonds = irandom(diamonds)
+			new_asteroid_2.diamonds = diamonds-new_asteroid_1.diamonds
+			diamonds = 0;
+			}
+	}
 	
-	
-	// Create credits after an enemy dies
-
-	for(var i = 0; i < pickup_objects; i+=1;){
+	for(var i = 0; i < diamonds; i+=1;){
 		var tempdir = random(360) //+ i * temp_angle_offset
 		var tempdist = random(20) + 20
-		pickup_object = instance_create_depth(phy_position_x,phy_position_y,-10,pickup_object_type);
+		pickup_object = instance_create_depth(phy_position_x,phy_position_y,-10,obj_pickup_diamond);
 		pickup_object.phy_position_x = phy_position_x+lengthdir_x(tempdist,tempdir)
 		pickup_object.phy_position_y = phy_position_y+lengthdir_y(tempdist,tempdir)
 		pickup_object.phy_speed_x = phy_speed_x
 		pickup_object.phy_speed_y = phy_speed_y
-		}
+		}	
+	
+
+	
+
 	scr_explosion_smoke_particles(6)
 	
 	instance_destroy();
@@ -34,7 +70,7 @@ if obj_health <= 0
 	}
 	
 if phy_speed > max_speed
-	phy_linear_damping = 0.2
+	phy_linear_damping = 0.4
 else 
 	phy_linear_damping = 0
 	

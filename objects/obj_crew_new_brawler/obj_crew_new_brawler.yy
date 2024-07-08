@@ -39,8 +39,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_crew_brawler",
-    "path":"sprites/spr_crew_brawler/spr_crew_brawler.yy",
+    "name":"scr_crew_robot_crusher",
+    "path":"sprites/scr_crew_robot_crusher/scr_crew_robot_crusher.yy",
   },
   "spriteMaskId":null,
   "visible":true,

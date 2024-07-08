@@ -19,7 +19,8 @@ joint_left = noone;
 //
 
 module = noone
-module_cost = 0
+credit_cost = 0
+diamond_cost = 0
 
 // Used to reposition things
 

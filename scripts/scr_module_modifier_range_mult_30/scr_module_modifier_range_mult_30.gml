@@ -5,7 +5,7 @@ function scr_module_modifier_range_mult_30() {
 
 	// Modifier script
 
-	bullet_range_multiplier += 0.3
+	bullet_range_multiplier *= 1.3
 
 
 }

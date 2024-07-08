@@ -5,7 +5,7 @@ function scr_module_modifier_rof_multiplier(argument0) {
 
 	// Modifier script
 
-	bullet_interval_multiplier += value
+	bullet_interval_multiplier *= value
 
 
 }
