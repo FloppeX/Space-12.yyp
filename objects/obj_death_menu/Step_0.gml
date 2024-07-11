@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-if gamepad_button_check_pressed(0,gp_face1)
+if global.button_menu_select 
 	switch(selected_item){
 		case 0 : 
 			with(obj_player)

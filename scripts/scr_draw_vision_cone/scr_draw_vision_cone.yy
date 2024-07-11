@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_draw_vision_cone",
   "isCompatibility":false,
   "isDnD":false,

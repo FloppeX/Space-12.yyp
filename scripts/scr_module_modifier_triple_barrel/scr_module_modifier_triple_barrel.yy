@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_module_modifier_triple_barrel",
   "isCompatibility":false,
   "isDnD":false,

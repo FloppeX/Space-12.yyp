@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_module_modifier_high_speed_flanges",
   "isCompatibility":false,
   "isDnD":false,

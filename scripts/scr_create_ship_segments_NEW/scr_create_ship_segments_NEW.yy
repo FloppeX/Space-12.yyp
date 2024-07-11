@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_create_ship_segments_NEW",
   "isCompatibility":false,
   "isDnD":false,

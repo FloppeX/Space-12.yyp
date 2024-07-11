@@ -1,7 +1,7 @@
 var module_placement_ok = true
 
 with(obj_player)
-		for(var i = 0; i < array_length_1d(ship_segment); i+=1;){
+		for(var i = 0; i < array_length(ship_segment); i+=1;){
 			if !scr_check_module_placement(ship_segment[i].module,ship_segment[i])
 				module_placement_ok = false
 		}

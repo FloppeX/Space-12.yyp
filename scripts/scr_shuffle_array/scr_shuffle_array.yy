@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_shuffle_array",
   "isCompatibility":false,
   "isDnD":false,

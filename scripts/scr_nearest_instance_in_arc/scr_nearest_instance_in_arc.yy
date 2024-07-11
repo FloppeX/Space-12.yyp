@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_nearest_instance_in_arc",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_wrap_distance_to_point",
   "isCompatibility":false,
   "isDnD":false,

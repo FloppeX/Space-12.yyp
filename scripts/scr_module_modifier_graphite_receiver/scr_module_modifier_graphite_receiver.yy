@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_module_modifier_graphite_receiver",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_ship_modifier_superior_avionics",
   "isCompatibility":false,
   "isDnD":false,

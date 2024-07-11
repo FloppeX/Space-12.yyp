@@ -1,4 +1,4 @@
-draw_self()
+draw_sprite_ext(sprite_index,-1,phy_position_x,phy_position_y,scale,scale,-phy_rotation,c_white,alpha)
 /*gpu_set_blendmode(bm_add)
 var temp_direction = random(360)
 var temp_distance = random(4)

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_populate_map_object_array",
   "isCompatibility":false,
   "isDnD":false,

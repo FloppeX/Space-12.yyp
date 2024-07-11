@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_module_modifier_rof_bonus",
   "isCompatibility":false,
   "isDnD":false,

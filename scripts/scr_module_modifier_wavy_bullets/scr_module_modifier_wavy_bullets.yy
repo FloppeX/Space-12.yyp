@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_module_modifier_wavy_bullets",
   "isCompatibility":false,
   "isDnD":false,

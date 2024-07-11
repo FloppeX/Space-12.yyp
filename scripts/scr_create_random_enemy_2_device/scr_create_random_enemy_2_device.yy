@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_create_random_enemy_2_device",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_ship_modifier_heavy_duty_ammo",
   "isCompatibility":false,
   "isDnD":false,

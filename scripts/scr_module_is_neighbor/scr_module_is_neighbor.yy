@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_module_is_neighbor",
   "isCompatibility":false,
   "isDnD":false,

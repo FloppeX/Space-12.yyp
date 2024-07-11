@@ -117,7 +117,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.2.0.132",
+    "IDEVersion":"2024.6.0.157",
   },
   "name":"Space 12",
   "resources":[
@@ -178,6 +178,7 @@
     {"id":{"name":"obj_crew_token_brain_in_a_jar","path":"objects/obj_crew_token_brain_in_a_jar/obj_crew_token_brain_in_a_jar.yy",},},
     {"id":{"name":"obj_crew_token_brawler","path":"objects/obj_crew_token_brawler/obj_crew_token_brawler.yy",},},
     {"id":{"name":"obj_crew_token_combat_repair_bot","path":"objects/obj_crew_token_combat_repair_bot/obj_crew_token_combat_repair_bot.yy",},},
+    {"id":{"name":"obj_crew_token_corvid_illusionist","path":"objects/obj_crew_token_corvid_illusionist/obj_crew_token_corvid_illusionist.yy",},},
     {"id":{"name":"obj_crew_token_freebooter","path":"objects/obj_crew_token_freebooter/obj_crew_token_freebooter.yy",},},
     {"id":{"name":"obj_crew_token_hot_shot_pilot","path":"objects/obj_crew_token_hot_shot_pilot/obj_crew_token_hot_shot_pilot.yy",},},
     {"id":{"name":"obj_crew_token_mechanoid_gunsmith","path":"objects/obj_crew_token_mechanoid_gunsmith/obj_crew_token_mechanoid_gunsmith.yy",},},
@@ -188,7 +189,6 @@
     {"id":{"name":"obj_crew_token_ratling_tailgunner","path":"objects/obj_crew_token_ratling_tailgunner/obj_crew_token_ratling_tailgunner.yy",},},
     {"id":{"name":"obj_crew_token_rock_man","path":"objects/obj_crew_token_rock_man/obj_crew_token_rock_man.yy",},},
     {"id":{"name":"obj_crew_token_slurpy_the_dog","path":"objects/obj_crew_token_slurpy_the_dog/obj_crew_token_slurpy_the_dog.yy",},},
-    {"id":{"name":"obj_crew_token_corvid_illusionist","path":"objects/obj_crew_token_corvid_illusionist/obj_crew_token_corvid_illusionist.yy",},},
     {"id":{"name":"obj_crew_token","path":"objects/obj_crew_token/obj_crew_token.yy",},},
     {"id":{"name":"obj_cursor_new","path":"objects/obj_cursor_new/obj_cursor_new.yy",},},
     {"id":{"name":"obj_damage_number","path":"objects/obj_damage_number/obj_damage_number.yy",},},

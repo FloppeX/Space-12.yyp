@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_module_modifier_electrifying_bullets",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_module_modifier_titanium_firing_pin",
   "isCompatibility":false,
   "isDnD":false,

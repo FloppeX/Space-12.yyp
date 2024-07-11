@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_gravity_push",
   "isCompatibility":false,
   "isDnD":false,

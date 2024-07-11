@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_engine_smoke_particles",
   "isCompatibility":false,
   "isDnD":false,

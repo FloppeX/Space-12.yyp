@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_wrap_collision_line",
   "isCompatibility":false,
   "isDnD":false,

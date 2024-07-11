@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_create_pickups_after_death",
   "isCompatibility":false,
   "isDnD":false,

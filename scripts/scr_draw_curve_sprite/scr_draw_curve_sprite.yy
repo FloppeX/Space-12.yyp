@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_draw_curve_sprite",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_module_modifier_recoil_mult_30",
   "isCompatibility":false,
   "isDnD":false,

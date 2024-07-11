@@ -64,6 +64,41 @@ if controls_disabled == false{
 	else select_next_active_item = false
 }
 
+// Keyboard controls
+if controls_disabled == false and !gamepad_is_connected(0){
+	rotation_value = 0
+	if keyboard_check(ord("A"))
+		rotation_value -= 1
+	if keyboard_check(ord("D"))
+		rotation_value += 1
+		
+	if keyboard_check(ord("W"))
+		add_thrust = 1
+		
+	if keyboard_check(ord("Q"))
+		use_active_item = true
+
+	if keyboard_check(vk_down)
+		gamepad_button[1] = true
+	else gamepad_button[1] = false
+	
+	if keyboard_check(vk_right)
+		gamepad_button[2] = true
+	else gamepad_button[2] = false
+	
+	if keyboard_check(vk_left)
+		gamepad_button[3] = true
+	else gamepad_button[3] = false
+		
+	if keyboard_check(vk_up) or keyboard_check(vk_space)
+		gamepad_button[4] = true
+	else gamepad_button[4] = false
+		
+	if keyboard_check(ord("E"))
+		select_next_active_item = true
+	else select_next_active_item = false
+}
+
 // Zoom
 
 if gamepad_button_check_pressed(0,gp_padl)
@@ -83,11 +118,11 @@ if keyboard_check(vk_right){
 // Testing stuff
 
 	
-if keyboard_check_pressed(vk_space){
+if keyboard_check_pressed(ord("M")){
 		credits += 4
 	}
 	
-if keyboard_check_pressed(ord("D")){
+if keyboard_check_pressed(ord("N")){
 		diamonds += 1
 	}
 	

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_module_modifier_aim_towards_enemy",
   "isCompatibility":false,
   "isDnD":false,

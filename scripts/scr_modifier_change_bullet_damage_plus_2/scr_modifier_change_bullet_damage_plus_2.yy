@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_modifier_change_bullet_damage_plus_2",
   "isCompatibility":false,
   "isDnD":false,

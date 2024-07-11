@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_create_random_enemy_module",
   "isCompatibility":false,
   "isDnD":false,

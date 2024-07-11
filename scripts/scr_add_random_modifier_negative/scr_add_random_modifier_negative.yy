@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_add_random_modifier_negative",
   "isCompatibility":false,
   "isDnD":false,

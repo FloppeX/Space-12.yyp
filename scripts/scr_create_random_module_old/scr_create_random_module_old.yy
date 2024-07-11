@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_create_random_module_old",
   "isCompatibility":false,
   "isDnD":false,

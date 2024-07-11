@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_bullet_modifier_destroy_enemy_bullets",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_number_of_free_segments",
   "isCompatibility":false,
   "isDnD":false,

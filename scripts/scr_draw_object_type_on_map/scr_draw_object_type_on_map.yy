@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_draw_object_type_on_map",
   "isCompatibility":false,
   "isDnD":false,

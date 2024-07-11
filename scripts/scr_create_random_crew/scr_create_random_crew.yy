@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_create_random_crew",
   "isCompatibility":false,
   "isDnD":false,

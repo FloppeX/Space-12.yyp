@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_module_modifier_range_plus_100",
   "isCompatibility":false,
   "isDnD":false,

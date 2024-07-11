@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_write_stats_to_file",
   "isCompatibility":false,
   "isDnD":false,

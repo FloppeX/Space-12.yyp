@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_rocket_find_target",
   "isCompatibility":false,
   "isDnD":false,

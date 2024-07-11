@@ -138,8 +138,11 @@ if obj_health > 0{
 			with (instance_find(pickup_type,i)){
 				var temp_dist = point_distance(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
 				var temp_dir = point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
-				if temp_dist <= other.pickup_seek_range
-					physics_apply_force(phy_position_x,phy_position_y,lengthdir_x(other.pickup_pull_force*temp_dist/other.pickup_seek_range,temp_dir),lengthdir_y(other.pickup_pull_force*temp_dist/other.pickup_seek_range,temp_dir))
+				if temp_dist <= other.pickup_seek_range{
+						physics_apply_force(phy_position_x,phy_position_y,lengthdir_x(other.pickup_pull_force*temp_dist/other.pickup_seek_range,temp_dir),lengthdir_y(other.pickup_pull_force*temp_dist/other.pickup_seek_range,temp_dir))
+						if scale < 0.96
+							scale += 0.05
+					}
 			}
 		
 	var pickup_type = obj_pickup_health
@@ -149,8 +152,11 @@ if obj_health > 0{
 				with (instance_find(pickup_type,i)){
 					var temp_dist = point_distance(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
 					var temp_dir = point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
-					if temp_dist <= other.pickup_seek_range
+					if temp_dist <= other.pickup_seek_range{
 						physics_apply_force(phy_position_x,phy_position_y,lengthdir_x(other.pickup_pull_force*temp_dist/other.pickup_seek_range,temp_dir),lengthdir_y(other.pickup_pull_force*temp_dist/other.pickup_seek_range,temp_dir))
+						if scale < 0.96
+							scale += 0.05
+					}
 				}
 		
 	var pickup_type = obj_pickup_particles
@@ -160,8 +166,11 @@ if obj_health > 0{
 				with (instance_find(pickup_type,i)){
 					var temp_dist = point_distance(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
 					var temp_dir = point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
-					if temp_dist <= other.pickup_seek_range
+					if temp_dist <= other.pickup_seek_range{
 						physics_apply_force(phy_position_x,phy_position_y,lengthdir_x(other.pickup_pull_force*temp_dist/other.pickup_seek_range,temp_dir),lengthdir_y(other.pickup_pull_force*temp_dist/other.pickup_seek_range,temp_dir))
+						if scale < 0.96
+							scale += 0.05
+					}
 				}
 				
 	var pickup_type = obj_pickup_diamond
@@ -170,8 +179,11 @@ if obj_health > 0{
 				with (instance_find(pickup_type,i)){
 					var temp_dist = point_distance(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
 					var temp_dir = point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
-					if temp_dist <= other.pickup_seek_range
+					if temp_dist <= other.pickup_seek_range{
 						physics_apply_force(phy_position_x,phy_position_y,lengthdir_x(other.pickup_pull_force*temp_dist/other.pickup_seek_range,temp_dir),lengthdir_y(other.pickup_pull_force*temp_dist/other.pickup_seek_range,temp_dir))
+						if scale < 0.96
+							scale += 0.05
+					}
 				}
 	}
 	

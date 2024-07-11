@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_place_engine_enemy",
   "isCompatibility":false,
   "isDnD":false,

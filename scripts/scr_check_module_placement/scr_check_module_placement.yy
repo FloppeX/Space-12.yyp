@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_check_module_placement",
   "isCompatibility":false,
   "isDnD":false,

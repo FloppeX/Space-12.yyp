@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_module_modifier_beam_effect",
   "isCompatibility":false,
   "isDnD":false,

@@ -97,7 +97,7 @@ if ai_disabled_timer <= 0{ // set this to > 0 to control the enemy from another 
 		if target == noone
 			target = scr_rocket_find_target_in_arc(target_objects[1],-phy_rotation,targeting_arc,seek_range)
 		}
-		if target != noone
+		if scr_exists(target)
 			if target.invisible
 				target = noone
 

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_check_has_modifier",
   "isCompatibility":false,
   "isDnD":false,

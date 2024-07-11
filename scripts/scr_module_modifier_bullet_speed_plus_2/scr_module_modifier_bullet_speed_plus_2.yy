@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_module_modifier_bullet_speed_plus_2",
   "isCompatibility":false,
   "isDnD":false,

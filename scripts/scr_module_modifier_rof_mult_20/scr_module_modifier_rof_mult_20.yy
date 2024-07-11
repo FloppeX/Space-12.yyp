@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_module_modifier_rof_mult_20",
   "isCompatibility":false,
   "isDnD":false,

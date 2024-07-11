@@ -29,6 +29,8 @@ obj_health = 20
 old_obj_health = 20
 health_bar_timer = 0
 
+invisible = false
+
 // Luck
 
 luck = 1

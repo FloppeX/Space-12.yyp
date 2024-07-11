@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_module_modifier_braided_copper_cables",
   "isCompatibility":false,
   "isDnD":false,

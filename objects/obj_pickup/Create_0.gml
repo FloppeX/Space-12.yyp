@@ -1,6 +1,8 @@
 event_inherited();
 timer = 0
 max_age = 900
+scale = 1
+alpha = 1
 
 max_speed = 10
 phy_rotation = random(360)

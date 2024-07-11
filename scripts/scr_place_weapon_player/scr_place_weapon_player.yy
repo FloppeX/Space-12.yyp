@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_place_weapon_player",
   "isCompatibility":false,
   "isDnD":false,

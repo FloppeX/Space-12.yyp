@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_wrap_closest_distance_to_instance",
   "isCompatibility":false,
   "isDnD":false,

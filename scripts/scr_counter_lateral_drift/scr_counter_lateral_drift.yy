@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_counter_lateral_drift",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_create_array_player_crew",
   "isCompatibility":false,
   "isDnD":false,

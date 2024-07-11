@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_module_modifier_heavy_duty_receiver",
   "isCompatibility":false,
   "isDnD":false,

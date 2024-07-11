@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_create_explosion_medium",
   "isCompatibility":false,
   "isDnD":false,

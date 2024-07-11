@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_module_modifier_multi_shot",
   "isCompatibility":false,
   "isDnD":false,

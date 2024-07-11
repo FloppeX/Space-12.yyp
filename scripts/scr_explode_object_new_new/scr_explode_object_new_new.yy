@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_explode_object_new_new",
   "isCompatibility":false,
   "isDnD":false,

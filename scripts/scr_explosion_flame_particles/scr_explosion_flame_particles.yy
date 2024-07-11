@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_explosion_flame_particles",
   "isCompatibility":false,
   "isDnD":false,

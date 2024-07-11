@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_module_modifier_bump_stock",
   "isCompatibility":false,
   "isDnD":false,

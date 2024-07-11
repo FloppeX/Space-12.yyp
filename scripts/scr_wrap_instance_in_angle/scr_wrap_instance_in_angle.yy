@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_wrap_instance_in_angle",
   "isCompatibility":false,
   "isDnD":false,
