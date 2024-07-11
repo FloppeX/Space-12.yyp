@@ -246,10 +246,10 @@ function scr_create_background_layers() {
 		sprite = spr_background//spr_background_2
 		x_pos = global.wrap_border_left + random( global.play_area_width)
 		y_pos = global.wrap_border_top + random( global.play_area_height)
-		x_scale = random(3)+2// random(3)+1
-		y_scale = random(1)+2// random(3)+1
+		x_scale = random(4)+3// random(3)+1
+		y_scale = random(2)+3// random(3)+1
 		color = make_color_hsv(random(255),192,255)
-		alpha = random(0.1)+0.2// random(0.1)+0.9
+		alpha = random(0.2)+0.2// random(0.1)+0.9
 		angle = random(360)
 	
 		background_sprite_0[i] = layer_sprite_create(layer_get_id("background_layer_4"),x_pos-global.play_area_width,y_pos-global.play_area_height, sprite);

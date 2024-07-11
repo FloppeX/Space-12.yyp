@@ -1,4 +1,10 @@
-depth = 0
+// Play area settings
+
+scr_initialize_room()
+
+// Create background sprites
+
+scr_create_background_layers()
 
 // Difficulty
 

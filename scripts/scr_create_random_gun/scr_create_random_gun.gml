@@ -58,6 +58,8 @@ function scr_create_random_gun() {
 			var cost_increase = min(round(credit_cost * 0.2),1)
 			credit_cost += cost_increase
 		}
+		else
+			credit_cost = floor(credit_cost*0.7)
 		}	
 	
 	return temp_module;

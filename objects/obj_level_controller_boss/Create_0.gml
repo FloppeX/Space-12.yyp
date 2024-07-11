@@ -1,3 +1,11 @@
+// Play area settings
+
+scr_initialize_room()
+
+// Create background sprites
+
+scr_create_background_layers()
+
 // Boss
 
 boss_object = obj_enemy_modular_boss_1

@@ -1,4 +1,10 @@
-// test
+// Play area settings
+
+scr_initialize_room()
+
+// Create background sprites
+
+scr_create_background_layers()
 
 //instance_create_layer(0,0,layer_get_id("instance_layer"),obj_mouse_cursor)
 
@@ -7,9 +13,9 @@
 global.camera.phy_position_x = 0.5 * room_width
 global.camera.phy_position_y = 0.5 * room_height
 
-//global.zoom = 1100
+global.zoom = 1000
 
-// Clear particles
+// Clear 
 
 part_particles_clear(global.part_system_above)
 part_particles_clear(global.part_system_below)
@@ -85,9 +91,7 @@ level_music = music_funky_gameplay_looping
 	audio_play_sound(level_music,1,1)
 
 
-// Create background sprites
 
-scr_create_background_layers()
 
 // Add enemies and asteroids if needed
 

@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_create_background_layers",
+  "%Name":"scr_initialize_room",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_create_background_layers",
+  "name":"scr_initialize_room",
   "parent":{
     "name":"Room scripts",
     "path":"folders/Scripts/Room scripts.yy",

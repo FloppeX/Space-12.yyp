@@ -39,8 +39,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_crew_arachnoid",
-    "path":"sprites/spr_crew_arachnoid/spr_crew_arachnoid.yy",
+    "name":"spr_crew_arachnoid_harvester",
+    "path":"sprites/spr_crew_arachnoid_harvester/spr_crew_arachnoid_harvester.yy",
   },
   "spriteMaskId":null,
   "visible":true,

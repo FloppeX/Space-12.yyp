@@ -92,6 +92,9 @@ display_set_gui_size(res_horizontal, res_vertical);
 //display_set_gui_size(display_get_width(), display_get_height());
 
 
+global.room_width = 8000
+global.room_height = 8000
+
 global.view_mode = 1
 global.max_zoom = 4400
 global.min_zoom = 200
@@ -129,8 +132,8 @@ global.font_shop = font_add(working_directory+ "arcade.ttf", 24, false, false, 3
 
 // Play area settings
 
-room_width = 6000;
-room_height = 6000;
+room_width = 12000;
+room_height =12000;
 
 global.wrap_margin_player = 1000;
 global.wrap_margin_objects = 1000;

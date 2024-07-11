@@ -38,8 +38,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_crew_mechanoid_1",
-    "path":"sprites/spr_crew_mechanoid_1/spr_crew_mechanoid_1.yy",
+    "name":"spr_crew_mechanoid_gunsmith",
+    "path":"sprites/spr_crew_mechanoid_gunsmith/spr_crew_mechanoid_gunsmith.yy",
   },
   "spriteMaskId":null,
   "visible":true,
