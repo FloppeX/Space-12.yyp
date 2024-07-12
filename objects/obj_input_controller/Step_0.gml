@@ -47,44 +47,11 @@ if gamepad_is_connected(0){
 	if keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter)
 		global.button_menu_select = true
 		
-	// Zoom
-/*
-	if gamepad_button_check(0,gp_padu)
-			global.zoom = global.zoom - 20
+	}
 
-	if gamepad_button_check(0,gp_padd)
-			global.zoom = global.zoom + 20
-	
-	global.zoom = clamp(global.zoom,global.min_zoom,global.max_zoom)
-*/
-	}
-/*
-if keyboard_check(vk_right){
-	shop = room_goto(rm_shop)
-	}
-*/
 	
 if keyboard_check_pressed(ord("L")){
 	global.active_level += 1
 	next_level = global.levels[global.active_level]
 	room_goto(next_level)
 	}
-	
-/*
-if keyboard_check(vk_left){
-	space = room_duplicate(rm_space)
-	room_goto (space)
-	}
-	
-	/*
-if keyboard_check_pressed(vk_control){
-		scr_add_ship_segment(id,1,24,obj_ship_segment_player)
-	}
-
-// Keyboard
-
-if keyboard_check_pressed(vk_up)
-	global.difficulty_level += 1
-	
-if keyboard_check_pressed(vk_down)
-	global.difficulty_level -= 1

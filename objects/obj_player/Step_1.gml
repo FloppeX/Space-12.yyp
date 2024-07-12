@@ -137,18 +137,6 @@ if keyboard_check_pressed(ord("Q")){
 		scr_ship_update_segments(id,segment_distance)
 	}
 	
-if keyboard_check_pressed(ord("1")){
-		scr_add_ship_segment_test_1(id,24,obj_ship_segment_player)
-	}
-
-if keyboard_check_pressed(ord("2")){
-		scr_add_ship_segment_test_2(id,24,obj_ship_segment_player)
-	}
-	
-if keyboard_check_pressed(ord("3")){
-		scr_add_ship_segment_test_3(id,24,obj_ship_segment_player)
-	}
-	
 // Update modules and activate them!
 
 for(var i = 0; i < array_length_1d(ship_segment); i+=1;)

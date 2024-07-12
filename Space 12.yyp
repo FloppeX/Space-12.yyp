@@ -44,7 +44,6 @@
     {"$GMFolder":"","%Name":"Rooms","folderPath":"folders/Rooms.yy","name":"Rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Scripts","folderPath":"folders/Scripts.yy","name":"Scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Audio scripts","folderPath":"folders/Scripts/Audio scripts.yy","name":"Audio scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Room scripts","folderPath":"folders/Scripts/Room scripts.yy","name":"Room scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Bullet modifiers","folderPath":"folders/Scripts/Bullet modifiers.yy","name":"Bullet modifiers","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Collision scripts","folderPath":"folders/Scripts/Collision scripts.yy","name":"Collision scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Crew scripts","folderPath":"folders/Scripts/Crew scripts.yy","name":"Crew scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -59,6 +58,7 @@
     {"$GMFolder":"","%Name":"Modular ship scripts","folderPath":"folders/Scripts/Modular ship scripts.yy","name":"Modular ship scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Movement scripts","folderPath":"folders/Scripts/Movement scripts.yy","name":"Movement scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Player creation scripts","folderPath":"folders/Scripts/Player creation scripts.yy","name":"Player creation scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Room scripts","folderPath":"folders/Scripts/Room scripts.yy","name":"Room scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Shop sscripts","folderPath":"folders/Scripts/Shop sscripts.yy","name":"Shop sscripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Targeting scripts","folderPath":"folders/Scripts/Targeting scripts.yy","name":"Targeting scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Test scripts","folderPath":"folders/Scripts/Test scripts.yy","name":"Test scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -117,7 +117,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.6.1.160",
+    "IDEVersion":"2024.6.0.157",
   },
   "name":"Space 12",
   "resources":[
@@ -304,6 +304,7 @@
     {"id":{"name":"obj_module_shotgun_enemy","path":"objects/obj_module_shotgun_enemy/obj_module_shotgun_enemy.yy",},},
     {"id":{"name":"obj_module_shotgun","path":"objects/obj_module_shotgun/obj_module_shotgun.yy",},},
     {"id":{"name":"obj_module_spectrocoil_reactor","path":"objects/obj_module_spectrocoil_reactor/obj_module_spectrocoil_reactor.yy",},},
+    {"id":{"name":"obj_module_static_amplifier","path":"objects/obj_module_static_amplifier/obj_module_static_amplifier.yy",},},
     {"id":{"name":"obj_module_teleporter","path":"objects/obj_module_teleporter/obj_module_teleporter.yy",},},
     {"id":{"name":"obj_module_thermodynamic_damper","path":"objects/obj_module_thermodynamic_damper/obj_module_thermodynamic_damper.yy",},},
     {"id":{"name":"obj_module_traction_control_system","path":"objects/obj_module_traction_control_system/obj_module_traction_control_system.yy",},},

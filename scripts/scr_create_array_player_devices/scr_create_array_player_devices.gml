@@ -366,7 +366,17 @@ function scr_create_array_player_devices() {
 
 	module_id = obj_module_engine_junk
 	credit_cost = 4
-	module_rarity = 40
+	module_rarity = 14
+	global.array_player_devices[module_number,0] = module_id
+	global.array_player_devices[module_number,1] = module_type
+	global.array_player_devices[module_number,2] = credit_cost
+	global.array_player_devices[module_number,3] = module_rarity
+	
+	module_number = 34
+
+	module_id = obj_module_static_amplifier
+	credit_cost = 4
+	module_rarity = 50
 	global.array_player_devices[module_number,0] = module_id
 	global.array_player_devices[module_number,1] = module_type
 	global.array_player_devices[module_number,2] = credit_cost
