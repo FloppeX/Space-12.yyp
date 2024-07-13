@@ -19,5 +19,10 @@ if scr_timer(30)
 		new_enemy_2 = scr_create_random_enemy(obj_enemy_modular_team_2);
 
 // Sound
-if !audio_is_playing(level_music)
-	audio_play_sound_on(global.music_emitter,level_music,1,1)
+if global.music_on
+	if !audio_is_playing(level_music)
+		audio_play_sound_on(global.music_emitter,level_music,1,1)
+else 
+	if audio_is_playing(level_music)
+		audio_stop_sound(level_music)
+	

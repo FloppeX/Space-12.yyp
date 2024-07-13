@@ -52,8 +52,8 @@ if(number_of_asteroids > 0){
 
 audio_stop_all()
 level_music = music_sci_fi_open_looping
-//if global.music_on 
-audio_play_sound_on(global.music_emitter,level_music,1,1)
+if global.music_on 
+	audio_play_sound_on(global.music_emitter,level_music,1,1)
 
 // Create background sprites
 

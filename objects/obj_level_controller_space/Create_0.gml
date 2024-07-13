@@ -87,7 +87,7 @@ number_of_diamonds = 2
 
 audio_stop_all()
 level_music = music_funky_gameplay_looping
-//if global.music_on 
+if global.music_on 
 	audio_play_sound(level_music,1,1)
 
 
