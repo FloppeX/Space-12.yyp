@@ -13,7 +13,7 @@ function scr_create_random_module_old() {
 			case 9: temp_module = instance_create_depth(0,0,-10,obj_module_reflective_shield_player);break;
 			case 10: temp_module = instance_create_depth(0,0,-10,obj_armor_player);break;
 			case 11: temp_module = instance_create_depth(0,0,-10,obj_module_sawblade);break;
-			case 12: temp_module = instance_create_depth(0,0,-10,obj_crew_ratling_gunner);break;
+			case 12: temp_module = instance_create_depth(0,0,-10,obj_crew_new_tailgunner);break;
 			case 13: temp_module = instance_create_depth(0,0,-10,obj_crew_telekinetic_gunner);break;
 			case 14: temp_module = instance_create_depth(0,0,-10,obj_crew_bloodsucker);break;
 			case 15: temp_module = instance_create_depth(0,0,-10,obj_crew_outlaw);break;

@@ -9,7 +9,7 @@ function scr_create_array_player_crew() {
 	global.array_player_crew[6] = obj_crew_token_mechanoid_gunsmith
 	global.array_player_crew[7] = obj_crew_token_rock_man
 	global.array_player_crew[8] = obj_crew_token_mechanoid_lovebot
-	global.array_player_crew[9] = obj_crew_token_ratling_tailgunner
+	global.array_player_crew[9] = obj_crew_token_uzok_tailgunner
 	global.array_player_crew[10] = obj_crew_token_battle_hardened_crusader
 	global.array_player_crew[11] = obj_crew_token_psychic_leech
 	global.array_player_crew[12] = obj_crew_token_combat_repair_bot
