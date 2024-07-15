@@ -17,6 +17,7 @@ function scr_create_array_player_crew() {
 	global.array_player_crew[14] = obj_crew_token_slurpy_the_dog
 	global.array_player_crew[15] = obj_crew_token_brain_in_a_jar
 	global.array_player_crew[16] = obj_crew_token_corvid_illusionist
+	global.array_player_crew[17] = obj_crew_token_ancient_astronaut
 
 	scr_shuffle_array(global.array_player_crew)
 }
