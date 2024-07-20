@@ -84,12 +84,12 @@ number_of_diamonds = 2
 
 	
 // Sound
-
+/*
 audio_stop_all()
 level_music = music_funky_gameplay_looping
 if global.music_on 
 	audio_play_sound(level_music,1,1)
-
+*/
 
 
 
@@ -148,30 +148,5 @@ repeat(number_of_diamonds)
 			diamonds += 1
 			//obj_health = 2*obj_health
 			}
-/*
-for (var i = 0; i < number_of_other_asteroids;i+=1){ //number_of_asteroids >= 1{
-	if irandom(1) == 0{
-		temp_xpos = global.wrap_border_left + random(global.play_area_width)//global.wrap_border_left + random(global.play_area_width)
-		temp_ypos = global.wrap_border_top//global.wrap_border_top
-		}
-	else{
-		temp_xpos = global.wrap_border_left
-		temp_ypos = global.wrap_border_top + random(global.play_area_height)
-		}
-	var random_number = random(100)
-	if random_number <= (global.asteroid_chance_credit + global.asteroid_chance_health)
-		new_asteroid =  instance_create_depth(temp_xpos,temp_ypos,0,obj_asteroid_big_health);
-		else {if random_number<= (global.asteroid_chance_credit + global.asteroid_chance_health + global.asteroid_chance_particles)
-			new_asteroid =  instance_create_depth(temp_xpos,temp_ypos,0,obj_asteroid_big_particles);
-			else new_asteroid =  instance_create_depth(temp_xpos,temp_ypos,0,obj_asteroid_big);
-			}
-		
-	
-	}
-	
-//create one asteroid with a diamond
 
-with (instance_find(obj_asteroid_big,irandom(number_of_gold_asteroids))){
-		diamonds = 5
-		obj_health = 2*obj_health
-		}
+

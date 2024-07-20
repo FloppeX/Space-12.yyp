@@ -39,8 +39,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_cockpit_4_v",
-    "path":"sprites/spr_cockpit_4_v/spr_cockpit_4_v.yy",
+    "name":"spr_cockpit_5",
+    "path":"sprites/spr_cockpit_5/spr_cockpit_5.yy",
   },
   "spriteMaskId":null,
   "visible":true,

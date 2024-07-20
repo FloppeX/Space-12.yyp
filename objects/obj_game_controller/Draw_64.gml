@@ -18,7 +18,7 @@ if global.view_mode == 2{
 	draw_text(860,480,"total_credits: " + string(global.total_credits))
 	draw_text(860,520,"Wormholes: " + string(instance_number(obj_wormhole)))
 	draw_text(860,560,"Crew array length: " + string(array_length(global.array_player_crew)))
-	//for(var i = 0; i < array_length_1d(text) ; i+=1;)
-	//	draw_text(860,400+i*40,text[i])
+	
+	//draw_sprite_part(spr_module_holder_door_left,-1,(global.game_timer mod 60)*24,0,24,48,1000,800)
 	
 }

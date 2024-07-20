@@ -38,6 +38,12 @@ if global.player_entering_shop{
 		physics_apply_force(phy_position_x,phy_position_y,0,y_braking_force)
 		
 		global.zoom =  500 + y_diff
+		
+		if y_diff < 200 and y_diff > 180
+			with(obj_module_holder_door){
+				close = false
+				open = true
+	}
 		}	
 }
 
@@ -46,6 +52,11 @@ if global.player_exiting_shop and !instance_exists(obj_wormhole){
 	global.active_level += 1
 	wormhole_end = instance_create_depth(0.5 * room_width,0.5 * room_height-500,100,obj_wormhole_level_end_new)
 	wormhole_end.next_level = global.levels[global.active_level]
+	
+	with(obj_module_holder_door){
+			close = true
+			open = false
+	}
 	}
 				
 

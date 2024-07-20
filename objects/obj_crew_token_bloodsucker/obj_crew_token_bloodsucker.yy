@@ -38,8 +38,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_crew_bloodsucker",
-    "path":"sprites/spr_crew_bloodsucker/spr_crew_bloodsucker.yy",
+    "name":"spr_crew_vampirie",
+    "path":"sprites/spr_crew_vampirie/spr_crew_vampirie.yy",
   },
   "spriteMaskId":null,
   "visible":true,

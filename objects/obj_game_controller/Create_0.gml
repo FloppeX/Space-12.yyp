@@ -128,7 +128,7 @@ global.font_small_text = font_add(working_directory+ "orbitron_medium.ttf", 10, 
 global.font_big_text = font_add(working_directory+ "orbitron_medium.ttf", 30, false, false, 32, 128);
 global.font_big_text_italic = font_add(working_directory+ "orbitron_medium.ttf", 30, false, true, 32, 128);
 global.font_bigger_text = font_add(working_directory+ "orbitron_medium.ttf", 48, false, false, 32, 128);
-global.font_shop = font_add(working_directory+ "arcade.ttf", 24, false, false, 32, 128);
+global.font_shop = font_add(working_directory+ "arcade.ttf", 40, false, false, 32, 128);
 
 // Play area settings
 
@@ -157,6 +157,7 @@ global.camera = instance_create_depth(0.5 * global.play_area_width, 0.5 * global
 // Sound
 
 global.music_on = true
+
 //audio_stop_all();
 audio_listener_position(0.5 * room_width,0.5 * room_height,1000);
 audio_falloff_set_model(audio_falloff_linear_distance_clamped)

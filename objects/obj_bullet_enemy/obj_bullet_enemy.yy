@@ -7,7 +7,6 @@
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_reflective_shield_player","path":"objects/obj_reflective_shield_player/obj_reflective_shield_player.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_shield_enemy_2","path":"objects/obj_shield_enemy_2/obj_shield_enemy_2.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_reflective_shield_enemy_2","path":"objects/obj_reflective_shield_enemy_2/obj_reflective_shield_enemy_2.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_armor_player","path":"objects/obj_armor_player/obj_armor_player.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_ship_segment_player","path":"objects/obj_ship_segment_player/obj_ship_segment_player.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_ship_segment_enemy_team_2","path":"objects/obj_ship_segment_enemy_team_2/obj_ship_segment_enemy_team_2.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],

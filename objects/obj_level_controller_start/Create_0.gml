@@ -51,7 +51,7 @@ if(number_of_asteroids > 0){
 // Sound
 
 audio_stop_all()
-level_music = music_sci_fi_open_looping
+level_music = snd_Electronic_Vol5_Pump_Main
 if global.music_on 
 	audio_play_sound_on(global.music_emitter,level_music,1,1)
 
@@ -69,4 +69,3 @@ fake_wormhole_1.draw_position_y = 1.6 * global.gui_unit
 
 fake_wormhole_2.draw_position_x = 9 * global.gui_unit
 fake_wormhole_2.draw_position_y = 1.6 * global.gui_unit
-

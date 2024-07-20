@@ -50,29 +50,26 @@ energy_increase_bonus = 0
 
 ////
 
-number_of_guns = 4
-number_of_utility = 6
-number_of_crew = 2
-number_of_items = number_of_guns + number_of_utility + number_of_crew
-number_of_items_left = 3
-number_of_items_to_select = 99
-number_of_rows = 6
-number_of_items_per_row = 2
+shop_segments[0] = noone
+
+//
 
 enter_shop = true
 exit_shop = false
-
-x_step_offset = 60
-y_step_offset = 60
+/*
+x_step_offset = 80
+y_step_offset = 80
 var i = 0
 for(var p = 0; p < number_of_rows; p+=1;)
 for(var q = 0; q < number_of_items_per_row; q+=1;){
-	shop_segments[i] = instance_create_depth(x,y,10,obj_ship_segment);
+	shop_segments[i] = instance_create_depth(x,y,10,obj_shop_segment);
 	shop_segments[i].owner = id
 	shop_segments[i].visible = false
 	shop_segments[i].persistent = false
-	shop_segments[i].phy_position_x = phy_position_x + 180 + q * x_step_offset;
-	shop_segments[i].phy_position_y = phy_position_y - (0.5 * y_step_offset * (number_of_rows-1)) + p * y_step_offset;
+	shop_segments[i].phy_position_x = phy_position_x + 180 + q * x_step_offset
+	shop_segments[i].phy_position_y = phy_position_y - (0.5 * y_step_offset * (number_of_rows-1)) + p * y_step_offset
+
+	shop_segments[i].door = instance_create_depth(shop_segments[i].phy_position_x,shop_segments[i].phy_position_y,-20,obj_module_holder_door);
 
 	if number_of_guns > 0{
 		temp_module = scr_create_random_gun();
@@ -106,6 +103,7 @@ for(var q = 0; q < number_of_items_per_row; q+=1;){
 		}
 	i += 1
 	}
+	*/
 	
 // Get module identities - used to check if more items can be taken...
 /*
@@ -115,16 +113,17 @@ for(var i = 0; i < number_of_items; i+=1;)
 	*/
 // Audio
 
-shop_audio_emitter = audio_emitter_create()
-audio_emitter_falloff(shop_audio_emitter, 600, 800, 1);
-audio_emitter_position(shop_audio_emitter,phy_position_x,phy_position_y,0)
+audio_emitter = audio_emitter_create()
+audio_emitter_falloff(audio_emitter, 200,700, 1);
+audio_emitter_position(audio_emitter,phy_position_x,phy_position_y,0)
+shop_noise = audio_play_sound_on(audio_emitter,snd_shop_background_hum,1,0.8)
 
 // Create buttons
 
-repair_button = instance_create_depth(x-200,y-30,-10,obj_shop_button_repair);
-reload_button = instance_create_depth(x-260,y-30,-10,obj_shop_button_reload);
-exit_button = instance_create_depth(x-200,y+30,-10,obj_shop_button_exit);
-segment_button = instance_create_depth(x-260,y+30,-10,obj_shop_button_segment);
+segment_button = instance_create_depth(x-60,y+80,-10,obj_shop_button_segment);
+repair_button = instance_create_depth(x-20,y+80,-10,obj_shop_button_repair);
+reload_button = instance_create_depth(x+20,y+80,-10,obj_shop_button_reload);
+exit_button = instance_create_depth(x+60,y+80,-10,obj_shop_button_exit);
 
 // 
 
@@ -143,28 +142,96 @@ shop_structure_part.depth = 100
 shop_structure_part.color = c_white
 
 
+// Test
+
+
+
+shop_structure_test = instance_create_depth(phy_position_x+95,phy_position_y-180,20,obj_shop_structure_gun_shop);
+shop_structure_test.scale = 1
+
+shop_structure_test = instance_create_depth(phy_position_x-315,phy_position_y-180,20,obj_shop_structure_device_shop);
+shop_structure_test.scale = 1
+
+
 shop_structure_part = instance_create_depth(phy_position_x-300,phy_position_y-250,-10,obj_shop_structure);
-//shop_structure_part = instance_create_depth(phy_position_x-250,phy_position_y-150,-10,obj_shop_structure);
 shop_structure_part = instance_create_depth(phy_position_x-200,phy_position_y-250,-10,obj_shop_structure);
 
 shop_structure_part = instance_create_depth(phy_position_x-300,phy_position_y,-10,obj_shop_structure);
-//shop_structure_part = instance_create_depth(phy_position_x-250,phy_position_y,-10,obj_shop_structure);
 shop_structure_part = instance_create_depth(phy_position_x-200,phy_position_y,-10,obj_shop_structure);
 
 shop_structure_part = instance_create_depth(phy_position_x-300,phy_position_y+150,-10,obj_shop_structure);
-//shop_structure_part = instance_create_depth(phy_position_x-250,phy_position_y+150,-10,obj_shop_structure);
 shop_structure_part = instance_create_depth(phy_position_x-200,phy_position_y+250,-10,obj_shop_structure);
 
 shop_structure_part = instance_create_depth(phy_position_x+300,phy_position_y-250,-10,obj_shop_structure);
-//shop_structure_part = instance_create_depth(phy_position_x+250,phy_position_y-150,-10,obj_shop_structure);
 shop_structure_part = instance_create_depth(phy_position_x+200,phy_position_y-250,-10,obj_shop_structure);
 
 shop_structure_part = instance_create_depth(phy_position_x+300,phy_position_y,-10,obj_shop_structure);
-//shop_structure_part = instance_create_depth(phy_position_x+250,phy_position_y,-10,obj_shop_structure);
 shop_structure_part = instance_create_depth(phy_position_x+200,phy_position_y,-10,obj_shop_structure);
 
 shop_structure_part = instance_create_depth(phy_position_x+300,phy_position_y+150,-10,obj_shop_structure);
-//shop_structure_part = instance_create_depth(phy_position_x+250,phy_position_y+150,-10,obj_shop_structure);
 shop_structure_part = instance_create_depth(phy_position_x+200,phy_position_y+150,-10,obj_shop_structure);
 
+
+//
+
+
+number_of_guns = 4
+number_of_utility = 6
+number_of_crew = 8
+number_of_items = number_of_guns + number_of_utility + number_of_crew
+number_of_items_left = 3
+number_of_items_to_select = 99
+temp_module = noone
+
+
+// Assign items to all slots on the shops
+
+for(var i = 0; i < instance_number(obj_shop_segment); i+=1;){
+	var temp_segment = instance_find(obj_shop_segment,i)
+	shop_segments[i] = temp_segment
+	shop_segments[i].owner = id
+	shop_segments[i].visible = false
+	shop_segments[i].persistent = false
+	shop_segments[i].module = noone
+	}
+/*
+for(var i = 0; i < array_length(shop_segments); i+=1;){
+	
+	if number_of_guns > 0{
+		temp_module = scr_create_random_gun();
+		number_of_guns -= 1
+	}
+	else {
+		if number_of_utility > 0{
+		temp_module = scr_create_random_device();
+		 number_of_utility -= 1
+		}
+
+		else {
+			temp_module = scr_create_random_crew();
+			number_of_crew -= 1
+			}
+		}
+
+	if scr_exists(temp_module){
+		temp_module.owner = id
+		temp_module.module_segment = shop_segments[i]
+		temp_module.owned_by_shop = true
+		
+		if shop_segments[i].module == noone{
+			shop_segments[i].module = temp_module
+			
+			temp_module.phy_position_x = shop_segments[i].phy_position_x
+			temp_module.phy_position_y = shop_segments[i].phy_position_y
+		
+			temp_module.phy_rotation = ( phy_rotation - temp_module.offset_angle)
+		
+			scr_adjust_module_placement_shop(temp_module,shop_segments[i])
+			}
+		else instance_destroy(temp_module)
+		
+		
+		
+		}
+	}
 

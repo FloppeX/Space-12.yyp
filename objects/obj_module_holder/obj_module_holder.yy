@@ -30,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_module_holder",
-    "path":"sprites/spr_module_holder/spr_module_holder.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":false,
 }

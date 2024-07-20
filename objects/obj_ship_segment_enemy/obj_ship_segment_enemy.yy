@@ -6,8 +6,8 @@
   "name":"obj_ship_segment_enemy",
   "overriddenProperties":[],
   "parent":{
-    "name":"Shop objects",
-    "path":"folders/Objects/Shop objects.yy",
+    "name":"Enemies",
+    "path":"folders/Objects/Ships/Enemies.yy",
   },
   "parentObjectId":{
     "name":"obj_ship_segment",

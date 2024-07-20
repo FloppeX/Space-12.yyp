@@ -11,6 +11,14 @@ my_shield.phy_rotation = phy_rotation
 
 activated = true
 
+if !object_is_ancestor(owner.object_index,obj_ship) or owner.controls_disabled{
+	activated = false
+	my_shield.phy_active = false
+	shield_active = false;
+	my_shield.obj_health = 0
+	recharge_timer = recharge_delay
+}
+
 // Animation
 
 if image_index == 0
@@ -39,7 +47,7 @@ if !activated and mechanism_retracted
 
 if my_shield.obj_health <= 0 {
 	if my_shield.phy_active == true
-		audio_play_sound_on(module_audio_emitter,snd_shield_power_down,0,owner.sound_priority)
+		audio_play_sound_on(module_audio_emitter,snd_shield_power_down,0,0.8)
 	my_shield.phy_active = false
 	shield_active = false;
 	recharge_timer -= 1
@@ -73,3 +81,4 @@ if shield_current_size > 0.01 and visible{
 	part_type_orientation(shield_particle,-phy_rotation,-phy_rotation,0,0,0);
 	part_particles_create(global.part_system_above, phy_position_x, phy_position_y, shield_particle, 3);
 	}
+	

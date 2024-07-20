@@ -12,7 +12,7 @@ if activated
 		global.player_entering_shop = false
 		}
 	else {
-		audio_play_sound_on(obj_shop.shop_audio_emitter,snd_shop_error_1,0,1)
+		audio_play_sound_on(obj_shop.audio_emitter,snd_shop_error_1,0,1)
 		activated = false
 		show_module_placement = true
 	}

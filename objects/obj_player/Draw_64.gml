@@ -60,7 +60,7 @@ if scr_exists(selected_active_module){//and scr_exists(modules[selected_active_m
 	draw_sprite_ext(selected_active_module.sprite_index,-1,energy_bar_x,health_bar_y + 0.5 * health_bar_height + 180,5,5,selected_active_module.offset_angle+90,c_white,1)
 	}
 	
-
+/*
 // Crew
 draw_set_font(global.font_big_text)
 draw_set_color(c_white)
@@ -71,13 +71,13 @@ for(var i = 0; i < array_height_2d(modifiers); i+=1;)
 				draw_sprite_ext(modifiers[i,4],-1,health_bar_x + global.gui_unit * 0.16,health_bar_y + 0.5 * health_bar_height + 2 * global.gui_unit +global.gui_unit * 0.5*i,global.gui_scale * 4,global.gui_scale * 4,0,c_white,1)
 				draw_text_ext_transformed(health_bar_x + 80,health_bar_y + 0.5 * health_bar_height + global.gui_unit * 2+global.gui_unit * 0.5*i,modifiers[i,2],0,800,global.gui_scale,global.gui_scale,0)
 				}
-				
+*/				
 // Crew new
 draw_set_halign(fa_middle)
 draw_set_valign(fa_middle)
 for(var i = 0; i < array_length(crew); i+=1;){
 	if crew[i] != noone 
-		draw_sprite_ext(crew[i].sprite_index,-1,display_get_gui_width() - 0.5 * global.gui_unit,0.5 * display_get_gui_height() - 0.5 * (0.6 * global.gui_unit * (array_length(crew) -1) )+ 0.6 * global.gui_unit*i,global.gui_scale * 4,global.gui_scale * 4,0,c_white,1)
+		draw_sprite_ext(crew[i].sprite_index,-1,display_get_gui_width() - 0.5 * global.gui_unit,0.5 * display_get_gui_height() - 0.5 * (0.6 * global.gui_unit * (array_length(crew) -1) )+ 0.6 * global.gui_unit*i,global.gui_scale * 5,global.gui_scale * 5,0,c_white,1)
 }
 /*
 for(var i = 0; i < array_length(crew); i+=1;){

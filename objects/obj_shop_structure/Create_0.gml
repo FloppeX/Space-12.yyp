@@ -13,9 +13,6 @@ var i = irandom(4)
 scale = 0.8+random(0.4)
 depth = irandom(24)
 
-phy_position_x += irandom(6)*10-30
-phy_position_y += irandom(6)*10-30
-
 color = make_color_hsv(owner.hue+irandom(40)-20,192,192)
 shadow = true
 /*

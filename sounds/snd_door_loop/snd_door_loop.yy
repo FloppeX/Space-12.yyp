@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_door_loop",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":12.102417,
+  "name":"snd_door_loop",
+  "parent":{
+    "name":"Shop sounds",
+    "path":"folders/Sounds/Shop sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_door_loop.wav",
+  "type":0,
+  "volume":1.0,
+}

@@ -2,7 +2,8 @@ function scr_create_random_gun() {
 	var temp_module = scr_create_random_module(global.array_player_weapons)
 
 	temp_module.offset_angle = irandom(3) * 90;
-
+	temp_module.phy_rotation = temp_module.offset_angle +90
+	
 	temp_module.placement_req_above = 1 // any placement allowed
 	temp_module.placement_req_right = 1
 	temp_module.placement_req_below = 1

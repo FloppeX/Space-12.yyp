@@ -3,15 +3,15 @@ module_under_cursor = instance_place(x,y,obj_module)
 
 
 temp_x = 0.5 * display_get_gui_width() //obj_shop.x //module_under_cursor.x
-temp_y = display_get_gui_height()-200//obj_shop.y + 120//module_under_cursor.y
-tmp_box_width = 440
-tmp_box_height = 170
+temp_y = display_get_gui_height()-300//obj_shop.y + 120//module_under_cursor.y
+tmp_box_width = 740*global.gui_scale
+tmp_box_height = 320*global.gui_scale
 tmp_offset_x = -0.5 * tmp_box_width 
 tmp_offset_y = -0.5 * tmp_box_height
-line_height = 28
-line_spacing = 28
+line_height = 42*global.gui_scale
+line_spacing = 42*global.gui_scale
 
-draw_sprite_ext(spr_shop_ui_4,-1,temp_x,temp_y+30,1.2,1.2,0,c_white,1)
+draw_sprite_ext(spr_shop_ui_4,-1,temp_x,temp_y+30,2.1*global.gui_scale,2.1*global.gui_scale,0,c_white,1)
 
 draw_set_font(global.font_shop)
 draw_set_valign(fa_top)
@@ -32,7 +32,7 @@ if module_under_cursor != noone and object_is_ancestor(module_under_cursor.objec
 		
 		draw_set_halign(fa_middle)
 		draw_set_color(c_white)
-		draw_text_ext_transformed(temp_x+tmp_offset_x+0.5*tmp_box_width,temp_y+tmp_offset_y+5,module_under_cursor.module_name,line_spacing,tmp_box_width,1,1,0)
+		draw_text_ext_transformed(temp_x+tmp_offset_x+0.5*tmp_box_width,temp_y+tmp_offset_y+5,module_under_cursor.module_name,line_spacing,tmp_box_width,global.gui_scale,global.gui_scale,0)
 		draw_set_halign(fa_left)
 		draw_text_ext_transformed_color(temp_x+tmp_offset_x+5,temp_y+tmp_offset_y+5+line_height,"Weapon",line_spacing,tmp_box_width,1,1,0,c_fuchsia,c_fuchsia,c_fuchsia,c_fuchsia,1)
 		if module_under_cursor.credit_cost > 0{
