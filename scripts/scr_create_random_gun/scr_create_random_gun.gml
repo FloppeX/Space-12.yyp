@@ -1,4 +1,5 @@
-function scr_create_random_gun() {
+function scr_create_random_gun(argument0) {
+	var gun_level = argument0
 	var temp_module = scr_create_random_module(global.array_player_weapons)
 
 	temp_module.offset_angle = irandom(3) * 90;
@@ -20,7 +21,7 @@ function scr_create_random_gun() {
 
 	// Add modifiers
 
-	repeat(global.difficulty_level){
+	repeat(gun_level){
 		var p = irandom(99)
 		if p <= 59 and p >= 40
 			with (temp_module){
@@ -44,7 +45,7 @@ function scr_create_random_gun() {
 				}
 				
 	// Chance for negative modifier
-	repeat(4-global.difficulty_level){
+	repeat(4-gun_level){
 		var p = irandom(99)
 		if p <= 29 and p >= 0
 			with (temp_module){
