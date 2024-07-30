@@ -232,7 +232,7 @@ for(var i = 0; i < array_length_1d(ship_segment); i+=1;)
 			
 // Update max health and health because this depends on segments
 
-max_health_base =  array_length_1d(ship_segment) * 10
+max_health_base =  array_length_1d(ship_segment) * 12
 obj_health = max_health_base
 
 //Sounds

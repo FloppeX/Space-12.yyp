@@ -1,5 +1,10 @@
 delay -= 1
 
+if open == true
+	close = false
+else 
+	close = true
+		
 if open and delay <= 0 and !fully_open{
 	fully_closed = false
 	door_travel_x += door_speed

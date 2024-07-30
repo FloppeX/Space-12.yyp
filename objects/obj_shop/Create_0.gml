@@ -141,15 +141,30 @@ shop_structure_part.sprite_index = spr_shop_structure_bars
 shop_structure_part.depth = 100
 shop_structure_part.color = c_white
 
+store_type_1 = noone
+store_type_1 = noone
 
-// Test
+// 
 
+store_list[0] = obj_shop_structure_gun_shop
+store_list[1] = obj_shop_structure_device_shop
+store_list[2] = obj_shop_structure_shield_shop
+store_list[3] = obj_shop_structure_crew_shop
 
+scr_shuffle_array(store_list)
 
-shop_structure_test = instance_create_depth(phy_position_x+95,phy_position_y-180,20,obj_shop_structure_gun_shop);
+//
+
+shop_structure_test = instance_create_depth(phy_position_x-220,phy_position_y-130,20,array_shift(store_list));
 shop_structure_test.scale = 1
 
-shop_structure_test = instance_create_depth(phy_position_x-315,phy_position_y-180,20,obj_shop_structure_device_shop);
+shop_structure_test = instance_create_depth(phy_position_x+220,phy_position_y-130,20,array_shift(store_list));
+shop_structure_test.scale = 1
+
+shop_structure_test = instance_create_depth(phy_position_x-220,phy_position_y+130,20,array_shift(store_list));
+shop_structure_test.scale = 1
+
+shop_structure_test = instance_create_depth(phy_position_x+220,phy_position_y+130,20,obj_shop_structure_pawn_shop);
 shop_structure_test.scale = 1
 
 
@@ -194,44 +209,3 @@ for(var i = 0; i < instance_number(obj_shop_segment); i+=1;){
 	shop_segments[i].persistent = false
 	shop_segments[i].module = noone
 	}
-/*
-for(var i = 0; i < array_length(shop_segments); i+=1;){
-	
-	if number_of_guns > 0{
-		temp_module = scr_create_random_gun();
-		number_of_guns -= 1
-	}
-	else {
-		if number_of_utility > 0{
-		temp_module = scr_create_random_device();
-		 number_of_utility -= 1
-		}
-
-		else {
-			temp_module = scr_create_random_crew();
-			number_of_crew -= 1
-			}
-		}
-
-	if scr_exists(temp_module){
-		temp_module.owner = id
-		temp_module.module_segment = shop_segments[i]
-		temp_module.owned_by_shop = true
-		
-		if shop_segments[i].module == noone{
-			shop_segments[i].module = temp_module
-			
-			temp_module.phy_position_x = shop_segments[i].phy_position_x
-			temp_module.phy_position_y = shop_segments[i].phy_position_y
-		
-			temp_module.phy_rotation = ( phy_rotation - temp_module.offset_angle)
-		
-			scr_adjust_module_placement_shop(temp_module,shop_segments[i])
-			}
-		else instance_destroy(temp_module)
-		
-		
-		
-		}
-	}
-

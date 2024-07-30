@@ -1,10 +1,10 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_gunshop",
+  "%Name":"spr_pawn_shop",
   "bboxMode":0,
-  "bbox_bottom":207,
+  "bbox_bottom":130,
   "bbox_left":0,
-  "bbox_right":239,
+  "bbox_right":240,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,16 +12,16 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"30d1e8c8-43ec-4eb0-a8c5-94615b313c96","name":"30d1e8c8-43ec-4eb0-a8c5-94615b313c96","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"2a2a15b7-6172-4f81-98b5-42abee093cad","name":"2a2a15b7-6172-4f81-98b5-42abee093cad","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":209,
+  "height":132,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"ba60217b-fd5a-4708-a8c8-fcd5c76173d2","blendMode":0,"displayName":"default","isLocked":false,"name":"ba60217b-fd5a-4708-a8c8-fcd5c76173d2","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"11cc26e0-9fba-4e2a-a16b-dfedfa110559","blendMode":0,"displayName":"default","isLocked":false,"name":"11cc26e0-9fba-4e2a-a16b-dfedfa110559","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_gunshop",
+  "name":"spr_pawn_shop",
   "nineSlice":null,
   "origin":9,
   "parent":{
@@ -33,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"spr_gunshop",
+    "%Name":"spr_pawn_shop",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_gunshop",
+    "name":"spr_pawn_shop",
     "playback":1,
     "playbackSpeed":60.0,
     "playbackSpeedType":0,
@@ -69,14 +69,14 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"30d1e8c8-43ec-4eb0-a8c5-94615b313c96","path":"sprites/spr_gunshop/spr_gunshop.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"1bfc7bb1-594c-468e-8a7e-bea909e51e1e","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2a2a15b7-6172-4f81-98b5-42abee093cad","path":"sprites/spr_pawn_shop/spr_pawn_shop.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"5330055c-492e-4303-b9b4-d450691113cf","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":132,
-    "yorigin":111,
+    "xorigin":108,
+    "yorigin":82,
   },
   "swatchColours":null,
   "swfPrecision":0.050000012,
@@ -86,5 +86,5 @@
   },
   "type":1,
   "VTile":false,
-  "width":241,
+  "width":242,
 }

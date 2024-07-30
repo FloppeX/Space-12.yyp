@@ -18,7 +18,7 @@ collision_victim = noone
 //
 timer = 0
 
-max_speed = 3
+max_speed = 2.8
 max_rotation_speed = 50
 
 mirror_x = 0;

@@ -10,11 +10,13 @@ var i = irandom(4)
 		case 4: sprite_index = spr_shop_structure_e; break;
 		}
 		
-scale = 0.8+random(0.4)
+scale = 1
 depth = irandom(24)
 
-color = make_color_hsv(owner.hue+irandom(40)-20,192,192)
+hue = irandom(40)-20
+color = make_color_hsv(hue,192,192)
 shadow = true
+
 /*
 number_of_bits = 2
 space_station_bits[0,0] = 0

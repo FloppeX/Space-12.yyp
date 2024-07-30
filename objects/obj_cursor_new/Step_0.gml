@@ -13,7 +13,6 @@ gamepad_set_axis_deadzone(0, 0.1);
 //
 
 
-
 //
 player_ship = instance_find(obj_player,0)
 

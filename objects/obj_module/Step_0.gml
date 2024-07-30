@@ -31,12 +31,11 @@ if joint != noone{
 	physics_joint_set_value(joint,phy_joint_max_motor_force,10000)
 	physics_joint_set_value(joint,phy_joint_motor_speed,0.8 * angle_diff)
 }
-target_angle = -owner.phy_rotation + offset_angle
 
-// Mirror owners alpha
-
-alpha = owner.alpha
-
+if scr_exists(owner){
+	target_angle = -owner.phy_rotation + offset_angle
+	alpha = owner.alpha
+	}
 //
 
 audio_emitter_position(module_audio_emitter,phy_position_x,phy_position_y,0)

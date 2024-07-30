@@ -1,3 +1,5 @@
+event_inherited()
+
 for(var i = 0; i < array_length(shop_segments); i+=1;){
 	if !scr_exists(shop_segments[i].module){
 		shop_segments[i].module = scr_create_random_device();
@@ -8,4 +10,12 @@ for(var i = 0; i < array_length(shop_segments); i+=1;){
 		shop_segments[i].module.phy_position_y = shop_segments[i].phy_position_y
 		shop_segments[i].module.phy_rotation = ( phy_rotation - shop_segments[i].module.offset_angle)
 		}
+	if scr_exists(shop_segments[i].module){
+		door_closed_timer -= 1
+		if door_closed_timer <= 0{
+			shop_segments[i].door.close = false
+			shop_segments[i].door.open = true
+			}
+		scr_adjust_module_placement_shop(shop_segments[i].module,shop_segments[i])
+	}
 }

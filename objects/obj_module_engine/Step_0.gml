@@ -1,5 +1,8 @@
 event_inherited();
 
+if !scr_exists(owner)
+	exit
+
 if !audio_is_playing(engine_noise)
 	engine_noise = audio_play_sound_on(module_audio_emitter,sound,1,sound_priority)
 
@@ -8,7 +11,7 @@ thrust = (thrust_base + thrust_bonus) * thrust_multiplier
 var add_thrust = owner.add_thrust
 thrust = thrust * add_thrust
 
-if scr_exists(owner) and thrust > 0 and visible and (owner.energy >= energy_cost){
+if  thrust > 0 and visible and (owner.energy >= energy_cost){
 	if owner.phy_speed < owner.max_speed
 		owner.energy -= energy_cost*add_thrust
 	var temp_dist = point_distance(phy_position_x,phy_position_y,owner.phy_position_x,owner.phy_position_y)
