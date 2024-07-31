@@ -14,3 +14,9 @@ shop_segments[1].joint = physics_joint_weld_create(shop_segments[1], id, shop_se
 
 shop_segments[2] = instance_create_depth(x+59,y+50,10,obj_shop_segment);
 shop_segments[2].joint = physics_joint_weld_create(shop_segments[2], id, shop_segments[2].phy_position_x,shop_segments[2].phy_position_y,0, 1, 1,false);
+
+shop_array = []
+
+for(var i = 0; i < array_length(global.array_player_devices); i+=1;)
+	if global.array_player_devices[i,1] == "shield"
+		array_insert(shop_array, -1, global.array_player_devices[i]);

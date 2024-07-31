@@ -5,7 +5,7 @@ for(var i = 0; i < array_length(shop_segments); i+=1;){
 		shop_segments[i].door.close = true
 		shop_segments[i].door.open = false
 		if shop_segments[i].door.fully_closed == true{
-			shop_segments[i].module = scr_create_random_device()
+			shop_segments[i].module = scr_create_random_module(shop_array)
 			shop_segments[i].module.owner = obj_shop
 			shop_segments[i].module.module_segment = shop_segments[i]
 			shop_segments[i].module.owned_by_shop = true

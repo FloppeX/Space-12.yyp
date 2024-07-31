@@ -53,10 +53,10 @@ wormhole = instance_create_depth(0.5 * room_width,0.5 * room_height,100,obj_worm
 //global.camera.follow_object = wormhole
 
 // timers
-stage_timer_start = 7200
+stage_timer_start = 10800
 stage_timer = stage_timer_start
 
-number_of_waves = 3
+number_of_waves = 4
 enemy_wave_timer = 360
 ship_interval_timer_start = 60
 ship_interval_timer = ship_interval_timer_start

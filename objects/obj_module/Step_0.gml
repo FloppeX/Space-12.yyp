@@ -1,3 +1,6 @@
+if owner == noone
+	exit
+
 // Set variables that may have been changed by modifiers
 
 bullet_damage = (bullet_damage_base + bullet_damage_bonus) * bullet_damage_multiplier

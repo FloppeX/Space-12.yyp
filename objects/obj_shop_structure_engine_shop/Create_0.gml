@@ -3,7 +3,7 @@ door_closed_timer_start = 240
 door_closed_timer = door_closed_timer_start
 
 depth = 0
-sprite_index = spr_device_shop
+sprite_index = spr_engine_shop
 color = c_white
 
 shop_segments[0] = instance_create_depth(x-59,y-50,10,obj_shop_segment);
@@ -18,7 +18,7 @@ shop_segments[2].joint = physics_joint_weld_create(shop_segments[2], id, shop_se
 shop_array = []
 
 for(var i = 0; i < array_length(global.array_player_devices); i+=1;)
-	if global.array_player_devices[i,1] == "gadget" or global.array_player_devices[i,1] == "weapon_mod" 
+	if global.array_player_devices[i,1] == "engine" or global.array_player_devices[i,1] == "engine_mod" 
 		array_insert(shop_array, -1, global.array_player_devices[i]);
 /*
 for(var i = 0; i < array_length(shop_segments); i+=1;){

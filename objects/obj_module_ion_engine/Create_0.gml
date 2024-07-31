@@ -1,6 +1,6 @@
 event_inherited();
 
-thrust_base = 100
+thrust_base = 120
 thrust_bonus = 0 
 thrust_multiplier = 1
 

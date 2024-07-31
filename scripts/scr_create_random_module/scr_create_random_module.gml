@@ -17,6 +17,10 @@ function scr_create_random_module(argument0) {
 		probability_step += array[i,3]
 		if random_number <= probability_step{
 			var temp_module = instance_create_depth(0,0,-10,array[i,0]);
+			if temp_module.fixed_rotation
+				temp_module.offset_angle = temp_module.fixed_rotation
+			else
+				temp_module.offset_angle = irandom(3) * 90;
 			temp_module.credit_cost = array[i,2]
 			temp_module.credit_cost = round(0.75 * temp_module.credit_cost + random(0.5)*temp_module.credit_cost)
 			return temp_module

@@ -1,4 +1,8 @@
 event_inherited();
+
+if !scr_exists(owner)
+	exit
+	
 //
 
 use_timer -= 1;

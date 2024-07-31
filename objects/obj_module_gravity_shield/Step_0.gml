@@ -1,5 +1,7 @@
 event_inherited();
 
+if !scr_exists(owner)
+	exit
 //
 
 // Animation

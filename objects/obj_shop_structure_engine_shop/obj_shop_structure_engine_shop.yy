@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_shop_structure_device_shop",
+  "%Name":"obj_shop_structure_engine_shop",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_shop_structure_device_shop",
+  "name":"obj_shop_structure_engine_shop",
   "overriddenProperties":[],
   "parent":{
     "name":"Shop objects",
@@ -29,9 +29,9 @@
   "physicsShape":1,
   "physicsShapePoints":[
     {"x":0.0,"y":0.0,},
-    {"x":32.0,"y":0.0,},
-    {"x":32.0,"y":32.0,},
-    {"x":0.0,"y":32.0,},
+    {"x":252.0,"y":0.0,},
+    {"x":252.0,"y":208.0,},
+    {"x":0.0,"y":208.0,},
   ],
   "physicsStartAwake":true,
   "properties":[],
@@ -39,8 +39,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_device_shop",
-    "path":"sprites/spr_device_shop/spr_device_shop.yy",
+    "name":"spr_engine_shop",
+    "path":"sprites/spr_engine_shop/spr_engine_shop.yy",
   },
   "spriteMaskId":null,
   "visible":true,
