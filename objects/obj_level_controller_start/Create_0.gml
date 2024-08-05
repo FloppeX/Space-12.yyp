@@ -1,3 +1,6 @@
+
+timer = 0
+
 // Play area settings
 
 scr_initialize_room()
@@ -30,9 +33,9 @@ part_particles_clear(global.part_system_below)
 
 // Create some asteroids
 
-number_of_asteroids = 10
-number_of_enemies_team_1 = 6
-number_of_enemies_team_2 = 6
+number_of_asteroids = 32
+number_of_enemies_team_1 = 0//6
+number_of_enemies_team_2 = 0//6
 
 if(number_of_asteroids > 0){
 	var i = irandom(1)
@@ -61,11 +64,6 @@ scr_create_background_layers()
 
 // Create fake wormholes for title!
 
-fake_wormhole_1 = instance_create_depth(0,0,-100,obj_wormhole_fake)
-fake_wormhole_2 = instance_create_depth(0,0,-100,obj_wormhole_fake)
-
-fake_wormhole_1.draw_position_x = 6.8 * global.gui_unit
-fake_wormhole_1.draw_position_y = 1.6 * global.gui_unit
-
-fake_wormhole_2.draw_position_x = 9 * global.gui_unit
-fake_wormhole_2.draw_position_y = 1.6 * global.gui_unit
+fake_wormhole = instance_create_depth(0,0,-100,obj_wormhole_fake)
+fake_wormhole.draw_position_x = 0.5 * display_get_gui_width()
+fake_wormhole.draw_position_y = 0.5 * display_get_gui_height()

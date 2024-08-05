@@ -1,3 +1,5 @@
+timer = 0
+
 effect_sprite = spr_wormhole
 rotation = 0
 rotation_speed = 1

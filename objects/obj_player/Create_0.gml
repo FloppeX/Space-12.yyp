@@ -97,7 +97,7 @@ energy_disabled_duration = 60
 
 // Particles
 
-particles = max_particles
+particles = 0
 
 
 // Diamonds

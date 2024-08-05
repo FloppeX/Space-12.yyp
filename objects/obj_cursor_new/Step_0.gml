@@ -36,6 +36,8 @@ if mouse_check_button_pressed(mb_left) or gamepad_button_check_pressed(0,gp_face
 						selected_segment.module.owned_by_shop = false;
 						selected_segment.module.owner = player_ship
 						selected_segment.owner = player_ship
+						selected_segment.module.credit_cost = 0.5 * selected_segment.module.credit_cost
+						selected_segment.credit_cost = selected_segment.module.credit_cost
 						audio_play_sound_on(obj_shop.audio_emitter,snd_purchase,0,1)
 						}
 					//selected_segment.credit_cost = 0

@@ -151,6 +151,7 @@ store_list[1] = obj_shop_structure_device_shop
 store_list[2] = obj_shop_structure_shield_shop
 store_list[3] = obj_shop_structure_crew_shop
 store_list[4] = obj_shop_structure_engine_shop
+store_list[5] = obj_shop_structure_gun_shop_2
 
 scr_shuffle_array(store_list)
 

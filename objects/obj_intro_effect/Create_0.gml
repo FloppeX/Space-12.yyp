@@ -1,0 +1,11 @@
+draw_position_x = 0.5 * display_get_gui_width()
+draw_position_y = 0.5 * display_get_gui_height()
+rotation = 0
+final_position_x = 0.5 * display_get_gui_width()
+final_position_y = 0.2 * display_get_gui_height()
+movement_speed_x = 0 * display_get_gui_width()
+movement_speed_y = 50
+max_movement_speed = 8
+temp_scale = 0.05
+scale_speed = 0.010
+final_scale = 1

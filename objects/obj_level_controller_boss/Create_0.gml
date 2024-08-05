@@ -72,7 +72,7 @@ boss_killed_timer = 600
 next_level_timer = 120
 
 end_wormhole_created = false
-wormhole_end_timer = 1800
+wormhole_end_timer = 3600
 wormhole_end_gone = false
 
 // Level
@@ -88,12 +88,12 @@ number_of_enemies = 0
 
 	
 // Sound
-
+/*
 audio_stop_all()
 level_music = music_funky_gameplay_looping
 if global.music_on 
 	audio_play_sound(level_music,1,1)
-
+*/
 
 // Create background sprites
 

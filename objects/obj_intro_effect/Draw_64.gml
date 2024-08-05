@@ -1,0 +1,1 @@
+draw_sprite_ext(sprite_index,-1,draw_position_x,draw_position_y,3*global.gui_scale * temp_scale,3*global.gui_scale * temp_scale,rotation,c_white,1)

@@ -1,11 +1,12 @@
 if !menu_active
 	exit;
-
+/*
 if gamepad_button_check_pressed(0,gp_padd)
 	selected_item += 1
 
 if gamepad_button_check_pressed(0,gp_padu)
 	selected_item -= 1
+	*/
 
 if keyboard_check_pressed(vk_down)
 	selected_item += 1

@@ -8,3 +8,13 @@ my_shield.phy_position_x = phy_position_x
 my_shield.phy_position_y = phy_position_y
 my_shield.phy_rotation = phy_rotation
 
+activated = true
+
+if !object_is_ancestor(owner.object_index,obj_ship) or owner.controls_disabled{
+	activated = false
+	my_shield.visible = false
+}
+else{
+	activated = true
+	my_shield.visible = true
+}
