@@ -82,7 +82,7 @@ wormhole_end_gone = false
 // Enemies
 
 
-number_of_asteroids = 6 + irandom(2 * global.difficulty_level)
+number_of_asteroids = 32
 number_of_explosive_barrels = 0
 number_of_enemies = 0
 

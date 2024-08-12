@@ -73,8 +73,8 @@ if !window_get_fullscreen()
 { window_set_size((s_width - offSET),(s_height - offSET)); }
 */
 
-var res_horizontal =  display_get_width()// 1920 // 3840// 
-var res_vertical = display_get_height() //1080 //2160//
+var res_horizontal =  1920 //display_get_width()// 1920 // 3840// 
+var res_vertical = 1080 //display_get_height() //1080 //2160//
 global.gui_scale = res_horizontal/3840
 global.gui_unit = res_horizontal/16
 
@@ -160,6 +160,7 @@ global.music_on = true
 
 //audio_stop_all();
 audio_listener_position(0.5 * room_width,0.5 * room_height,1000);
+audio_listener_orientation(0, 0, 1, 0, -1, 0);
 audio_falloff_set_model(audio_falloff_linear_distance_clamped)
 global.music_emitter = audio_emitter_create()
 audio_emitter_falloff(global.music_emitter, 100, 1600, 1);

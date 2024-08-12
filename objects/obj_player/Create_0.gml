@@ -181,7 +181,7 @@ repeat(20)
 		scr_place_engine_player()
 
 		var segment_placed = false	
-		var i = irandom(4)
+		var i = irandom(3)
 		switch (i){
 			case 0: temp_module = instance_create_depth(0,0,-10,obj_module_cockpit_1); break;
 			case 1: temp_module = instance_create_depth(0,0,-10,obj_module_cockpit_2); break;

@@ -42,6 +42,7 @@ if scr_exists(warping_ship) and !done_warping{
 				fake_warping_ship.modules[i,5] = 1
 			else fake_warping_ship.modules[i,5] = 0
 		}
+		audio_play_sound_on(audio_emitter,snd_wormhole_enter,0,1)
 		}
 	
 	// Move the player ship to the center of the wormhole

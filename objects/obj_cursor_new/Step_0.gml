@@ -38,6 +38,7 @@ if mouse_check_button_pressed(mb_left) or gamepad_button_check_pressed(0,gp_face
 						selected_segment.owner = player_ship
 						selected_segment.module.credit_cost = 0.5 * selected_segment.module.credit_cost
 						selected_segment.credit_cost = selected_segment.module.credit_cost
+						selected_segment.module.depth = -20
 						audio_play_sound_on(obj_shop.audio_emitter,snd_purchase,0,1)
 						}
 					//selected_segment.credit_cost = 0
@@ -68,6 +69,7 @@ if mouse_check_button_pressed(mb_left) or gamepad_button_check_pressed(0,gp_face
 						selected_segment.module.phy_position_y = selected_segment.phy_position_y
 						selected_segment.module.visible = true
 						selected_segment.module.persistent = true
+						selected_segment.module.depth = selected_segment.depth -20
 						if !selected_segment.visible // This is dumb, but it works as a way of checking if the segment is on a ship or a shop
 							scr_adjust_module_placement_shop(selected_segment.module,selected_segment)
 						else

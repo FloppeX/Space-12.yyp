@@ -75,7 +75,7 @@ wormhole_end_gone = false
 
 // Enemies
 
-number_of_asteroids = 18
+number_of_asteroids = 32
 number_of_gold_asteroids = 2 + round(global.difficulty_level/3)
 number_of_other_asteroids = 10 + 2* irandom(global.difficulty_level)//12 + irandom(4 * global.difficulty_level)
 number_of_explosive_barrels = 2 + irandom(global.difficulty_level)
@@ -84,12 +84,13 @@ number_of_diamonds = 2
 
 	
 // Sound
-/*
+
 audio_stop_all()
-level_music = music_funky_gameplay_looping
+
+level_music = snd_music_space_2
 if global.music_on 
-	audio_play_sound(level_music,1,1)
-*/
+	audio_play_sound_on(global.music_emitter,level_music,0,10)
+
 
 
 
@@ -107,7 +108,7 @@ for (var i = 0; i < number_of_asteroids;i+=1){
 	instance_create_depth(temp_xpos,temp_ypos,0,obj_asteroid_big);
 }
 
-level_credit_pickups = 18
+level_credit_pickups = 26
 for(var i = 0; i<number_of_asteroids;i+=1)
 	with (instance_find(obj_asteroid_big,i)){
 		if pickup_object_type == noone{

@@ -36,4 +36,7 @@ scr_find_mirror_positions();
 
 scr_wrap_room();
 
+//
 
+audio_emitter_position(audio_emitter,phy_position_x,phy_position_y,0)
+audio_emitter_gain(audio_emitter, wormhole_size);

@@ -142,3 +142,9 @@ if death_timer <= 0 and !instance_exists(obj_death_menu){
 if stage_timer == 0 and number_of_enemies < 10
 	number_of_enemies = 10
 
+// Sound
+if global.music_on
+	if !audio_is_playing(level_music)
+		audio_play_sound_on(global.music_emitter,level_music,1,10)
+			
+	

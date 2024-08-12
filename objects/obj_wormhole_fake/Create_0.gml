@@ -20,15 +20,11 @@ life_timer = 0
 
 draw_position_x = 0
 draw_position_y = 0
-/*
-wormhole_particle = part_type_create();
-part_type_sprite(wormhole_particle,effect_sprite,false,false,false);            
-part_type_size(wormhole_particle,1,1,-0.02,0);                   
-part_type_scale(wormhole_particle,1,1);                     
-part_type_color3(wormhole_particle,c_white,color,c_black);
-part_type_alpha2(wormhole_particle,1,0);
-part_type_speed(wormhole_particle,0,0,0,0);         
-part_type_direction(wormhole_particle,0,0,0,1);            
-part_type_orientation(wormhole_particle,0,0,0,0,1);      
-part_type_blend(wormhole_particle,false);                      
-part_type_life(wormhole_particle,140,140);
+
+//Sounds
+
+sound = snd_wormhole_loop
+audio_emitter = audio_emitter_create()
+audio_emitter_falloff(audio_emitter, 100, 1200, 1);
+
+audio_play_sound_on(audio_emitter,sound,1,0.8)

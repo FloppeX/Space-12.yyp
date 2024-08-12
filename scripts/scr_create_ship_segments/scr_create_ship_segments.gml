@@ -10,7 +10,7 @@ function scr_create_ship_segments(argument0, argument1, argument2) {
 	number_segments_placed = 1;
 	var segment_placed = false;
 
-	repeat(100)
+	repeat(20)
 		if number_segments_placed < number_of_segments{
 			segment_placed = false
 			var i = irandom(array_length_1d(ship_segment)-1)//for(var i = 0; i < array_length_1d(ship_segment); i+=1;)

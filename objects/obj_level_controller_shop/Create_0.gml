@@ -58,9 +58,11 @@ wormhole_begin = instance_create_depth(0.5 * room_width,0.5 * room_height+500,10
 // Sound
 
 audio_stop_all()
-level_music = music_sci_fi_close_2_looping
+
+level_music = snd_music_shop
 if global.music_on 
-	//audio_play_sound(level_music,1,1)
+	audio_play_sound(level_music,1,1)
+
 
 // Create background sprites
 

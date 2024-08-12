@@ -142,7 +142,7 @@ function scr_create_array_player_devices() {
 	module_id = obj_module_deaths_head
 	module_type = "weapon_mod"
 	credit_cost = 8
-	module_rarity = 4
+	module_rarity = 400
 	global.array_player_devices[module_number,0] = module_id
 	global.array_player_devices[module_number,1] = module_type
 	global.array_player_devices[module_number,2] = credit_cost

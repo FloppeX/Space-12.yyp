@@ -4,6 +4,7 @@ if done_warping
 new_wormhole_traveller = instance_create_depth(other.phy_position_x,other.phy_position_y,-10,obj_wormhole_traveller_level_end_ship)
 new_wormhole_traveller.phy_rotation = other.phy_rotation
 new_wormhole_traveller.sprite_index = other.sprite_index
+audio_play_sound_on(audio_emitter,snd_wormhole_enter,0,2)
 
 		new_wormhole_traveller.draw_scale = 1
 		for(var i = 0; i < array_length_1d(other.ship_segment); i+=1;){

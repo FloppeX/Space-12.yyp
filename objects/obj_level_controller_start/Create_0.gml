@@ -37,7 +37,7 @@ number_of_asteroids = 32
 number_of_enemies_team_1 = 0//6
 number_of_enemies_team_2 = 0//6
 
-if(number_of_asteroids > 0){
+for(var h = 0; h < number_of_asteroids; h+= 1){
 	var i = irandom(1)
 	if i == 0{
 		temp_xpos = global.wrap_border_left + random(global.play_area_width)
@@ -54,16 +54,12 @@ if(number_of_asteroids > 0){
 // Sound
 
 audio_stop_all()
-level_music = snd_Electronic_Vol5_Pump_Main
+level_music = snd_music_start_intro
 if global.music_on 
-	audio_play_sound_on(global.music_emitter,level_music,1,1)
+	audio_play_sound_on(global.music_emitter,level_music,0,1)
 
 // Create background sprites
 
 scr_create_background_layers()
 
-// Create fake wormholes for title!
 
-fake_wormhole = instance_create_depth(0,0,-100,obj_wormhole_fake)
-fake_wormhole.draw_position_x = 0.5 * display_get_gui_width()
-fake_wormhole.draw_position_y = 0.5 * display_get_gui_height()

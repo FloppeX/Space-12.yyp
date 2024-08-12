@@ -7,6 +7,6 @@ new_wormhole_traveller.color = other.color
 new_wormhole_traveller.phy_speed_x = other.phy_speed_x
 new_wormhole_traveller.phy_speed_y = other.phy_speed_y
 draw_scale = other.draw_scale
-
+audio_play_sound_on(audio_emitter,snd_wormhole_enter,0,2)
 with(other)
 	instance_destroy()
