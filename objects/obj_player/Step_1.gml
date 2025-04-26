@@ -1,3 +1,32 @@
+
+// At the VERY START of obj_player Step_1 Event
+show_debug_message("--- Step_1 Start Debug ---");
+show_debug_message("Type of modifiers: " + typeof(modifiers)); // Should be "array"
+
+if (is_array(modifiers)) {
+    show_debug_message("Is Array = true");
+    show_debug_message("Array Height (1D): " + string(array_length(modifiers))); // Check 1D length
+    show_debug_message("Array Height (2D): " + string(array_height_2d(modifiers))); // Check 2D height
+
+    // Check width of first row ONLY if height > 0
+    if (array_height_2d(modifiers) > 0) {
+         // Defensive check: ensure row 0 is actually an array itself
+         if (is_array(modifiers[0])) {
+              show_debug_message("Width of Row 0: " + string(array_length(modifiers[0]))); // Should be 5
+         } else {
+              show_debug_message("Row 0 is NOT an array!"); // Problem if this shows!
+         }
+    } else {
+         show_debug_message("Height is 0, cannot check width."); // This would explain the error
+    }
+} else {
+    show_debug_message("Is Array = false"); // Problem if this shows!
+}
+show_debug_message("-------------------------");
+
+
+
+
 // Execute modifiers
 
 for(var h = 0; h < array_height_2d(modifiers); h+=1;)

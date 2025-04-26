@@ -277,35 +277,68 @@ if (ai_disabled_timer <= 0 && !controls_disabled) { // Only run AI if active and
                     }
                 } // End close-range logic
 
-                // --- Shooting Logic (Remains the same - fires if guns currently have LOS) ---
-                var _shoot_target_arc = 30;
-                 for (var i = 0; i < array_length_1d(ship_segment); i += 1;) {
+                // --- Shooting Logic (Corrected Arguments & Conditions) ---
+                var _shoot_target_arc = 30; // Define arc width for gun check
+                for (var i = 0; i < array_length_1d(ship_segment); i += 1;) {
                      if (scr_exists(ship_segment[i]) && scr_exists(ship_segment[i].module)) {
                         var _module = ship_segment[i].module;
-                        if (object_is_ancestor(_module.object_index, obj_module_gun) /*... other conditions ...*/) {
+
+                        // Check if it's a gun AND if it's ready/enabled
+                        if (object_is_ancestor(_module.object_index, obj_module_gun) &&
+                            _module.ready_to_shoot && // Is the gun ready?
+                            !_module.activation_timer && // Is it not already activating?
+                            !controls_disabled) {       // Are controls enabled?
+
+                            // Check periodically for a target in the gun's specific arc
                             if (timer mod 20 == 0) {
-								// In Step Event, inside ATTACK state, right BEFORE the first scr_rocket_find_target_in_arc call
-								show_debug_message("--- Step Event Debug (Shooting Logic) ---");
-								show_debug_message("Checking target_objects before script call...");
-								if (is_array(target_objects)) {
-								     show_debug_message("target_objects is array. Length: " + string(array_length(target_objects)));
-								     // Check the actual values being passed
-								     if (array_length(target_objects) > 0) show_debug_message("Value for Index 0: " + string(target_objects[0]));
-								     if (array_length(target_objects) > 1) show_debug_message("Value for Index 1: " + string(target_objects[1])); // Relevant if the error happens on the second call
-								} else {
-								    show_debug_message("target_objects is NOT an array here!");
-													}
-								show_debug_message("-----------------------------------------");
-                                var _gun_target = scr_rocket_find_target_in_arc(/*...*/);
-                                if (_gun_target == noone) { _gun_target = scr_rocket_find_target_in_arc(/*...*/); }
-                                // Fire if the gun found any valid, visible target
-                                if (scr_exists(_gun_target) && !_gun_target.invisible) {
-                                     _module.activation_timer = 30;
+
+                                // --- Debug messages we added earlier (keep or remove as needed) ---
+                                show_debug_message("--- Step Event Debug (Shooting Logic) ---");
+                                show_debug_message("Checking target_objects before script call...");
+                                if (is_array(target_objects)) {
+                                     show_debug_message("target_objects is array. Length: " + string(array_length(target_objects)));
+                                     if (array_length(target_objects) > 0) show_debug_message("Value for Index 0: " + string(target_objects[0]));
+                                     if (array_length(target_objects) > 1) show_debug_message("Value for Index 1: " + string(target_objects[1]));
+                                } else {
+                                    show_debug_message("target_objects is NOT an array here!");
                                 }
-                            }
-                        }
-                     }
-                 }
+                                show_debug_message("Checking Module -> ID: " + string(_module.id) + ", Object: " + object_get_name(_module.object_index) + ", Has bullet_range?: " + string(variable_instance_exists(_module.id, "bullet_range")) + ", bullet_range Value: " + string(_module.bullet_range));
+                                show_debug_message("-----------------------------------------");
+                                // --- End Debug messages ---
+
+                                // Check bullet_range validity before using it
+                                if (!is_undefined(_module.bullet_range)) {
+
+                                    // *** CORRECTED SCRIPT CALLS with actual arguments ***
+                                    var _gun_target = scr_rocket_find_target_in_arc(
+                                        object_get_name(target_objects[0]),  // Arg0: Target Name String
+                                        -_module.phy_rotation,               // Arg1: Module Angle
+                                        _shoot_target_arc,                   // Arg2: Arc Width
+                                        _module.bullet_range * 1.5           // Arg3: Range Check
+                                    );
+
+                                    if (_gun_target == noone && array_length(target_objects) > 1) { // Check second target type if first failed
+                                        _gun_target = scr_rocket_find_target_in_arc(
+                                            object_get_name(target_objects[1]),  // Arg0: Target Name String
+                                            -_module.phy_rotation,               // Arg1: Module Angle
+                                            _shoot_target_arc,                   // Arg2: Arc Width
+                                            _module.bullet_range * 1.5           // Arg3: Range Check
+                                        );
+                                    }
+
+                                    // Fire if the gun found any valid, visible target in its arc
+                                    if (scr_exists(_gun_target) && !_gun_target.invisible) {
+                                         _module.activation_timer = 30; // Activate gun
+                                         // show_debug_message("ATTACK: Firing Gun at instance " + string(_gun_target));
+                                    }
+                                } else {
+                                     // Safety message if bullet_range was somehow still undefined
+                                     show_debug_message("WARNING: _module.bullet_range is undefined for module ID " + string(_module.id));
+                                }
+                            } // End timer mod check
+                        } // End gun check & conditions
+                     } // End module exists check
+                 } // End for loop
                  // --- End Shooting Logic ---
 				 break;
 
@@ -359,6 +392,12 @@ if (!controls_disabled && add_thrust > 0) {
 // =============================================================================
 // Pass Throttle Intent to Engine Modules
 // =============================================================================
+
+// Override throttle if ship is already at or above max speed
+if (phy_speed >= max_speed) {
+    add_thrust = 0; // Command zero thrust regardless of AI state's desire
+    // show_debug_message("Speed limit reached, overriding thrust to 0");
+}
 
 // Pass the final calculated 'add_thrust' to engine modules
 for (var i = 0; i < array_length_1d(ship_segment); i += 1;) {
