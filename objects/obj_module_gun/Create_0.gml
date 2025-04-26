@@ -6,7 +6,7 @@ ready_to_shoot = true
 
 bullet_type_base = obj_bullet_player;
 bullet_damage_base = 8;
-bullet_range_base = 560
+bullet_range_base = 560;
 bullet_speed_base = 9;
 bullet_speed_randomness_base = 0//0.25;
 bullet_interval_base = 16;

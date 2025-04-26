@@ -1,6 +1,7 @@
 //
 hit_enemy = true;
 other.obj_health -= damage;
+other.recently_hit = true;
 if other.obj_health <= 0
 	if scr_exists(obj_player)
 		other.the_one_that_killed_me = obj_player

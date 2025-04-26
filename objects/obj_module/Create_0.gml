@@ -112,6 +112,7 @@ energy_cost_bonus = 0
 particle_cost_bonus = 0
 
 // Calculate values
+bullet_range = 100;
 
 bullet_damage = round((bullet_damage_base * bullet_damage_multiplier) + bullet_damage_bonus)
 bullet_range = round((bullet_range_base * bullet_range_multiplier) + bullet_range_bonus)
