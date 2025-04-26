@@ -22,6 +22,6 @@ if global.view_mode == 2{
 	draw_text(phy_position_x,phy_position_y+80,"phy_rotation: " + string(phy_rotation mod 360))
 	draw_text(phy_position_x,phy_position_y+120,"angular velocity: " + string((phy_angular_velocity)))
 	}
-	
+	/*
 draw_self()
 draw_sprite(spr_segment_2,-1,scr_local_sprite_coords_x(-15,-15),scr_local_sprite_coords_y(-15,-15))
