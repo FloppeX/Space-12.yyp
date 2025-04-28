@@ -8,15 +8,22 @@ if !scr_exists(follow_object){
 
 if scr_exists(follow_object){
 	
-	var temp_dir = scr_wrap_direction_to_point(phy_position_x, phy_position_y, follow_object.phy_position_x, follow_object.phy_position_y) 
-	var temp_dist = scr_wrap_distance_to_point(phy_position_x, phy_position_y, follow_object.phy_position_x, follow_object.phy_position_y)
-	camera_speed = min(6,temp_dist/24)
-	phy_speed_x = lengthdir_x(camera_speed, temp_dir)
-	phy_speed_y = lengthdir_y(camera_speed, temp_dir)
-	/*
-	phy_position_x = follow_object.phy_position_x
-	phy_position_y = follow_object.phy_position_y
-	*/
+ // --- TEMPORARY SNAPPING CODE ---
+    // Comment out the physics speed calculation:
+    /*
+    var temp_dir = scr_wrap_direction_to_point(phy_position_x, phy_position_y, follow_object.phy_position_x, follow_object.phy_position_y);
+    var temp_dist = scr_wrap_distance_to_point(phy_position_x, phy_position_y, follow_object.phy_position_x, follow_object.phy_position_y);
+    camera_speed = min(6, temp_dist / 24);
+    phy_speed_x = lengthdir_x(camera_speed, temp_dir);
+    phy_speed_y = lengthdir_y(camera_speed, temp_dir);
+    */
+
+    // Add direct position snapping:
+    phy_position_x = follow_object.phy_position_x;
+    phy_position_y = follow_object.phy_position_y;
+    phy_speed_x = 0; // Stop residual physics movement
+    phy_speed_y = 0;
+    // --- END TEMPORARY SNAPPING CODE ---
 	}
 	
 // Move the background
@@ -82,4 +89,9 @@ camera_set_view_mat(camera,vm)
 camera_set_proj_mat(camera,pm)
 view_camera[0] = camera;
 
+
+// Inside obj_camera Step Event, after setting phy_speed_x/y
+if scr_timer(60) { // Print once per second
+    show_debug_message("Camera Debug: ID=" + string(id) + " Target=" + ((scr_exists(follow_object))?string(follow_object.id):"None") + " Pos=(" + string(floor(phy_position_x)) + "," + string(floor(phy_position_y)) + ") Speed=(" + string(phy_speed_x) + "," + string(phy_speed_y) + ")");
+}
 

@@ -24,7 +24,7 @@
   },
   "persistent":true,
   "physicsAngularDamping":20.0,
-  "physicsDensity":0.2,
+  "physicsDensity":0.01,
   "physicsFriction":0.1,
   "physicsGroup":0,
   "physicsKinematic":false,
@@ -34,7 +34,7 @@
   "physicsSensor":false,
   "physicsShape":0,
   "physicsShapePoints":[
-    {"x":10.0,"y":10.0,},
+    {"x":11.0,"y":10.0,},
     {"x":22.0,"y":10.0,},
   ],
   "physicsStartAwake":true,

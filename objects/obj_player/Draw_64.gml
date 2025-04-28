@@ -79,8 +79,3 @@ for(var i = 0; i < array_length(crew); i+=1;){
 	if crew[i] != noone 
 		draw_sprite_ext(crew[i].sprite_index,-1,display_get_gui_width() - 0.5 * global.gui_unit,0.5 * display_get_gui_height() - 0.5 * (0.6 * global.gui_unit * (array_length(crew) -1) )+ 0.6 * global.gui_unit*i,global.gui_scale * 5,global.gui_scale * 5,0,c_white,1)
 }
-/*
-for(var i = 0; i < array_length(crew); i+=1;){
-	if crew[i] != noone
-		draw_sprite_ext(crew[i].sprite_index,-1,health_bar_x + global.gui_unit * 0.16,health_bar_y + 0.4 * health_bar_height + 0.76 * global.gui_unit +0.55 * global.gui_unit *i,global.gui_scale * 4,global.gui_scale * 4,0,c_white,1)
-}

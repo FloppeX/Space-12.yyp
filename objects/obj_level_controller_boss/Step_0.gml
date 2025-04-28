@@ -63,7 +63,8 @@ if boss_creation_timer <= 0 and boss_created == false{
 	var temp_y = obj_player.phy_position_y + lengthdir_y(tempdist,tempdir)
 
 	
-	global.temp_number_of_segments = irandom(global.difficulty_level);
+	global.temp_number_of_segments = irandom(global.difficulty_level)+2;
+	global.temp_number_of_segments = clamp(global.temp_number_of_segments,3,8)
 	
 	enemy_boss = instance_create_depth(temp_x,temp_y,0,boss_object);
 

@@ -1,92 +1,95 @@
+/// @function scr_ship_update_segments(ship_instance_id, segment_distance)
+/// @param {Id.Instance} ship_instance_id The ID of the ship (e.g., 'id' from the ship object).
+/// @param {real} segment_distance The desired distance between segments.
+/// @description Updates segment neighbors, recalculates relative positions based on center of mass,
+///              and potentially recreates weld joints. Includes division by zero check.
+
 function scr_ship_update_segments(argument0, argument1) {
-	var ship = argument0
-	var segment_distance = argument1
 
-	// Delete all joints
+    var ship_id = argument0;
+    var seg_dist = argument1;
 
-	for(var i = 0; i < array_length_1d(ship.ship_segment); i+=1;)
-		with(ship.ship_segment[i]){
-			if joint != noone
-				physics_joint_delete(joint)
-			if joint_above != noone
-				physics_joint_delete(joint_above)
-			if joint_right != noone
-				physics_joint_delete(joint_right)
-			if joint_below != noone
-				physics_joint_delete(joint_below)
-			if joint_left != noone
-				physics_joint_delete(joint_left)
-			joint = noone
-			joint_above = noone;
-			joint_right = noone;
-			joint_below = noone;
-			joint_left = noone;
-		}
-	
-	// Move the segments 
+    // --- Safety Check: Ensure ship instance and segment array exist ---
+    if (!instance_exists(ship_id) || !variable_instance_exists(ship_id, "ship_segment") || !is_array(ship_id.ship_segment)) {
+        show_debug_message("ERROR in scr_ship_update_segments: Invalid ship ID or ship_segment array.");
+        exit;
+    }
 
-	for(var i = 0; i < array_length_1d(ship.ship_segment); i+=1;){
-		temp_segment = ship.ship_segment[i].ship_segment_left
-		if temp_segment != noone{
-			temp_segment.phy_position_x = ship.ship_segment[i].phy_position_x + lengthdir_x(segment_distance,-phy_rotation+90)
-			temp_segment.phy_position_y = ship.ship_segment[i].phy_position_y + lengthdir_y(segment_distance,-phy_rotation+90)
-			}
-		temp_segment = ship.ship_segment[i].ship_segment_above
-		if temp_segment != noone{
-			temp_segment.phy_position_x = ship.ship_segment[i].phy_position_x + lengthdir_x(segment_distance,-phy_rotation)
-			temp_segment.phy_position_y = ship.ship_segment[i].phy_position_y + lengthdir_y(segment_distance,-phy_rotation)
-			}
-		temp_segment = ship.ship_segment[i].ship_segment_right
-		if temp_segment != noone{
-			temp_segment.phy_position_x = ship.ship_segment[i].phy_position_x + lengthdir_x(segment_distance,-phy_rotation-90)
-			temp_segment.phy_position_y = ship.ship_segment[i].phy_position_y + lengthdir_y(segment_distance,-phy_rotation-90)
-			}
-		temp_segment = ship.ship_segment[i].ship_segment_below
-		if temp_segment != noone{
-			temp_segment.phy_position_x = ship.ship_segment[i].phy_position_x + lengthdir_x(segment_distance,-phy_rotation+180)
-			temp_segment.phy_position_y = ship.ship_segment[i].phy_position_y + lengthdir_y(segment_distance,-phy_rotation+180)
-			}
-		}
-	
-	// Update ship position = average of all segment positions
+    var _ship_segments = ship_id.ship_segment;
+    var _segments_count = 0;
+    var center_x = 0;
+    var center_y = 0;
 
-	var x_total = 0
-	var y_total = 0;
-	for(var i = 0; i < array_length_1d(ship.ship_segment); i+=1;){
-		x_total += ship.ship_segment[i].phy_position_x
-		y_total += ship.ship_segment[i].phy_position_y
-		}
-	ship.phy_position_x = x_total / array_length_1d(ship_segment)
-	ship.phy_position_y = y_total / array_length_1d(ship_segment)
+    // First pass: Count valid segments and sum positions for CoM
+    for (var i = 0; i < array_length(_ship_segments); i++) {
+        var _seg = _ship_segments[i];
+        if (scr_exists(_seg)) {
+            center_x += _seg.phy_position_x;
+            center_y += _seg.phy_position_y;
+            _segments_count += 1;
+        }
+    }
 
-	// Join segments to ship
-	/*
+    // Prevent Division by Zero
+    if (_segments_count == 0) {
+        show_debug_message("WARN in scr_ship_update_segments: No valid segments found for ship " + string(ship_id) + ". Exiting.");
+        exit;
+    }
 
-	for(var i = 0; i < array_length_1d(ship.ship_segment); i+=1;){
-		if ship.ship_segment[i].ship_segment_above != noone
-			if ship.ship_segment[i].ship_segment_above.joint_below == noone
-				ship.ship_segment[i].joint_above = physics_joint_weld_create(ship.ship_segment[i], ship.ship_segment[i].ship_segment_above, ship.ship_segment[i].phy_position_x,ship.ship_segment[i].phy_position_y,0, 1000, 1000,false);
-		if ship.ship_segment[i].ship_segment_right != noone
-			if ship.ship_segment[i].ship_segment_right.joint_left == noone
-				ship.ship_segment[i].joint_right = physics_joint_weld_create(ship.ship_segment[i], ship.ship_segment[i].ship_segment_right, ship.ship_segment[i].phy_position_x,ship.ship_segment[i].phy_position_y,0, 1000, 1000,false);
-		if ship.ship_segment[i].ship_segment_below != noone
-			if ship.ship_segment[i].ship_segment_below.joint_above == noone
-				ship.ship_segment[i].joint_below = physics_joint_weld_create(ship.ship_segment[i], ship.ship_segment[i].ship_segment_below, ship.ship_segment[i].phy_position_x,ship.ship_segment[i].phy_position_y,0, 1000, 1000,false);
-		if ship.ship_segment[i].ship_segment_left != noone
-			if ship.ship_segment[i].ship_segment_left.joint_right == noone
-				ship.ship_segment[i].joint_left = physics_joint_weld_create(ship.ship_segment[i], ship.ship_segment[i].ship_segment_left, ship.ship_segment[i].phy_position_x,ship.ship_segment[i].phy_position_y,0, 1000, 1000,false);
-	}
-	ship.ship_segment[0].joint = physics_joint_weld_create(ship.ship_segment[0], ship, ship.ship_segment[0].phy_position_x,ship.ship_segment[0].phy_position_y,0, 10000, 10000,false);
-	*/
-	for(var i = 0; i < array_length_1d(ship.ship_segment); i+=1;)
-		ship.ship_segment[i].joint = physics_joint_weld_create(ship.ship_segment[i], ship, ship.ship_segment[i].phy_position_x,ship.ship_segment[i].phy_position_y,0, 10000, 10000,false);
+    // Calculate average position (Center of Mass)
+    var average_x = center_x / _segments_count;
+    var average_y = center_y / _segments_count;
 
-	// Update placement angle and distance (for creating fake ships when warping)
+    // --- Update segments based on calculated CoM and neighbors ---
+    // (Assuming neighbor update logic might exist elsewhere or isn't strictly needed if joints are strong)
 
-	for(var i = 0; i < array_length_1d(ship.ship_segment); i+=1;){
-			ship.ship_segment[i].placement_angle = ship.phy_rotation + point_direction(ship.phy_position_x,ship.phy_position_y,ship.ship_segment[i].phy_position_x,ship.ship_segment[i].phy_position_y)
-			ship.ship_segment[i].placement_distance = point_distance(ship.phy_position_x,ship.phy_position_y,ship.ship_segment[i].phy_position_x,ship.ship_segment[i].phy_position_y)
-		}
+    // Second pass: Update positions (optional?) and recreate joints
+    for (var i = 0; i < array_length(_ship_segments); i++) {
+        var _seg = _ship_segments[i];
+        if (scr_exists(_seg)) {
+
+            // --- Optional: Reposition based on CoM/Placement Angle? ---
+            // Consider if this is necessary or if physics should handle positioning via joints.
+            // Directly setting phy_position_* here can cause issues if done frequently with active physics.
+            // var target_x = average_x + lengthdir_x(_seg.placement_distance, _seg.placement_angle);
+            // var target_y = average_y + lengthdir_y(_seg.placement_distance, _seg.placement_angle);
+            // _seg.phy_position_x = target_x;
+            // _seg.phy_position_y = target_y;
+            // --- End Optional Reposition ---
 
 
+            // --- Joint Recreation / Handling ---
+            // *** CORRECTED CHECK ***
+            // Destroy existing weld joint ONLY if the 'joint' variable exists AND it's not already 'noone'
+            if (variable_instance_exists(_seg.id, "joint") && _seg.joint != noone) {
+                 physics_joint_delete(_seg.joint); // Attempt deletion
+                 _seg.joint = noone; // Reset variable after deletion attempt
+            } else if (!variable_instance_exists(_seg.id, "joint")) {
+                 // If the variable didn't even exist, create it and set to noone
+                 _seg.joint = noone;
+            }
+
+            // Create NEW weld joint connecting the segment to the main ship body (ship_id)
+            // Consider if this should only happen ONCE during initial setup, not every time this script runs.
+            // Recreating joints frequently can be unstable.
+            if (_seg.joint == noone) { // Only create if we don't think one exists
+                _seg.joint = physics_joint_weld_create(ship_id, _seg, _seg.phy_position_x, _seg.phy_position_y, 0, 10000, 10000, false);
+                 if (_seg.joint < 0) { // Check if joint creation failed (returns negative value on failure)
+                      show_debug_message("WARN: Failed to create weld joint for segment " + string(_seg.id));
+                      _seg.joint = noone; // Ensure it's noone if failed
+                 }
+            }
+
+            // --- Module Position Update ---
+             if (scr_exists(_seg.module)) {
+                  // Usually handled by the revolute joint, but ensures visual alignment
+                  _seg.module.phy_position_x = _seg.phy_position_x;
+                  _seg.module.phy_position_y = _seg.phy_position_y;
+             }
+        }
+    } // End loop
+
+    // Update the main ship body's position to the CoM? Optional.
+    // ship_id.phy_position_x = average_x;
+    // ship_id.phy_position_y = average_y;
 }

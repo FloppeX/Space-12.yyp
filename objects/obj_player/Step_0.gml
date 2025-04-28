@@ -35,18 +35,46 @@ if hit_invulnerable_timer > 0
 	hit_invulnerable_timer -= 1
 
 	
-// Turn
+// --- Turning Logic (Targeting Rotation Speed) ---
 
-if controls_disabled == false{
-	
-	if abs(phy_angular_velocity) < rotation_speed{
-		physics_apply_torque(array_length_1d(ship_segment) * rotation_force * rotation_value)
-		phy_angular_damping = 2 * array_length_1d(ship_segment) + add_thrust * 10
-		}
-	else
-		phy_angular_damping = 30
+// Tuning Variables - Adjust these!
+var turn_responsiveness = 20.0; // How strongly it tries to reach target speed (Proportional Gain)
+var turn_stop_damping = 0.98;  // Damping factor when NO input is given (higher = drifts longer)
+var turn_max_torque = rotation_force * 10; // Max torque to prevent excessive force (adjust multiplier)
+
+if (controls_disabled == false) {
+    // 1. Determine Target Angular Velocity
+    // Assumes rotation_value is calculated elsewhere based on key/gamepad input (-1 for right, 1 for left, 0 for none)
+    // rotation_speed is the instance variable holding the current max angular velocity (degrees/step)
+    var target_angular_velocity = rotation_value * rotation_speed; // Target speed in degrees per step
+
+    // 2. Calculate Error
+    // Difference between where we want to be and where we are
+    var error = target_angular_velocity - phy_angular_velocity;
+
+    // 3. Calculate Torque Proportional to Error
+    // Apply torque to correct the error. Clamp it to prevent excessive force.
+    var desired_torque = clamp(error * turn_responsiveness, -turn_max_torque, turn_max_torque);
+
+    // Apply the calculated torque
+    physics_apply_torque(desired_torque);
+
+    // Apply slight damping even when turning to prevent overshooting if responsiveness is high
+    // This factor should be closer to 1 than the stopping damping
+    phy_angular_velocity *= 0.98; // Optional: small constant damping
+
+} else {
+    // If controls disabled, just apply damping to stop rotation
+    phy_angular_velocity *= turn_stop_damping;
 }
-else phy_angular_damping = 4
+
+// Additional damping when there's NO turn input (helps stop cleanly)
+if (rotation_value == 0 && controls_disabled == false) {
+     phy_angular_velocity *= turn_stop_damping;
+}
+
+
+// --- End Turning Logic ---
 	
 // Stop ship from skidding
 if add_thrust
@@ -241,5 +269,28 @@ if scr_timer(60)
 					}
 				}
 		
+// Update CoM Marker Position
+if (instance_exists(com_marker_instance)) { // Check if marker exists
 
+    // Calculate world CoM using physics variables
+    var world_com_x = phy_position_x + phy_com_x;
+    var world_com_y = phy_position_y + phy_com_y;
 
+    // Check for NaN just in case physics is unstable
+    if (!is_nan(world_com_x) && !is_nan(world_com_y)) {
+        // Update the marker object's standard x/y position
+        com_marker_instance.x = world_com_x;
+        com_marker_instance.y = world_com_y;
+
+        // --- DEBUG: Output Marker Position ---
+        if (timer mod 60 == 0) { // Print once per second
+             show_debug_message("End Step: Updating CoM marker instance " + string(com_marker_instance) + " to World Pos: (" + string(floor(world_com_x)) + "," + string(floor(world_com_y)) + ")");
+        }
+        // --- END DEBUG ---
+
+    } else {
+         if (timer mod 60 == 0) { show_debug_message("End Step WARN: CoM values are NaN, not updating marker."); }
+    }
+} else if (timer mod 120 == 0) { // Print warning less often if marker missing
+     show_debug_message("End Step WARN: com_marker_instance does not exist!");
+}

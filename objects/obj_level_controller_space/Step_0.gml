@@ -68,7 +68,7 @@ if number_of_enemies >= 1 and ship_interval_timer <= 0 and scr_exists(obj_player
 	global.temp_number_of_segments = clamp(global.temp_number_of_segments,3,8)
 	
 	new_enemy = instance_create_depth(temp_x,temp_y,0,obj_enemy_modular_team_1);
-
+	show_debug_message("Attempting to spawn: " + object_get_name(new_enemy.object_index) + " at (" + string(temp_x) + "," + string(temp_y) + ")");
 	new_enemy.max_health_base = global.temp_number_of_segments * 10 + 10//new_enemy.max_health_base * (1 + 0.2 * global.difficulty_level)
 	new_enemy.obj_health = new_enemy.max_health_base
 	new_enemy.pickup_objects = 1 + irandom(irandom(global.difficulty_level))

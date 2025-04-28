@@ -292,20 +292,6 @@ if (ai_disabled_timer <= 0 && !controls_disabled) { // Only run AI if active and
                             // Check periodically for a target in the gun's specific arc
                             if (timer mod 20 == 0) {
 
-                                // --- Debug messages we added earlier (keep or remove as needed) ---
-                                show_debug_message("--- Step Event Debug (Shooting Logic) ---");
-                                show_debug_message("Checking target_objects before script call...");
-                                if (is_array(target_objects)) {
-                                     show_debug_message("target_objects is array. Length: " + string(array_length(target_objects)));
-                                     if (array_length(target_objects) > 0) show_debug_message("Value for Index 0: " + string(target_objects[0]));
-                                     if (array_length(target_objects) > 1) show_debug_message("Value for Index 1: " + string(target_objects[1]));
-                                } else {
-                                    show_debug_message("target_objects is NOT an array here!");
-                                }
-                                show_debug_message("Checking Module -> ID: " + string(_module.id) + ", Object: " + object_get_name(_module.object_index) + ", Has bullet_range?: " + string(variable_instance_exists(_module.id, "bullet_range")) + ", bullet_range Value: " + string(_module.bullet_range));
-                                show_debug_message("-----------------------------------------");
-                                // --- End Debug messages ---
-
                                 // Check bullet_range validity before using it
                                 if (!is_undefined(_module.bullet_range)) {
 

@@ -19,7 +19,7 @@ var segment_distance = 24
 
 scr_create_ship_segments(number_of_segments,24,obj_ship_segment_enemy_team_2)
 
-scr_ship_update_segments(id,segment_distance)
+//scr_ship_update_segments(id,segment_distance)
 
 repeat(round(number_of_segments/3))
 	scr_place_engine_enemy (obj_module_engine_enemy_team_2)
