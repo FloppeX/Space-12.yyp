@@ -15,6 +15,9 @@ randomize()
 game_set_speed(60,gamespeed_fps)
 global.game_timer = 0
 
+physics_world_update_speed(60);
+physics_world_update_iterations(20);
+
 //physics_world_update_speed(60)
 //physics_world_update_iterations(20)
 
@@ -149,6 +152,10 @@ global.wrap_border_right = room_width - global.wrap_margin_player
 global.wrap_border_top = global.wrap_margin_player
 global.wrap_border_bottom = room_height - global.wrap_margin_player
 
+global.wrap_border_left_player = global.wrap_margin_player
+global.wrap_border_right_player = room_width - global.wrap_margin_player
+global.wrap_border_top_player = global.wrap_margin_player
+global.wrap_border_bottom_player = room_height - global.wrap_margin_player
 
 // Camera
 

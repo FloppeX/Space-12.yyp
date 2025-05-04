@@ -1,3 +1,17 @@
+
+// --- DEBUG: Manual Teleport Test ---
+if (mouse_check_button_pressed(mb_middle)) { // Check for middle mouse button press
+    show_debug_message("--- Middle Mouse Pressed: Triggering Manual Wrap ---");
+    scr_wrap_room_ship_new() // Teleport 100 pixels right
+}
+
+
+// --- DEBUG: Check velocity at start of next step ---
+if (timer mod 60 == 0) { // Throttle logging
+    show_debug_message("Step 0 Start: Vel=(" + string(phy_speed_x) + "," + string(phy_speed_y) + ")");
+}
+// --- END DEBUG ---
+
 // Timer
 
 timer += 1
@@ -294,3 +308,4 @@ if (instance_exists(com_marker_instance)) { // Check if marker exists
 } else if (timer mod 120 == 0) { // Print warning less often if marker missing
      show_debug_message("End Step WARN: com_marker_instance does not exist!");
 }
+

@@ -98,7 +98,7 @@ function scr_create_array_player_devices() {
 	module_id = obj_module_teleporter
 	module_type = "gadget"
 	credit_cost = 12
-	module_rarity = 1
+	module_rarity = 1000
 	global.array_player_devices[module_number,0] = module_id
 	global.array_player_devices[module_number,1] = module_type
 	global.array_player_devices[module_number,2] = credit_cost

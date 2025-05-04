@@ -1,3 +1,11 @@
+// Physics settings
+
+game_set_speed(60,gamespeed_fps)
+physics_world_update_speed(60);
+physics_world_update_iterations(20);
+
+
+
 // test
 
 instance_create_depth(3000,1800,10,obj_planet_earth)

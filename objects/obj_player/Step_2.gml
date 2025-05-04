@@ -33,7 +33,4 @@ luck_bonus = 0
 
 collision_target = noone
 
-// Wrap room if needed
-
-scr_wrap_room_ship_new();	
 

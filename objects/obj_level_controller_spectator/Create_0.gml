@@ -1,3 +1,10 @@
+// Physics settings
+
+game_set_speed(60,gamespeed_fps)
+physics_world_update_speed(60);
+physics_world_update_iterations(20);
+
+
 // View settings
 
 view_object = instance_create_depth(0.5 * room_width,0.5 * room_height,-5,obj_view_object)

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_wrap_using_world_shift",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_wrap_using_world_shift",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

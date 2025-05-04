@@ -1,3 +1,12 @@
+// Physics settings
+
+game_set_speed(60,gamespeed_fps)
+physics_world_update_speed(60);
+physics_world_update_iterations(20);
+
+
+//
+
 global.player_entering_shop = false
 global.player_in_shop = false
 global.player_exiting_shop = false

@@ -27,18 +27,37 @@ if activation_timer > 0{
 	}
 
 // orient to correct angle
+if (scr_exists(owner)) { // Calculate target angle first if owner exists
+    target_angle = -owner.phy_rotation + offset_angle;
+    alpha = owner.alpha; // Inherit alpha
 
-angle_diff = angle_difference(-phy_rotation, target_angle)
-if joint != noone{
-	physics_joint_set_value(joint,phy_joint_max_motor_torque,10000)
-	physics_joint_set_value(joint,phy_joint_max_motor_force,10000)
-	physics_joint_set_value(joint,phy_joint_motor_speed,0.8 * angle_diff)
+    if (joint != noone) { // Check if joint exists
+        angle_diff = angle_difference(-phy_rotation, target_angle);
+
+        // --- CORRECTED MOTOR CONTROL ---
+
+
+       
+
+        // 1. Explicitly ENABLE the motor using the correct function
+        physics_joint_enable_motor(joint, true);
+		
+		// 2. Set Motor Speed proportional to angle difference
+        physics_joint_set_value(joint, phy_joint_motor_speed, 0.8 * angle_diff); // Adjust speed based on how far off it is
+        
+        // 3. Set MAX MOTOR TORQUE (using the correct constant)
+        physics_joint_set_value(joint, phy_joint_max_motor_torque, 10000); // High torque to force alignment		
+		
+		// --- END CORRECTIONS ---
+    }
+} else {
+    // Optional: If owner doesn't exist, maybe disable motor?
+    if (joint != noone) {
+        physics_joint_enable_motor(joint, false);
+    }
 }
-
-if scr_exists(owner){
-	target_angle = -owner.phy_rotation + offset_angle
-	alpha = owner.alpha
-	}
+	
+	
 //
 
 audio_emitter_position(module_audio_emitter,phy_position_x,phy_position_y,0)

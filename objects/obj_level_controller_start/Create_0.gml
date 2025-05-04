@@ -1,6 +1,12 @@
 
 timer = 0
 
+// Physics settings
+
+game_set_speed(60,gamespeed_fps)
+physics_world_update_speed(60);
+physics_world_update_iterations(20);
+
 // Play area settings
 
 scr_initialize_room()

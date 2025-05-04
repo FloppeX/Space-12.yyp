@@ -1,3 +1,9 @@
+// Wrap room if needed
+
+scr_wrap_room_ship_new()
+
+// --- END DEBUG ---
+
 // Execute modifiers
 
 for(var h = 0; h < array_height_2d(modifiers); h+=1;)
@@ -102,10 +108,10 @@ if controls_disabled == false and !gamepad_is_connected(0){
 // Zoom
 
 if gamepad_button_check_pressed(0,gp_padl)
-		global.zoom = global.zoom - 100
+		global.zoom = global.zoom - 300
 
 if gamepad_button_check_pressed(0,gp_padr)
-		global.zoom = global.zoom + 100
+		global.zoom = global.zoom + 300
 	
 global.zoom = clamp(global.zoom,global.min_zoom,global.max_zoom)
 
@@ -130,9 +136,9 @@ if keyboard_check_pressed(ord("H"))
 	obj_health += 50
 	
 if keyboard_check_pressed(vk_control){
-		scr_add_ship_segment(id,24,obj_ship_segment_player)
+		//scr_add_ship_segment(id,24,obj_ship_segment_player)
 		scr_update_segment_neighbors();
-		scr_recenter_ship_on_com();
+		//scr_recenter_ship_on_com();
 	}
 	
 if keyboard_check_pressed(ord("Q")){
@@ -155,4 +161,9 @@ global.wrap_border_left = phy_position_x - 0.5 * global.play_area_width;
 global.wrap_border_right = phy_position_x + 0.5 * global.play_area_width;
 global.wrap_border_top = phy_position_y - 0.5 * global.play_area_height;
 global.wrap_border_bottom = phy_position_y + 0.5 * global.play_area_height;
+
+global.wrap_border_left_player = global.wrap_margin_player
+global.wrap_border_right_player = room_width - global.wrap_margin_player
+global.wrap_border_top_player = global.wrap_margin_player
+global.wrap_border_bottom_player = room_height - global.wrap_margin_player
 

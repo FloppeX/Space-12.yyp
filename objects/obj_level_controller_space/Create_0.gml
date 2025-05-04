@@ -2,6 +2,12 @@
 
 scr_initialize_room()
 
+// Physics settings
+
+game_set_speed(60,gamespeed_fps)
+physics_world_update_speed(60);
+physics_world_update_iterations(20);
+
 // Create background sprites
 
 scr_create_background_layers()

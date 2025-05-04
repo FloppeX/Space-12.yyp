@@ -72,10 +72,10 @@ audio_listener_position(phy_position_x,phy_position_y,listener_height)
 
 
 if obj_input_controller.zoom_out
-	zoom -= 10
+	zoom -= 50
 		
 if obj_input_controller.zoom_in
-	zoom += 10
+	zoom += 50
 
 zoom = global.zoom
 zoom = clamp(zoom,global.min_zoom,global.max_zoom)
@@ -88,10 +88,3 @@ var pm = matrix_build_projection_ortho(temp_zoom*1.6,temp_zoom,1,100000)
 camera_set_view_mat(camera,vm)
 camera_set_proj_mat(camera,pm)
 view_camera[0] = camera;
-
-
-// Inside obj_camera Step Event, after setting phy_speed_x/y
-if scr_timer(60) { // Print once per second
-    show_debug_message("Camera Debug: ID=" + string(id) + " Target=" + ((scr_exists(follow_object))?string(follow_object.id):"None") + " Pos=(" + string(floor(phy_position_x)) + "," + string(floor(phy_position_y)) + ") Speed=(" + string(phy_speed_x) + "," + string(phy_speed_y) + ")");
-}
-

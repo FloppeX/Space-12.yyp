@@ -126,7 +126,7 @@ if (guarantee_forward_facing_starting_gun) {
     temp_weapon = scr_create_random_starting_gun();
     if (scr_exists(temp_weapon)) {
         temp_weapon.offset_angle = 0;
-        temp_weapon.placement_req_right = noone; temp_weapon.placement_req_left = 1; temp_weapon.placement_req_above = 1; temp_weapon.placement_req_below = 1;
+        temp_weapon.placement_req_above = noone; temp_weapon.placement_req_left = 1; temp_weapon.placement_req_right = 1; temp_weapon.placement_req_below = 1;
         var valid_weapon_slots = scr_find_valid_module_slots(id, temp_weapon);
         if (ds_list_size(valid_weapon_slots) > 0) {
             ds_list_shuffle(valid_weapon_slots); var index = valid_weapon_slots[| 0];
@@ -145,7 +145,7 @@ if (guarantee_forward_facing_starting_gun) {
         temp_cockpit = instance_create_depth(0, 0, -10, temp_cockpit_obj);
         if (scr_exists(temp_cockpit)) {
             // Set forward placement requirements for cockpit too
-            temp_cockpit.placement_req_right = noone; temp_cockpit.placement_req_left = 1; temp_cockpit.placement_req_above = 1; temp_cockpit.placement_req_below = 1;
+            temp_cockpit.placement_req_above = noone; temp_cockpit.placement_req_left = 1; temp_cockpit.placement_req_right = 1; temp_cockpit.placement_req_below = 1;
             var valid_slots = scr_find_valid_module_slots(id, temp_cockpit); // Finds *remaining* valid forward slots
             if (ds_list_size(valid_slots) > 0) {
                 ds_list_shuffle(valid_slots); var index = valid_slots[| 0];
@@ -209,7 +209,9 @@ if (guarantee_forward_facing_starting_gun) {
         }
     }
     // --- End Best Effort Logic ---
+	
 } // End if/else (guarantee_forward_facing_starting_gun)
+
 
 
 // --- Final Joint Creation --- (Using corrected code from Response #55)
@@ -247,10 +249,8 @@ for (var i = 0; i < array_length(ship_segment); i += 1) {
 }
 show_debug_message("Finished final loop for joint creation for " + string(id));
 
-
 scr_update_segment_neighbors();
 
-//scr_recenter_ship_on_com();
 
 // --- Final Health Calculation ---
 max_health_base = array_length(ship_segment) * 10;
