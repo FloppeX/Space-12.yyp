@@ -17,17 +17,17 @@ for (var p = -global.play_area_width; p <= global.play_area_width; p += global.p
         // Draw RIGHT connector (Geometric right is Ship's UP -> Rotation = Ship Rot + 0)
         if (variable_instance_exists(id,"neighbor_right") && neighbor_right != noone && instance_exists(neighbor_right)) {
              // To point right relative to ship, use base rotation + 0 (was -90)
-             draw_sprite_ext(_crossbar_sprite, _crossbar_subimg, _draw_x, _draw_y, _crossbar_scale, _crossbar_scale, _ship_rot-90, _crossbar_col, _crossbar_alpha);
+             draw_sprite_ext(_crossbar_sprite, _crossbar_subimg, _draw_x, _draw_y, _crossbar_scale, _crossbar_scale, _ship_rot, _crossbar_col, _crossbar_alpha);
         }
 
         // Draw BELOW connector (Geometric down is Ship's RIGHT -> Rotation = Ship Rot + 90)
          if (variable_instance_exists(id,"neighbor_bottom") && neighbor_bottom != noone && instance_exists(neighbor_bottom)) {
              // To point down relative to ship, use base rotation + 90 (was +180)
              // Note: +270 might be equivalent depending on sprite orientation, using -90 for simplicity
-             draw_sprite_ext(_crossbar_sprite, _crossbar_subimg, _draw_x, _draw_y, _crossbar_scale, _crossbar_scale, _ship_rot+180, _crossbar_col, _crossbar_alpha); // Or +270
+             draw_sprite_ext(_crossbar_sprite, _crossbar_subimg, _draw_x, _draw_y, _crossbar_scale, _crossbar_scale, _ship_rot-90, _crossbar_col, _crossbar_alpha); // Or +270
         }
 
-        // Reminder: Original logic only draws right/below, so left/above are not drawn
+		draw_sprite_ext(sprite_index, _crossbar_subimg, _draw_x, _draw_y, _crossbar_scale, _crossbar_scale, _ship_rot, _crossbar_col, _crossbar_alpha); // Or +270
     }
 }
 // --- End Crossbar Connectors ---

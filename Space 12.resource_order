@@ -300,7 +300,7 @@
     {"name":"obj_ship_segment_enemy","order":6,"path":"objects/obj_ship_segment_enemy/obj_ship_segment_enemy.yy",},
     {"name":"obj_ship_segment_player","order":2,"path":"objects/obj_ship_segment_player/obj_ship_segment_player.yy",},
     {"name":"obj_ship_segment","order":1,"path":"objects/obj_ship_segment/obj_ship_segment.yy",},
-    {"name":"obj_ship","order":5,"path":"objects/obj_ship/obj_ship.yy",},
+    {"name":"obj_ship","order":2,"path":"objects/obj_ship/obj_ship.yy",},
     {"name":"obj_shop_button_exit","order":2,"path":"objects/obj_shop_button_exit/obj_shop_button_exit.yy",},
     {"name":"obj_shop_button_reload","order":4,"path":"objects/obj_shop_button_reload/obj_shop_button_reload.yy",},
     {"name":"obj_shop_button_repair","order":3,"path":"objects/obj_shop_button_repair/obj_shop_button_repair.yy",},

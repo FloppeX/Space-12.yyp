@@ -104,7 +104,6 @@ for (var w = 0; w < num_additional_weapons; w += 1) {
 var num_devices_to_place = max(0, round(number_of_segments / 5));
 
 // --- Final Update & Joint Creation ---
-// Make sure scr_ship_update_segments(...) is commented out before this!
 
 show_debug_message("Starting final loop for joint creation for " + string(id) + " (" + object_get_name(object_index) + ")");
 var _is_enemy = object_is_ancestor(object_index, obj_enemy_ship); // Check if this is an enemy
@@ -187,6 +186,11 @@ for (var i = 0; i < array_length(ship_segment); i += 1) {
 } // End final loop
 
 show_debug_message("Finished final loop for joint creation for " + string(id));
+
+
+// Update segment neighbors
+
+scr_update_segment_neighbors();
 
 // Final health calculation (should be done AFTER the loop)
 max_health_base = array_length(ship_segment) * ((object_is_ancestor(object_index, obj_enemy_ship)) ? 8 : 10); // Different base health?

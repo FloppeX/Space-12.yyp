@@ -136,5 +136,7 @@ function scr_wrap_room_ship_new() {
          show_debug_message("    Finished recreating joints.");
     }
 
+	self.just_wrapped = true; // flag that a wrap just happened
+
     show_debug_message("<<< scr_wrap_room_ship_new finished (delete/move/recreate - RETAIN angle).");
 }

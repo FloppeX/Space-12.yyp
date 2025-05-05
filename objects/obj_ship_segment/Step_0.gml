@@ -1,6 +1,8 @@
 if !scr_exists(owner)
 	exit;
 	
+depth = 10
+	
 phy_rotation = owner.phy_rotation
 alpha = owner.alpha
 

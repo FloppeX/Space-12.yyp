@@ -1,9 +1,9 @@
 
-
+/*
 for(var i = 0; i < array_length_1d(ship_segment); i+=1;)
 	//if ship_segment[i].ship_segment_right != noone
 		draw_sprite_ext(spr_segment_2,-1,ship_segment[i].phy_position_x,ship_segment[i].phy_position_y,1,1,-phy_rotation,c_white,alpha)
-
+*/
 // TEST
 if global.view_mode == 2{
 	draw_set_font(global.font_small_text)

@@ -112,6 +112,11 @@ luck_multiplier = 1; luck_bonus = 0;
 
 drift_resistance = (drift_resistance_base * drift_resistance_multiplier) + drift_resistance_bonus;
 
+
+// Wrap variable
+
+just_wrapped = false;
+
 // Run debug checks if needed (copied from original enemy create)
 show_debug_message("--- Create Event Debug ---");
 if (is_array(target_objects)) { /* ... debug checks from before ... */ } else { show_debug_message("target_objects is NOT an array!"); }

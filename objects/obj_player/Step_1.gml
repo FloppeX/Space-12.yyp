@@ -2,7 +2,6 @@
 
 scr_wrap_room_ship_new()
 
-// --- END DEBUG ---
 
 // Execute modifiers
 

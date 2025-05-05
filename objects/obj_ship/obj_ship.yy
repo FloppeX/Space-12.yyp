@@ -6,8 +6,8 @@
   "name":"obj_ship",
   "overriddenProperties":[],
   "parent":{
-    "name":"Friendlies",
-    "path":"folders/Objects/Ships/Friendlies.yy",
+    "name":"Ships",
+    "path":"folders/Objects/Ships.yy",
   },
   "parentObjectId":null,
   "persistent":false,
